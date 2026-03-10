@@ -90,8 +90,8 @@ body{background:var(--bg);color:var(--black);font-family:var(--fm);overflow-x:hi
 .cta-eyebrow{font-family:var(--fm);font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.28);margin-bottom:16px;}
 .cta-title{font-family:var(--fp);font-size:clamp(32px,5vw,58px);letter-spacing:.08em;text-transform:uppercase;color:#fff;line-height:1.05;margin-bottom:24px;}
 .cta-title em{color:var(--red);font-style:normal;}
-.cta-links{display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;margin-top:24px;}
-.cta-btn{display:inline-flex;align-items:center;gap:9px;padding:13px 28px;font-family:var(--fm);font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;cursor:pointer;transition:all .2s;text-decoration:none;border:none;}
+.cta-links{display:flex;flex-direction:row;align-items:stretch;justify-content:center;gap:12px;flex-wrap:wrap;margin:28px auto 0;max-width:700px;}
+.cta-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:0 22px;height:48px;font-family:var(--fm);font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;cursor:pointer;transition:all .2s;text-decoration:none;border:none;white-space:nowrap;flex:1;min-width:140px;}
 .cta-icon{display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;}
 .cta-btn.primary{background:var(--red);color:#fff;border:1px solid var(--red);}
 .cta-btn.primary:hover{background:#c02020;border-color:#c02020;}
@@ -436,7 +436,8 @@ nav{padding:13px 40px;display:flex;align-items:center;background:rgba(8,8,8,0.95
   /* Hide desktop-only game UI on mobile */
   .bg-hint,.bg-hint.active,.bg-canvas,.bg-canvas.active,
   #gameInteractOverlay,.game-interact-pill{display:none!important;}
-  /* #heroGameHint is display:none by default in HTML, shown desktop-only via min-width query */
+  /* heroGameHint shown on mobile — repositioned to bottom center */
+  #heroGameHint{display:flex!important;bottom:120px!important;left:50%!important;transform:translateX(-50%)!important;white-space:nowrap!important;}
   /* Show scroll CTA */
   /* scroll CTA already display:flex globally */
 
@@ -471,10 +472,10 @@ nav{padding:13px 40px;display:flex;align-items:center;background:rgba(8,8,8,0.95
   /* EDU */
   .edu-grid{grid-template-columns:1fr;}
 
-  /* CTA */
+  /* CTA — vertical stack on mobile */
   .cta-section{padding:48px 20px;}
-  .cta-links{flex-direction:column;align-items:stretch;gap:8px;max-width:320px;margin:20px auto 0;}
-  .cta-btn{justify-content:flex-start;align-items:center;padding:0 24px;height:52px;min-height:52px;font-size:10px;gap:0;width:100%;}
+  .cta-links{flex-direction:column;align-items:stretch;gap:10px;max-width:300px;margin:24px auto 0;}
+  .cta-btn{flex:none;width:100%;height:52px;justify-content:flex-start;padding:0 20px;gap:0;}
   .cta-icon{width:44px;min-width:44px;justify-content:center;}
   .cta-btn svg{width:15px;height:15px;}
 
