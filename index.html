@@ -536,6 +536,61 @@ nav{padding:13px 40px;display:flex;align-items:center;background:rgba(8,8,8,0.95
   .mini-card-inner{min-height:auto!important;}
   .mini-preview{min-height:160px!important;}
 
+  /* ── GLOBAL: collapse ALL inline multi-col grids on mobile ── */
+  /* Prevent any container from overflowing viewport */
+  .page, .au-section, .wrap, .page-header {
+    max-width:100%;
+    overflow-x:hidden;
+  }
+  /* 3-col grids */
+  div[style*="grid-template-columns:1fr 1fr 1fr"],
+  div[style*="grid-template-columns: 1fr 1fr 1fr"] {
+    display:flex!important;flex-direction:column!important;
+  }
+  div[style*="grid-template-columns:1fr 1fr 1fr"] > div,
+  div[style*="grid-template-columns: 1fr 1fr 1fr"] > div {
+    border-right:none!important;border-bottom:1px dashed #e8e8e8;
+  }
+  div[style*="grid-template-columns:1fr 1fr 1fr"] > div:last-child,
+  div[style*="grid-template-columns: 1fr 1fr 1fr"] > div:last-child {
+    border-bottom:none;
+  }
+
+  /* 2-col 1fr 1fr grids */
+  div[style*="grid-template-columns:1fr 1fr;"],
+  div[style*="grid-template-columns:1fr 1fr "] {
+    display:flex!important;flex-direction:column!important;
+  }
+  div[style*="grid-template-columns:1fr 1fr;"] > div,
+  div[style*="grid-template-columns:1fr 1fr "] > div {
+    border-right:none!important;border-bottom:1px dashed #e8e8e8;
+  }
+  div[style*="grid-template-columns:1fr 1fr;"] > div:last-child,
+  div[style*="grid-template-columns:1fr 1fr "] > div:last-child {
+    border-bottom:none;
+  }
+
+  /* 2-col 1fr 1.4fr / 1.4fr 1fr */
+  div[style*="grid-template-columns:1fr 1.4fr"],
+  div[style*="grid-template-columns:1.4fr 1fr"] {
+    display:flex!important;flex-direction:column!important;
+  }
+
+  /* Sidebar grids: 200px/220px sidebar + 1fr content */
+  div[style*="grid-template-columns:200px 1fr"],
+  div[style*="grid-template-columns:220px 1fr"] {
+    display:flex!important;flex-direction:column!important;
+  }
+  div[style*="grid-template-columns:200px 1fr"] > div:first-child,
+  div[style*="grid-template-columns:220px 1fr"] > div:first-child {
+    border-right:none!important;border-bottom:1px dashed #e8e8e8;
+  }
+
+  /* cards-grid inline override */
+  .cards-grid[style*="grid-template-columns"] {
+    grid-template-columns:1fr!important;
+  }
+
   /* ── ABOUT PAGE — 2-col skills grid (bottom row) ── */
   #page-about div[style*="grid-template-columns:1fr 1fr;"]{
     display:flex!important;flex-direction:column!important;
@@ -546,35 +601,6 @@ nav{padding:13px 40px;display:flex;align-items:center;background:rgba(8,8,8,0.95
   #page-about div[style*="grid-template-columns:1fr 1fr;"] > div:last-child{
     border-bottom:none;
   }
-
-  /* ── HRSAAS PAGE — inline 2-col & sidebar grids ── */
-  #page-hrsaas div[style*="grid-template-columns:1fr 1fr;"]{
-    display:flex!important;flex-direction:column!important;
-  }
-  #page-hrsaas div[style*="grid-template-columns:200px 1fr"]{
-    display:flex!important;flex-direction:column!important;
-  }
-  #page-hrsaas div[style*="grid-template-columns:200px 1fr"] > div:first-child{
-    border-right:none!important;border-bottom:1px dashed #e8e8e8;
-  }
-
-  /* ── FINMONITOR PAGE — inline 2-col & sidebar grids ── */
-  #page-finmonitor div[style*="grid-template-columns:1fr 1fr;"]{
-    display:flex!important;flex-direction:column!important;
-  }
-  #page-finmonitor div[style*="grid-template-columns:1fr 1fr;"] > div{
-    border-right:none!important;border-bottom:1px dashed #e8e8e8;
-  }
-  #page-finmonitor div[style*="grid-template-columns:1fr 1fr;"] > div:last-child{
-    border-bottom:none;
-  }
-  #page-finmonitor div[style*="grid-template-columns:220px 1fr"]{
-    display:flex!important;flex-direction:column!important;
-  }
-  #page-finmonitor div[style*="grid-template-columns:220px 1fr"] > div:first-child{
-    border-right:none!important;border-bottom:1px dashed #e8e8e8;
-  }
-}
 
 </style>
 </head>
