@@ -1949,6 +1949,8 @@ function replayGame(){if(_replayFn)_replayFn();}
     goState=true;
     var chip=document.getElementById('replayChip');
     if(chip)chip.classList.add('visible');
+    var hint=document.getElementById('heroGameHint');
+    if(hint)hint.style.opacity='0';
     _replayFn=startGame;
   }
 
@@ -1957,6 +1959,8 @@ function replayGame(){if(_replayFn)_replayFn();}
     goState=false;
     var chip=document.getElementById('replayChip');
     if(chip)chip.classList.remove('visible');
+    var hint=document.getElementById('heroGameHint');
+    if(hint)hint.style.opacity='';
     for(let i=0;i<4;i++) setTimeout(()=>asts.push(new Asteroid()),i*400);
     updateHUD();
   }
