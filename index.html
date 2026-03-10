@@ -1835,6 +1835,95 @@ function replayGame(){if(_replayFn)_replayFn();}
 
   function drawStars(){stars.forEach(s=>{s.tw+=s.tws;cx.save();cx.globalAlpha=s.a*(.35+.65*Math.sin(s.tw));cx.fillStyle='#fff';cx.beginPath();cx.arc(s.x,s.y,s.r,0,Math.PI*2);cx.fill();cx.restore();});}
 
+  // ── ARIES CONSTELLATION (above-right of name) ──
+  // Hamal, Sheratan, Mesarthim + 2 minor stars — classic hook shape
+  const ARIES_NODES=[
+    [ 0.00,  0.00],   // 0 Hamal (α) — brightest
+    [ 0.18, -0.08],   // 1 Sheratan (β)
+    [ 0.26, -0.10],   // 2 Mesarthim (γ)
+    [-0.16,  0.18],   // 3 41 Ari — lower left
+    [-0.28,  0.10],   // 4 minor tail star
+  ];
+  const ARIES_LINES=[[0,1],[1,2],[0,3],[3,4]];
+  const ARIES_SIZE=[1.9,1.4,1.3,1.1,1.0]; // star sizes
+  let ariesTw=0;
+
+  function drawAries(){
+    ariesTw+=0.005;
+    const cx0=W*0.63;
+    const cy0=H*0.30;
+    const scale=Math.min(W,H)*0.14;
+
+    cx.save();
+    cx.strokeStyle='rgba(255,220,200,0.14)';
+    cx.lineWidth=0.7;
+    ARIES_LINES.forEach(([a,b])=>{
+      cx.beginPath();
+      cx.moveTo(cx0+ARIES_NODES[a][0]*scale, cy0+ARIES_NODES[a][1]*scale);
+      cx.lineTo(cx0+ARIES_NODES[b][0]*scale, cy0+ARIES_NODES[b][1]*scale);
+      cx.stroke();
+    });
+    cx.restore();
+
+    ARIES_NODES.forEach(([nx,ny],i)=>{
+      const px=cx0+nx*scale, py=cy0+ny*scale;
+      const pulse=0.5+0.5*Math.sin(ariesTw+i*1.1);
+      const r=ARIES_SIZE[i];
+      cx.save();
+      // glow
+      cx.globalAlpha=pulse*0.12;
+      const g=cx.createRadialGradient(px,py,0,px,py,r*5);
+      g.addColorStop(0,'rgba(255,210,180,1)');g.addColorStop(1,'transparent');
+      cx.fillStyle=g;cx.beginPath();cx.arc(px,py,r*5,0,Math.PI*2);cx.fill();
+      // core
+      cx.globalAlpha=0.55+pulse*0.45;
+      cx.fillStyle=i===0?'#ffe8d0':'#fff';
+      cx.beginPath();cx.arc(px,py,r,0,Math.PI*2);cx.fill();
+      cx.restore();
+    });
+  }
+
+  // ── GALAXY (left side, parallel to Aries) ──
+  let galaxyTw=0;
+  function drawGalaxy(){
+    galaxyTw+=0.003;
+    const gx=W*0.22, gy=H*0.28;
+    const arms=3, starsPerArm=55;
+    cx.save();
+    // soft glow core
+    const core=cx.createRadialGradient(gx,gy,0,gx,gy,38);
+    core.addColorStop(0,'rgba(160,140,255,0.18)');
+    core.addColorStop(0.4,'rgba(120,100,220,0.07)');
+    core.addColorStop(1,'transparent');
+    cx.fillStyle=core;cx.beginPath();cx.arc(gx,gy,38,0,Math.PI*2);cx.fill();
+
+    for(let arm=0;arm<arms;arm++){
+      const armAngle=(arm/arms)*Math.PI*2+galaxyTw;
+      for(let j=0;j<starsPerArm;j++){
+        const t=j/starsPerArm;
+        const spread=t*Math.PI*1.8+armAngle;
+        const dist=8+t*52;
+        const scatter=(Math.random()-0.5)*10*(t+0.3);
+        const px=gx+Math.cos(spread)*dist+scatter;
+        const py=gy+Math.sin(spread)*dist*0.45+scatter*0.4;
+        const alpha=(0.08+t*0.18)*(0.6+0.4*Math.sin(galaxyTw*2+j));
+        const r=0.4+Math.random()*0.7*(1-t*0.5);
+        cx.save();
+        cx.globalAlpha=alpha;
+        cx.fillStyle=j%7===0?'rgba(200,180,255,1)':'#fff';
+        cx.beginPath();cx.arc(px,py,r,0,Math.PI*2);cx.fill();
+        cx.restore();
+      }
+    }
+    // bright nucleus
+    cx.save();
+    cx.globalAlpha=0.55+0.2*Math.sin(galaxyTw*3);
+    cx.fillStyle='rgba(220,210,255,1)';
+    cx.beginPath();cx.arc(gx,gy,1.4,0,Math.PI*2);cx.fill();
+    cx.restore();
+    cx.restore();
+  }
+
   class Asteroid{
     constructor(sz,x,y,vx,vy){
       this.sz=sz||(14+Math.random()*26);
@@ -1993,6 +2082,8 @@ function replayGame(){if(_replayFn)_replayFn();}
     nb.addColorStop(0,'rgba(20,8,30,.5)');nb.addColorStop(.6,'rgba(8,3,16,.2)');nb.addColorStop(1,'transparent');
     cx.fillStyle=nb;cx.fillRect(0,0,W,H);
     drawStars();
+    drawGalaxy();
+    drawAries();
 
     if(!goState){
       if(fc%Math.max(28,60-wave*3)===0&&asts.length<6) asts.push(new Asteroid());
