@@ -436,8 +436,8 @@ nav{padding:13px 40px;display:flex;align-items:center;background:rgba(8,8,8,0.95
   /* Hide desktop-only game UI on mobile */
   .bg-hint,.bg-hint.active,.bg-canvas,.bg-canvas.active,
   #gameInteractOverlay,.game-interact-pill{display:none!important;}
-  /* heroGameHint shown on mobile — bottom right above spaceship */
-  #heroGameHint{display:flex!important;bottom:100px!important;left:auto!important;right:18px!important;transform:none!important;white-space:nowrap!important;}
+  /* heroGameHint shown on mobile — bottom left matching desktop */
+  #heroGameHint{display:flex!important;bottom:100px!important;left:18px!important;right:auto!important;transform:none!important;white-space:nowrap!important;}
   /* Show scroll CTA */
   /* scroll CTA already display:flex globally */
 
@@ -475,10 +475,10 @@ nav{padding:13px 40px;display:flex;align-items:center;background:rgba(8,8,8,0.95
   /* CTA — vertical stack on mobile */
   .cta-section{padding:48px 20px;}
   .cta-links{flex-direction:column;align-items:stretch;gap:10px;max-width:300px;margin:24px auto 0;}
-  .cta-btn{flex:none;width:100%;height:52px;display:grid!important;grid-template-columns:52px 1fr;align-items:center;padding:0;gap:0;justify-content:initial;}
-  .cta-icon{width:52px;height:52px;display:flex!important;align-items:center;justify-content:center;}
+  .cta-btn{flex:none;width:100%;height:52px;display:flex!important;align-items:center;justify-content:center!important;padding:0;gap:12px;}
+  .cta-icon{width:auto;min-width:auto;display:flex!important;align-items:center;justify-content:center;}
   .cta-btn svg{width:15px;height:15px;}
-  .cta-btn > :last-child{text-align:left;}
+  .cta-btn > span:last-child{min-width:100px;text-align:left;}
 
   /* FOOTER */
   .foot-inner{flex-direction:column;gap:10px;align-items:flex-start;padding:20px 18px;}
