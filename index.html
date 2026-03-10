@@ -326,7 +326,36 @@ nav{padding:13px 40px;display:flex;align-items:center;background:rgba(8,8,8,0.95
 .hero-tag{font-family:var(--fb);font-size:clamp(14px,2vw,19px);color:rgba(255,255,255,.92);line-height:1.5;font-style:italic;margin-bottom:10px;}
 .hero-pillars{font-family:var(--fm);font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:16px;display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;}
 
-/* ── SYSTEMS STRIP ── */
+/* ── SCROLL CTA (mobile only) ── */
+.scroll-cta{
+  display:none;
+  position:absolute;
+  bottom:32px;
+  left:50%;
+  transform:translateX(-50%);
+  z-index:10;
+  flex-direction:column;
+  align-items:center;
+  gap:6px;
+  pointer-events:none;
+  animation:scrollFade 2.4s ease-in-out infinite;
+}
+.scroll-cta-line{width:1px;height:24px;background:linear-gradient(to bottom,transparent,rgba(255,255,255,.35));}
+.scroll-cta-text{font-family:var(--fm);font-size:8px;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.45);white-space:nowrap;}
+.scroll-cta-arrow{font-size:12px;color:var(--red);animation:scrollBounce 2.4s ease-in-out infinite;}
+@keyframes scrollFade{
+  0%,100%{opacity:0;transform:translateX(-50%) translateY(6px);}
+  30%,70%{opacity:1;transform:translateX(-50%) translateY(0);}
+}
+@keyframes scrollBounce{
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(4px);}
+}
+@media(max-width:720px){
+  .scroll-cta{display:flex;}
+}
+
+
 .systems-strip{background:#0e0e0e;}
 .systems-lbl-row{font-family:var(--fm);font-size:8px;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.22);padding:18px 40px 14px;border-bottom:1px solid rgba(255,255,255,.05);}
 .systems-grid{display:grid;grid-template-columns:repeat(6,1fr);}
@@ -657,6 +686,11 @@ nav{padding:13px 40px;display:flex;align-items:center;background:rgba(8,8,8,0.95
       <div class="hero-sub"><span class="hero-sub-dot"></span> Business · Data · Product <span class="hero-sub-dot"></span></div>
       <p class="hero-tag">Curious about systems<br>Careful with data</p>
       <div class="hire-badge"><span class="hire-dot"></span> Immediately Available</div>
+    </div>
+    <div class="scroll-cta" id="scrollCta">
+      <div class="scroll-cta-line"></div>
+      <span class="scroll-cta-text">Scroll to explore</span>
+      <div class="scroll-cta-arrow">↓</div>
     </div>
   </section>
 
@@ -2882,6 +2916,21 @@ function initMarioBg(){
   }
   loop();
 }
+
+// Hide scroll CTA once user starts scrolling
+(function(){
+  const cta = document.getElementById('scrollCta');
+  if(!cta) return;
+  function hideCta(){
+    cta.style.transition='opacity .6s ease';
+    cta.style.opacity='0';
+    cta.style.pointerEvents='none';
+    window.removeEventListener('scroll',hideCta);
+    window.removeEventListener('touchmove',hideCta);
+  }
+  window.addEventListener('scroll',hideCta,{passive:true});
+  window.addEventListener('touchmove',hideCta,{passive:true});
+})();
 </script>
 </body>
 </html>
