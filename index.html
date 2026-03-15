@@ -320,10 +320,10 @@ nav{padding:13px 40px;display:flex;align-items:center;background:rgba(8,8,8,0.95
 .pc-cs-txt{font-family:var(--fb);font-size:12px;color:#555;line-height:1.6;font-weight:300;}
 
 /* ── 11. VISION LABS PAGE ── */
-.vl-hero{min-height:300px;background:#0a0a10;position:relative;overflow:hidden;display:flex;align-items:flex-end;border-bottom:1px dashed #1a1a22;}
+.vl-hero{min-height:340px;background:#0a0a10;position:relative;overflow:hidden;display:flex;align-items:flex-end;border-bottom:1px dashed #1a1a22;}
 #vlCanvas{position:absolute;inset:0;width:100%;height:100%;z-index:0;}
 .vl-hero-fade{position:absolute;bottom:0;left:0;right:0;height:100px;background:linear-gradient(to bottom,transparent,#0a0a10);z-index:2;pointer-events:none;}
-.vl-hc{position:relative;z-index:3;max-width:900px;margin:0 auto;width:100%;padding:110px 40px 44px;}
+.vl-hc{position:relative;z-index:3;max-width:900px;margin:0 auto;width:100%;padding:110px 40px 64px;}
 .vl-lbl{font-family:var(--fm);font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.28);margin-bottom:10px;}
 .vl-title{font-family:var(--fp);font-size:clamp(42px,7.5vw,86px);letter-spacing:.06em;text-transform:uppercase;color:#fff;line-height:.9;}
 .vl-title em{color:var(--red);font-style:normal;}
@@ -940,10 +940,16 @@ nav{padding:13px 40px;display:flex;align-items:center;background:rgba(8,8,8,0.95
 
 <!-- ════════════════════ PROJECTS ════════════════════ -->
 <div id="page-projects" class="page">
-  <div class="page-header">
-    <div class="pg-lbl">02 / Work</div>
-    <h1 class="pg-title">Systems<br><span style="color:var(--red)">Built</span></h1>
-    <p class="pg-desc">Automated systems, analytical frameworks, and workflow tools built across enterprise consulting and independent work. Each one starts with a real problem.</p>
+  <!-- PROJECTS HERO — dark, full-bleed -->
+  <div style="background:#0e0e0e;padding:110px 0 64px;position:relative;overflow:hidden;">
+    <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);background-size:40px 40px;pointer-events:none;"></div>
+    <div class="wrap" style="position:relative;padding-top:0;padding-bottom:0;">
+      <div style="font-family:var(--fm);font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.25);margin-bottom:20px;display:flex;align-items:center;gap:10px;">
+        <span style="width:20px;height:1px;background:var(--red);display:inline-block;"></span> 02 / Work
+      </div>
+      <h1 style="font-family:var(--fp);font-size:clamp(42px,7vw,88px);letter-spacing:.06em;text-transform:uppercase;color:#fff;line-height:.9;margin-bottom:28px;">Systems<br><span style="color:var(--red);">Built</span></h1>
+      <p style="font-family:var(--fb);font-size:16px;color:rgba(255,255,255,.5);line-height:1.7;font-weight:300;max-width:540px;border-left:2px solid var(--red);padding-left:18px;">Automated systems, analytical frameworks, and workflow tools built across enterprise consulting and independent work. Each one starts with a real problem.</p>
+    </div>
   </div>
   <div class="wrap" style="padding-top:52px;padding-bottom:72px;">
     <div class="projects-grid">
