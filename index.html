@@ -195,8 +195,8 @@ nav{padding:13px 40px;display:flex;align-items:center;background:rgba(8,8,8,0.95
 .about-tag:hover{border-color:var(--red);color:var(--red);}
 /* Exp cards (home preview) */
 .exp-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;align-items:start;}
-.exp-card{border:1px dashed #bbb;background:var(--white);padding:20px;position:relative;cursor:default;transition:border-color .2s,box-shadow .2s,opacity .2s;overflow:hidden;}
-.exp-grid:hover .exp-card:not(:hover){opacity:.4;}
+.exp-card{border:1px dashed #bbb;background:var(--white);padding:20px;position:relative;cursor:default;transition:border-color .2s,box-shadow .2s;overflow:hidden;}
+.exp-grid:hover .exp-card:not(:hover){opacity:1;}
 .exp-card:hover{border-color:var(--black);box-shadow:0 8px 28px rgba(0,0,0,.06);}
 .exp-corner{position:absolute;top:0;left:0;width:7px;height:7px;background:var(--red);}
 .exp-company{font-family:var(--fp);font-size:22px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:3px;}
@@ -1037,6 +1037,15 @@ nav{padding:13px 40px;display:flex;align-items:center;background:rgba(8,8,8,0.95
       </div>
       <div class="lab-card">
         <div class="lab-corner"></div>
+        <div class="lab-status"><span class="lb-dot live"></span> Prototype Built</div>
+        <div class="lab-title">CorpSim AI</div>
+        <div class="lab-sub">Corporate Readiness Simulation Platform</div>
+        <div class="lab-desc">AI-powered corporate simulation platform built for EMELEX Solutions — a startup wanting to create Forage, but completely with AI. Prototyped the full product from a product person's POV: VDE, CRS scoring engine, and stakeholder simulation powered by Claude.</div>
+        <div class="lab-tags"><span class="lab-tag">AI / LLM</span><span class="lab-tag">B2B SaaS</span><span class="lab-tag">EdTech</span><span class="lab-tag">Product Prototype</span></div>
+        <button class="lab-cta" onclick="showPage('corpsim')"><span class="rsq"></span> View Concept Doc</button>
+      </div>
+      <div class="lab-card">
+        <div class="lab-corner"></div>
         <div class="lab-status"><span class="lb-dot concept"></span> Concept Phase</div>
         <div class="lab-title">HR SaaS</div>
         <div class="lab-sub">People Operations Platform</div>
@@ -1065,6 +1074,223 @@ nav{padding:13px 40px;display:flex;align-items:center;background:rgba(8,8,8,0.95
   <footer>
     <div class="foot-inner"><a href="mailto:vidur2002@gmail.com" class="foot-email">&#9993;&nbsp; vidur2002@gmail.com</a><a href="https://in.linkedin.com/in/vidurr" target="_blank" rel="noopener noreferrer" class="foot-email">&#128279;&nbsp; linkedin.com/in/vidurr</a><span class="foot-credit">© 2026</span></div>
     <div class="foot-dark"><span>·············· Designed &amp; Built by Vidur Ramachandran</span></div>
+  </footer>
+</div>
+
+<!-- ════════════════════ CORPSIM AI CONCEPT DOC ════════════════════ -->
+<div id="page-corpsim" class="page">
+
+  <!-- HERO -->
+  <div style="background:#0e0e0e;padding:110px 40px 64px;position:relative;overflow:hidden;">
+    <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);background-size:40px 40px;pointer-events:none;"></div>
+    <div style="max-width:900px;margin:0 auto;position:relative;">
+      <div style="font-family:var(--fm);font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.25);margin-bottom:20px;display:flex;align-items:center;gap:10px;">
+        <span style="width:20px;height:1px;background:var(--red);display:inline-block;"></span>
+        <span onclick="showPage('visionlabs')" style="cursor:pointer;transition:color .2s;" onmouseover="this.style.color='rgba(255,255,255,.6)'" onmouseout="this.style.color='rgba(255,255,255,.25)'">&#8592; Vision Labs</span>
+        <span style="color:rgba(255,255,255,.1);">/</span>
+        <span>Concept Doc</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:22px;flex-wrap:wrap;">
+        <div style="display:inline-flex;align-items:center;gap:7px;background:rgba(34,204,136,.08);border:1px dashed rgba(34,204,136,.35);padding:5px 14px;font-family:var(--fm);font-size:8px;letter-spacing:.18em;text-transform:uppercase;color:#22cc88;">
+          <span style="width:5px;height:5px;border-radius:50%;background:#22cc88;box-shadow:0 0 6px #22cc88;animation:blink 1.4s infinite;"></span> Prototype Built
+        </div>
+        <div style="display:inline-flex;align-items:center;gap:7px;background:rgba(255,255,255,.04);border:1px dashed rgba(255,255,255,.12);padding:5px 14px;font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.4);">
+          In Association with EMELEX Solutions Pvt. Ltd.
+        </div>
+      </div>
+      <h1 style="font-family:var(--fp);font-size:clamp(38px,6.5vw,82px);letter-spacing:.06em;text-transform:uppercase;color:#fff;line-height:.9;margin-bottom:24px;">Corp<em style="color:var(--red);font-style:normal;">Sim</em><br>AI</h1>
+      <p style="font-family:var(--fb);font-size:15px;color:rgba(255,255,255,.48);line-height:1.72;font-weight:300;max-width:560px;border-left:2px solid var(--red);padding-left:18px;">A professional-grade, AI-powered corporate simulation platform that bridges the gap between campus life and the corporate world &#8212; built as a product prototype for a startup that wants to create Forage, but completely with AI.</p>
+      <div style="margin-top:28px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+        <a href="https://corp-sim-zeta.vercel.app/" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:8px;background:var(--red);color:#fff;border:1px solid var(--red);padding:0 20px;height:42px;font-family:var(--fm);font-size:9px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;transition:all .2s;"><span class="rsq" style="background:#fff;"></span> Try the Prototype</a>
+        <a href="https://www.pidot.in/" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:8px;background:none;color:rgba(255,255,255,.5);border:1px dashed rgba(255,255,255,.2);padding:0 20px;height:42px;font-family:var(--fm);font-size:9px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;transition:all .2s;">&#8599; EMELEX / pidot.in</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-top:56px;padding-bottom:80px;">
+
+    <!-- MY ROLE -->
+    <div class="au-section" style="margin-bottom:48px;">
+      <div class="sec-lbl">My Role</div>
+      <div style="border:1px dashed #bbb;background:#fff;padding:28px 32px;position:relative;">
+        <div style="position:absolute;top:0;left:0;width:8px;height:8px;background:var(--red);"></div>
+        <p style="font-family:var(--fb);font-size:14px;line-height:1.78;color:#444;font-weight:300;margin-bottom:16px;"><strong style="color:var(--black);font-weight:500;">EMELEX Solutions</strong> is a startup building the next generation of corporate readiness training. They approached me to understand their product vision and translate it into a working prototype &#8212; something concrete they could put in front of developers and investors.</p>
+        <p style="font-family:var(--fb);font-size:14px;line-height:1.78;color:#444;font-weight:300;margin-bottom:0;">My job was to think like a product person: understand the user journey end-to-end, define the information architecture, prototype the core experience, and document how it all fits together. This is not a final product &#8212; it is a high-fidelity signal of what the product should feel like.</p>
+        <div style="margin-top:22px;padding-top:18px;border-top:1px dashed #eee;font-family:var(--fm);font-size:9px;letter-spacing:.1em;color:var(--muted);">
+          <span style="color:var(--red);">&#9632;</span>&nbsp; Deliverable: Prototype + Product Wireframe from a Product Person&#8217;s POV &#8212; shareable with developers to guide build.
+        </div>
+      </div>
+    </div>
+
+    <!-- THE CONCEPT -->
+    <div class="au-section" style="margin-bottom:48px;">
+      <div class="sec-lbl">The Core Concept</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+        <div style="border:1px dashed #bbb;background:#fff;padding:26px 28px;position:relative;">
+          <div style="position:absolute;top:0;left:0;width:8px;height:8px;background:var(--red);"></div>
+          <div style="font-family:var(--fm);font-size:8px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--black);margin-bottom:14px;padding-bottom:10px;border-bottom:1px dashed #eee;">The Problem</div>
+          <ul class="au-list au-list-spaced">
+            <li>Students graduate with zero corporate context &#8212; no idea how to manage email, handle stakeholders, or prioritise under pressure.</li>
+            <li>Existing platforms (Forage, Coursera) are passive &#8212; videos and quizzes, not real work.</li>
+            <li>Internships are competitive and limited. Most students never get one before their first job.</li>
+            <li>Corporate readiness is untestable on a resume &#8212; it has to be demonstrated.</li>
+          </ul>
+        </div>
+        <div style="border:1px dashed #bbb;background:#fff;padding:26px 28px;position:relative;">
+          <div style="position:absolute;top:0;left:0;width:8px;height:8px;background:var(--red);"></div>
+          <div style="font-family:var(--fm);font-size:8px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--black);margin-bottom:14px;padding-bottom:10px;border-bottom:1px dashed #eee;">The Solution</div>
+          <ul class="au-list au-list-spaced">
+            <li><strong style="font-weight:500;">CorpSim AI</strong> drops users into a Virtual Desktop Environment &#8212; their first day on the job.</li>
+            <li>AI-powered stakeholders respond to your emails, messages, and decisions dynamically.</li>
+            <li>Real tasks: write a BRD, analyse data, manage a Kanban board, present to a panel.</li>
+            <li>A proprietary 8-pillar <strong style="font-weight:500;">Corporate Readiness Score (CRS)</strong> benchmarks performance against real corporate standards.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- THE VDE -->
+    <div class="au-section" style="margin-bottom:48px;">
+      <div class="sec-lbl">The Virtual Desktop Environment</div>
+      <div style="border:1px dashed #bbb;background:#fff;position:relative;overflow:hidden;">
+        <div style="position:absolute;top:0;left:0;width:8px;height:8px;background:var(--red);"></div>
+        <div style="padding:22px 28px 18px;border-bottom:1px dashed #eee;">
+          <p style="font-family:var(--fb);font-size:13px;color:#555;line-height:1.7;font-weight:300;margin:0;">The VDE is a multi-app interface containing everything a junior professional would need on day one. Users don&#8217;t &#8220;answer questions&#8221; &#8212; they actually work inside these tools simultaneously.</p>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;border-bottom:1px dashed #eee;">
+          <div style="padding:20px 22px;border-right:1px dashed #e8e8e8;">
+            <div style="font-family:var(--fm);font-size:8px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--black);margin-bottom:10px;">InboxAI</div>
+            <p style="font-family:var(--fb);font-size:12px;color:#555;line-height:1.6;font-weight:300;margin:0;">Intelligent email client where users manage AI-generated stakeholder communications. Claude responds dynamically to tone, clarity, and analytical depth.</p>
+          </div>
+          <div style="padding:20px 22px;border-right:1px dashed #e8e8e8;">
+            <div style="font-family:var(--fm);font-size:8px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--black);margin-bottom:10px;">SlackSim + TaskBoard</div>
+            <p style="font-family:var(--fb);font-size:12px;color:#555;line-height:1.6;font-weight:300;margin:0;">Real-time chat simulation for team collaboration, plus a Kanban system for managing deliverables &#8212; mirroring actual project workflows.</p>
+          </div>
+          <div style="padding:20px 22px;">
+            <div style="font-family:var(--fm);font-size:8px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--black);margin-bottom:10px;">DocVault + MeetingRoom</div>
+            <p style="font-family:var(--fb);font-size:12px;color:#555;line-height:1.6;font-weight:300;margin:0;">Professional document editor for BRDs, specs, and reports &#8212; plus a video call simulator for stakeholder presentations and stand-ups.</p>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;border-bottom:1px dashed #eee;">
+          <div style="padding:20px 22px;border-right:1px dashed #e8e8e8;">
+            <div style="font-family:var(--fm);font-size:8px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--black);margin-bottom:10px;">DataStudio + TeamCalendar</div>
+            <p style="font-family:var(--fb);font-size:12px;color:#555;line-height:1.6;font-weight:300;margin:0;">Analytics and scheduling tools to round out the experience &#8212; modelling real analyst and PM workflows.</p>
+          </div>
+          <div style="padding:20px 22px;">
+            <div style="font-family:var(--fm);font-size:8px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--black);margin-bottom:10px;">CRS Engine</div>
+            <p style="font-family:var(--fb);font-size:12px;color:#555;line-height:1.6;font-weight:300;margin:0;">Proprietary 8-pillar scoring: Communication, Analytical Thinking, Urgency, Stakeholder Management, and more &#8212; updated in real-time as you work.</p>
+          </div>
+        </div>
+        <div style="padding:14px 22px;background:#fafaf8;">
+          <p style="font-family:var(--fb);font-size:12px;color:#888;line-height:1.6;font-weight:300;margin:0;font-style:italic;">AI Engine: Claude/Anthropic generates dynamic content (emails, documents) and provides objective managerial grading on all user outputs. The AI acts as your manager, colleague, and evaluator simultaneously.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- USER JOURNEY -->
+    <div class="au-section" style="margin-bottom:48px;">
+      <div class="sec-lbl">The User Journey</div>
+      <div style="border:1px dashed #bbb;background:#fff;position:relative;">
+        <div style="position:absolute;top:0;left:0;width:8px;height:8px;background:var(--red);"></div>
+        <div style="padding:20px 28px 0;font-family:var(--fb);font-size:13px;color:#555;line-height:1.7;font-weight:300;">Designed to feel less like a test, more like your first week on the job.</div>
+        <div style="padding:20px 28px;display:flex;flex-direction:column;gap:0;">
+          <div style="display:grid;grid-template-columns:120px 1fr;gap:0;border-bottom:1px dashed #eee;padding-bottom:18px;margin-bottom:18px;">
+            <div style="padding-right:20px;padding-top:2px;"><div style="font-family:var(--fp);font-size:26px;color:#f0f0ee;line-height:1;">01</div><div style="font-family:var(--fm);font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:4px;">Discovery</div></div>
+            <div><div style="font-family:var(--fm);font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--black);margin-bottom:6px;">Landing &#8594; Simulation Catalog</div><p style="font-family:var(--fb);font-size:12px;color:#555;line-height:1.6;font-weight:300;margin:0;">User enters through a professional portal and browses a library of Experience Templates &#8212; e.g. &#8220;Business Analyst at JPMorgan&#8221; or &#8220;Risk Analysis at McKinsey&#8221;. Each shows difficulty, skills practiced, and partner certifications available.</p></div>
+          </div>
+          <div style="display:grid;grid-template-columns:120px 1fr;gap:0;border-bottom:1px dashed #eee;padding-bottom:18px;margin-bottom:18px;">
+            <div style="padding-right:20px;padding-top:2px;"><div style="font-family:var(--fp);font-size:26px;color:#f0f0ee;line-height:1;">02</div><div style="font-family:var(--fm);font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:4px;">Immersion</div></div>
+            <div><div style="font-family:var(--fm);font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--black);margin-bottom:6px;">Enter the VDE &#8212; First Day Hook</div><p style="font-family:var(--fb);font-size:12px;color:#555;line-height:1.6;font-weight:300;margin:0;">User is dropped into their Virtual Desktop. An onboarding email arrives in InboxAI. A welcome message appears on SlackSim from their AI manager. Then the problem lands: &#8220;Our regulatory reporting system is failing &#8212; we need a BRD by Wednesday.&#8221;</p></div>
+          </div>
+          <div style="display:grid;grid-template-columns:120px 1fr;gap:0;border-bottom:1px dashed #eee;padding-bottom:18px;margin-bottom:18px;">
+            <div style="padding-right:20px;padding-top:2px;"><div style="font-family:var(--fp);font-size:26px;color:#f0f0ee;line-height:1;">03</div><div style="font-family:var(--fm);font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:4px;">Deep Work</div></div>
+            <div><div style="font-family:var(--fm);font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--black);margin-bottom:6px;">Multi-App Workflow Execution</div><p style="font-family:var(--fb);font-size:12px;color:#555;line-height:1.6;font-weight:300;margin:0;">Draft requirements in DocVault. Analyse data in DataStudio. Track progress on the TaskBoard. Schedule stakeholder syncs in TeamCalendar. AI stakeholders respond dynamically to tone and clarity &#8212; CRS updates in real-time.</p></div>
+          </div>
+          <div style="display:grid;grid-template-columns:120px 1fr;gap:0;border-bottom:1px dashed #eee;padding-bottom:18px;margin-bottom:18px;">
+            <div style="padding-right:20px;padding-top:2px;"><div style="font-family:var(--fp);font-size:26px;color:#f0f0ee;line-height:1;">04</div><div style="font-family:var(--fm);font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:4px;">Curveball</div></div>
+            <div><div style="font-family:var(--fm);font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--black);margin-bottom:6px;">Dynamic Complexity Injection</div><p style="font-family:var(--fb);font-size:12px;color:#555;line-height:1.6;font-weight:300;margin:0;">Halfway through, the AI triggers a disruption &#8212; a stakeholder change, a data error, a shifting deadline. How you prioritise under pressure directly impacts your CRS score.</p></div>
+          </div>
+          <div style="display:grid;grid-template-columns:120px 1fr;gap:0;border-bottom:1px dashed #eee;padding-bottom:18px;margin-bottom:18px;">
+            <div style="padding-right:20px;padding-top:2px;"><div style="font-family:var(--fp);font-size:26px;color:#f0f0ee;line-height:1;">05</div><div style="font-family:var(--fm);font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:4px;">Presentation</div></div>
+            <div><div style="font-family:var(--fm);font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--black);margin-bottom:6px;">The MeetingRoom &#8212; Stakeholder Presentation</div><p style="font-family:var(--fb);font-size:12px;color:#555;line-height:1.6;font-weight:300;margin:0;">The journey culminates in a simulated video call where the user presents findings to a panel of AI stakeholders &#8212; practising verbal communication and executive presence.</p></div>
+          </div>
+          <div style="display:grid;grid-template-columns:120px 1fr;gap:0;">
+            <div style="padding-right:20px;padding-top:2px;"><div style="font-family:var(--fp);font-size:26px;color:#f0f0ee;line-height:1;">06</div><div style="font-family:var(--fm);font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:4px;">Results</div></div>
+            <div><div style="font-family:var(--fm);font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--black);margin-bottom:6px;">8-Pillar CRS Scorecard + Certification</div><p style="font-family:var(--fb);font-size:12px;color:#555;line-height:1.6;font-weight:300;margin:0;">A comprehensive debrief breaks down Professionalism, Urgency, Analytical Thinking, Communication, and more. Pass the threshold and earn a verified digital certificate shareable on LinkedIn or with partner recruiters.</p></div>
+          </div>
+        </div>
+        <div style="padding:14px 28px;background:#fafaf8;border-top:1px dashed #eee;">
+          <p style="font-family:var(--fm);font-size:9px;letter-spacing:.1em;color:var(--muted);margin:0;text-transform:uppercase;">Journey: <span style="color:var(--black);">Landing &#8594; Dashboard &#8594; Catalog &#8594; Virtual Work (VDE) &#8594; Real-time Feedback &#8594; Certified CRS Score</span></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- TECH STACK -->
+    <div class="au-section" style="margin-bottom:48px;">
+      <div class="sec-lbl">Tech Stack</div>
+      <div style="border:1px dashed #bbb;background:#fff;position:relative;overflow:hidden;">
+        <div style="position:absolute;top:0;left:0;width:8px;height:8px;background:var(--red);"></div>
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;border-bottom:1px dashed #eee;">
+          <div style="padding:22px 24px;border-right:1px dashed #e8e8e8;">
+            <div style="font-family:var(--fm);font-size:8px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--black);margin-bottom:12px;padding-bottom:8px;border-bottom:1px dashed #eee;">Frontend</div>
+            <ul class="au-list"><li>Next.js 14 (App Router)</li><li>TypeScript</li><li>Tailwind CSS &#8212; B2B SaaS light theme</li><li>Framer Motion for transitions</li></ul>
+          </div>
+          <div style="padding:22px 24px;border-right:1px dashed #e8e8e8;">
+            <div style="font-family:var(--fm);font-size:8px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--black);margin-bottom:12px;padding-bottom:8px;border-bottom:1px dashed #eee;">Backend</div>
+            <ul class="au-list"><li>FastAPI (Python)</li><li>PostgreSQL</li><li>Redis for caching and queues</li><li>WebSockets for live score updates</li></ul>
+          </div>
+          <div style="padding:22px 24px;">
+            <div style="font-family:var(--fm);font-size:8px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--black);margin-bottom:12px;padding-bottom:8px;border-bottom:1px dashed #eee;">AI + Infra</div>
+            <ul class="au-list"><li>Claude / Anthropic API</li><li>Dockerised monorepo</li><li>Ready for high-scale deployment</li></ul>
+          </div>
+        </div>
+        <div style="padding:16px 24px;background:#fafaf8;">
+          <p style="font-family:var(--fb);font-size:12px;color:#888;line-height:1.6;font-weight:300;margin:0;font-style:italic;">Design aesthetic: Premium B2B SaaS &#8212; clean light theme, sophisticated slate-gray accents, high-readability typography. Deliberately moved away from educational platform aesthetics toward something closer to Linear or Forage.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- TRY THE PROTOTYPE -->
+    <div class="au-section" style="margin-bottom:0;">
+      <div class="sec-lbl">Try the Prototype</div>
+      <div style="border:1px dashed #bbb;background:#0e0e0e;padding:32px 36px;position:relative;">
+        <div style="position:absolute;top:0;left:0;width:8px;height:8px;background:var(--red);"></div>
+        <div style="font-family:var(--fm);font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.28);margin-bottom:18px;">Recommended walkthrough to experience the student POV</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px;">
+          <div style="border:1px dashed rgba(255,255,255,.1);padding:18px 20px;">
+            <div style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:12px;">Step-by-step</div>
+            <ol style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:12px;">
+              <li style="font-family:var(--fb);font-size:12px;color:rgba(255,255,255,.65);font-weight:300;line-height:1.6;padding-left:22px;position:relative;"><span style="position:absolute;left:0;top:0;font-family:var(--fp);font-size:14px;color:var(--red);">1</span>Click <strong style="color:#fff;font-weight:500;">Get Started</strong> and enter any dummy information to create an account.</li>
+              <li style="font-family:var(--fb);font-size:12px;color:rgba(255,255,255,.65);font-weight:300;line-height:1.6;padding-left:22px;position:relative;"><span style="position:absolute;left:0;top:0;font-family:var(--fp);font-size:14px;color:var(--red);">2</span>Land on the <strong style="color:#fff;font-weight:500;">Dashboard</strong> &#8212; your student home base.</li>
+              <li style="font-family:var(--fb);font-size:12px;color:rgba(255,255,255,.65);font-weight:300;line-height:1.6;padding-left:22px;position:relative;"><span style="position:absolute;left:0;top:0;font-family:var(--fp);font-size:14px;color:var(--red);">3</span>Select <strong style="color:#fff;font-weight:500;">Corporate Simulation</strong> from the catalog.</li>
+              <li style="font-family:var(--fb);font-size:12px;color:rgba(255,255,255,.65);font-weight:300;line-height:1.6;padding-left:22px;position:relative;"><span style="position:absolute;left:0;top:0;font-family:var(--fp);font-size:14px;color:var(--red);">4</span>Choose <strong style="color:#fff;font-weight:500;">Business Analyst at JPMorgan</strong> to experience the full VM-type student POV.</li>
+            </ol>
+          </div>
+          <div style="border:1px dashed rgba(255,255,255,.1);padding:18px 20px;display:flex;flex-direction:column;gap:14px;">
+            <div>
+              <div style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:8px;">What to look for</div>
+              <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:7px;">
+                <li style="font-family:var(--fb);font-size:12px;color:rgba(255,255,255,.55);font-weight:300;line-height:1.5;display:flex;gap:8px;"><span style="color:var(--red);flex-shrink:0;">&#9632;</span>How the multi-app VDE simulates a real work environment</li>
+                <li style="font-family:var(--fb);font-size:12px;color:rgba(255,255,255,.55);font-weight:300;line-height:1.5;display:flex;gap:8px;"><span style="color:var(--red);flex-shrink:0;">&#9632;</span>The information architecture and user flow across tools</li>
+                <li style="font-family:var(--fb);font-size:12px;color:rgba(255,255,255,.55);font-weight:300;line-height:1.5;display:flex;gap:8px;"><span style="color:var(--red);flex-shrink:0;">&#9632;</span>The CRS scoring panel updating in real-time</li>
+                <li style="font-family:var(--fb);font-size:12px;color:rgba(255,255,255,.55);font-weight:300;line-height:1.5;display:flex;gap:8px;"><span style="color:var(--red);flex-shrink:0;">&#9632;</span>The premium B2B SaaS aesthetic vs. typical EdTech UI</li>
+              </ul>
+            </div>
+            <div style="padding-top:14px;border-top:1px dashed rgba(255,255,255,.08);">
+              <p style="font-family:var(--fb);font-size:11px;color:rgba(255,255,255,.35);font-weight:300;line-height:1.55;margin:0;">This is a prototype &#8212; some flows may be incomplete. The goal is to convey the product vision and architecture, not production-ready polish.</p>
+            </div>
+          </div>
+        </div>
+        <a href="https://corp-sim-zeta.vercel.app/" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:10px;background:var(--red);color:#fff;border:1px solid var(--red);padding:0 26px;height:46px;font-family:var(--fm);font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;transition:all .2s;"><span class="rsq" style="background:#fff;"></span> Open CorpSim AI Prototype &#8599;</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="divider"></div><div class="divider-dots"><span></span><span></span><span></span></div><div class="divider"></div>
+  <footer>
+    <div class="foot-inner"><a href="mailto:vidur2002@gmail.com" class="foot-email">&#9993;&nbsp; vidur2002@gmail.com</a><a href="https://in.linkedin.com/in/vidurr" target="_blank" rel="noopener noreferrer" class="foot-email">&#128279;&nbsp; linkedin.com/in/vidurr</a><span class="foot-credit">&#169; 2026</span></div>
+    <div class="foot-dark"><span>&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183; Designed &amp; Built by Vidur Ramachandran</span></div>
   </footer>
 </div>
 
@@ -1804,6 +2030,7 @@ function showPage(id){
   if(id==='visionlabs'){initVLCanvas();initMesh23();initMarioBg();}
   if(id==='about'){initBreakoutBg();}
   if(id==='hrsaas'){/* concept doc — no canvas */}
+  if(id==='corpsim'){/* concept doc — no canvas */}
   if(id==='finmonitor'){/* project doc — no canvas */}
 }
 
@@ -2436,13 +2663,13 @@ function initProjCanvas(){
     cx.beginPath();cx.moveTo(W*.05,thr);cx.lineTo(W*.95,thr);cx.stroke();
     cx.beginPath();cx.moveTo(W*.05,ltr);cx.lineTo(W*.95,ltr);cx.stroke();cx.restore();
     cx.font='8px "Space Mono",monospace';cx.fillStyle='rgba(224,48,48,.5)';cx.fillText('HIGH',W*.05,thr-4);cx.fillText('LOW',W*.05,ltr-4);
-    const vis=Math.min(data.length,Math.floor(t*.5)+1),xStep=(W*.9)/(data.length-1),sx=W*.05;
+    const done=t>=data.length*2;const vis=done?data.length:Math.min(data.length,Math.floor(t*.5)+1),xStep=(W*.9)/(data.length-1),sx=W*.05;
     cx.save();cx.beginPath();
     for(let i=0;i<vis;i++){const x=sx+i*xStep,y=H*.1+(1-data[i].v/100)*H*.8;if(i===0)cx.moveTo(x,y);else cx.lineTo(x,y);}
     cx.strokeStyle='#2a2a2a';cx.lineWidth=1.5;cx.setLineDash([]);cx.stroke();cx.restore();
-    for(let i=0;i<vis;i++){if(!data[i].anomaly)continue;const x=sx+i*xStep,y=H*.1+(1-data[i].v/100)*H*.8,pulse=Math.sin(t*.08+i)*.3+.7;cx.save();cx.globalAlpha=pulse;cx.strokeStyle='#E03030';cx.lineWidth=1.5;cx.setLineDash([]);cx.beginPath();cx.arc(x,y,5,0,Math.PI*2);cx.stroke();cx.globalAlpha=pulse*.3;cx.fillStyle='#E03030';cx.beginPath();cx.arc(x,y,5,0,Math.PI*2);cx.fill();cx.restore();}
+    for(let i=0;i<vis;i++){if(!data[i].anomaly)continue;const x=sx+i*xStep,y=H*.1+(1-data[i].v/100)*H*.8;cx.save();cx.globalAlpha=1;cx.strokeStyle='#E03030';cx.lineWidth=1.5;cx.setLineDash([]);cx.beginPath();cx.arc(x,y,5,0,Math.PI*2);cx.stroke();cx.globalAlpha=.25;cx.fillStyle='#E03030';cx.beginPath();cx.arc(x,y,5,0,Math.PI*2);cx.fill();cx.restore();}
     cx.font='8px "Space Mono",monospace';cx.fillStyle='rgba(0,0,0,.22)';cx.fillText('TRANSACTION ANOMALY MONITOR',W*.05,H-8);
-    if(t>140)t=0;requestAnimationFrame(loop);
+    if(!done) requestAnimationFrame(loop);
   }
   loop();
 }
@@ -2975,23 +3202,16 @@ function initMarioBg(){
 (function(){
   function initExpCards(){
     var cards=document.querySelectorAll('.exp-card');
-    cards.forEach(function(card){
-      card.addEventListener('mouseenter',function(){
-        cards.forEach(function(c){
-          if(c!==card){
-            c.querySelector('.exp-details').style.maxHeight='0';
-            c.querySelector('.exp-details').style.transition='none';
-          }
-        });
-      });
-      card.addEventListener('mouseleave',function(){
-        cards.forEach(function(c){
-          var d=c.querySelector('.exp-details');
-          d.style.maxHeight='';
-          d.style.transition='';
-        });
-      });
-    });
+    // Lock each card's min-height to its collapsed height so siblings never grow/shrink
+    function lockHeights(){
+      // Reset first
+      cards.forEach(function(c){ c.style.minHeight=''; });
+      var maxH=0;
+      cards.forEach(function(c){ if(c.offsetHeight>maxH) maxH=c.offsetHeight; });
+      cards.forEach(function(c){ c.style.minHeight=maxH+'px'; });
+    }
+    if(document.readyState==='complete'){ lockHeights(); }
+    else { window.addEventListener('load', lockHeights); }
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',initExpCards);
   else initExpCards();
