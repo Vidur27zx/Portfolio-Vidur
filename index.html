@@ -2008,6 +2008,7 @@ function showPage(id){
   const el=document.getElementById('nav-'+id);
   if(el) el.classList.add('active');
   window.scrollTo(0,0);
+  try{history.replaceState(null,'',id==='home'?window.location.pathname+'#home':'#'+id);}catch(e){}
   // show/hide scroll CTA — home only
   const cta=document.getElementById('scrollCta');
   if(cta){
@@ -2033,6 +2034,18 @@ function showPage(id){
   if(id==='corpsim'){/* concept doc — no canvas */}
   if(id==='finmonitor'){/* project doc — no canvas */}
 }
+
+// ── Deep link: restore page from URL hash ──
+(function(){
+  var VALID=['home','about','projects','visionlabs','hrsaas','corpsim','finmonitor'];
+  function routeHash(){
+    var hash=(window.location.hash||'').replace('#','').trim();
+    showPage((hash && VALID.indexOf(hash)!==-1)?hash:'home');
+  }
+  window.addEventListener('hashchange',routeHash);
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',routeHash);
+  else routeHash();
+})();
 
 function toggleMenu(){
   var links=document.getElementById('navLinks');
