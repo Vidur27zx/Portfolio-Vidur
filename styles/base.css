@@ -1,0 +1,88 @@
+/* ── 1. VARIABLES & RESET ── */
+:root {
+  font-size: 110%; /* Reverted to 110% to fix layout bloating */
+  --bg:#F8F9FA;--white:#ffffff;--black:#000000;
+  --muted:#666666;--red:#E03030;
+  --glass:rgba(255,255,255,0.7);
+  --border:rgba(0,0,0,0.06);
+  --fp:'VT323',monospace;--fm:'Space Mono',monospace;--fb:'DM Sans',sans-serif;
+  --mx: 0px;
+  --my: 0px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--bg);
+  color:var(--black);
+  font-family:var(--fm);
+  overflow-x:hidden;
+  position:relative;
+  min-height: 100vh;
+}
+
+/* Nothing OS Style Dot Matrix Background */
+body::before{
+  content:'';
+  position:fixed;
+  inset:0;
+  z-index:-2;
+  pointer-events:none;
+  background-image: radial-gradient(rgba(0,0,0,0.04) 1.5px, transparent 1.5px);
+  background-size: 24px 24px;
+  mask-image: radial-gradient(circle at var(--mx) var(--my), #000 0%, rgba(0,0,0,0.3) 15%, rgba(0,0,0,0.05) 45%);
+  -webkit-mask-image: radial-gradient(circle at var(--mx) var(--my), #000 0%, rgba(0,0,0,0.3) 15%, rgba(0,0,0,0.05) 45%);
+}
+
+/* Dynamic Nothing-style mesh background */
+body {
+  background-color: #ffffff;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  inset: -10%;
+  z-index: -1;
+  pointer-events: none;
+  background: 
+    radial-gradient(circle at 5% 15%, rgba(224, 48, 48, 0.2), transparent 25%),
+    radial-gradient(circle at 95% 85%, rgba(60, 60, 60, 0.15), transparent 30%),
+    radial-gradient(circle at 85% 10%, rgba(40, 100, 200, 0.1), transparent 25%),
+    radial-gradient(circle at 15% 75%, rgba(224, 48, 48, 0.08), transparent 25%);
+  filter: blur(40px);
+  background-size: 130% 130%;
+  animation: floatBackground 35s ease-in-out infinite alternate;
+}
+
+/* Highly visible Nothing-style grid & texture */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  background-image: 
+    radial-gradient(rgba(0,0,0,0.18) 1.5px, transparent 1.5px),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  background-size: 32px 32px, 300px 300px;
+  opacity: 0.2;
+}
+
+@keyframes floatBackground {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(-2%, -2%) scale(1.1); }
+}
+
+.page {
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  transform: translateY(10px);
+  opacity: 0;
+  display: none;
+}
+
+.page.active {
+  display: block;
+}
+

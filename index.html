@@ -1,0 +1,1788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vidur Ramachandran — Business Analyst & Automation Strategist</title>
+  
+  <!-- SEO Metadata -->
+  <meta name="description" content="Business Analyst & Automation Strategist specializing in high-performance operations architecture, GenAI workflow deployment, and product lifecycle management.">
+  <meta name="author" content="Vidur Ramachandran">
+  <meta name="keywords" content="Business Analyst, Automation Strategist, Product Lifecycle, Operations Architecture, n8n, Supabase, Next.js, Portfolio, Vidur Ramachandran, Deloitte, Acumen Connect">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://vidur.me/">
+  <meta property="og:title" content="Vidur Ramachandran — Systems &amp; Automation Strategist">
+  <meta property="og:description" content="Building the future of operational infrastructure through systems thinking and automation.">
+  <meta property="og:image" content="https://vidur.me/assets/og-preview.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://vidur.me/">
+  <meta property="twitter:title" content="Vidur Ramachandran — Systems &amp; Automation Strategist">
+  <meta property="twitter:description" content="Building the future of operational infrastructure through systems thinking and automation.">
+  <meta property="twitter:image" content="https://vidur.me/assets/og-preview.png">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/fav-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/fav-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+<link href="https://fonts.googleapis.com/css2?family=VT323&family=Space+Mono:wght@400;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="./styles/base.css">
+<link rel="stylesheet" href="./styles/layout.css">
+<link rel="stylesheet" href="./styles/components.css">
+<link rel="stylesheet" href="./styles/pages/home.css">
+<link rel="stylesheet" href="./styles/pages/projects.css">
+<link rel="stylesheet" href="./styles/pages/visionlabs.css">
+<link rel="stylesheet" href="./styles/pages/about.css">
+<link rel="stylesheet" href="./styles/pages/hrsaas.css">
+<link rel="stylesheet" href="./styles/pages/corpsim.css">
+<link rel="stylesheet" href="./styles/pages/finmonitor.css">
+<link rel="stylesheet" href="./styles/pages/roastmoney.css">
+<link rel="stylesheet" href="./styles/pages/validateidea.css">
+<link rel="stylesheet" href="./styles/animations.css">
+<link rel="stylesheet" href="./styles/generated-inline.css">
+<link rel="stylesheet" href="./styles/responsive.css">
+
+<script defer src="https://cdn.vercel-insights.com/v1/speed-insights/script.js"></script>
+<script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <span class="nav-logo" data-onclick="showPage('home');closeMenu()">Vidur(s) Portfolio (╯°□°）╯</span>
+  <div class="nav-line"></div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#home" data-onclick="showPage('home');closeMenu()" id="nav-home">Home</a></li>
+    <li><a href="#about" data-onclick="showPage('about');closeMenu()" id="nav-about">About</a></li>
+    <li><a href="#projects" data-onclick="showPage('projects');closeMenu()" id="nav-projects">Projects</a></li>
+    <li><a href="#visionlabs" data-onclick="showPage('visionlabs');closeMenu()" id="nav-visionlabs">Vision Labs</a></li>
+    <li><a href="#" onclick="downloadResume();return false;" class="nav-resume-blink cta-glint">DOWNLOAD RESUME</a></li>
+  </ul>
+  <button class="nav-hamburger" id="navHamburger" data-onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ════════════════════ HOME ════════════════════ -->
+<div id="page-home" class="page active">
+  <section id="hero">
+    <canvas id="gameCanvas" aria-label="Interactive arcade background game"></canvas>
+    <div class="hero-fade-top"></div>
+    <div class="hero-fade-bot"></div>
+    <div class="hud">
+      <div class="hud-col">
+        <div class="hud-lbl">Score</div>
+        <div class="hud-val" id="scoreNum">000</div>
+        <div class="hud-hi">HI: <span id="hiNum">000</span></div>
+        <div class="lives-row" id="livesRow">
+          <div class="life"></div><div class="life"></div><div class="life"></div>
+        </div>
+      </div>
+      <div class="hud-col right">
+        <div class="hud-lbl">Wave</div>
+        <div class="hud-val" id="waveNum">01</div>
+      </div>
+    </div>
+    <div id="gameOver"><div class="go-box"><div class="go-title">SYSTEM FAILURE</div><div class="go-sub" id="goSub"></div><div class="go-bar inl-0001"><div class="go-fill" id="goFill"></div></div></div></div>
+    <div id="replayChip">
+      <div id="replayChipTitle">SYSTEM FAILURE</div>
+      <button id="replayChipBtn" data-onclick="replayGame()">↺ Play Again</button>
+    </div>
+    <!-- Scroll Nudge Popup -->
+    <div id="scrollNudge" class="scroll-nudge-popup">
+      <div class="nudge-content">
+        <span class="nudge-icon">↓</span>
+        <span class="nudge-text">Scroll to explore</span>
+      </div>
+    </div>
+    <div id="gameInteractOverlay" class="inl-0002"><div class="game-interact-pill" id="gamePill"></div></div>
+    <div id="heroGameHint" class="inl-0003">
+      <span class="inl-0004"></span>
+      <span class="inl-0005">Move &amp; Click to Shoot</span>
+    </div>
+    <div class="hero-text">
+      <h1 class="hero-name">VIDUR RAMACHANDRAN</h1>
+      <div class="hero-sub"><span class="hero-sub-dot"></span> Business · Data · Product <span class="hero-sub-dot"></span></div>
+      <p class="hero-tag">Curious about systems<br>Careful with data</p>
+      <div class="hire-badge"><span class="hire-dot"></span> Available Immediately</div>
+    </div>
+  </section>
+
+  <!-- MOBILE SCROLL CTA -->
+  <div class="scroll-cta" id="scrollCta">
+    <div class="scroll-cta-line"></div>
+    <span class="scroll-cta-text">Scroll to explore</span>
+    <div class="scroll-cta-arrow">↓</div>
+  </div>
+
+  <!-- SYSTEMS I HAVE WORKED WITH -->
+  <div class="systems-strip">
+    <div class="systems-lbl-row">Systems I Have Worked With</div>
+    <div id="homeSystemsGrid" class="systems-grid"></div>
+  </div>
+
+  <!-- ABOUT STRIP -->
+  <div class="about-strip">
+    <div>
+      <div class="about-lbl">Profile</div>
+      <h2 class="about-hl">Systems<br>thinker.<br>Automation<br><em>builder.</em></h2>
+    </div>
+    <div class="about-body">
+      <div class="about-lbl">About me</div>
+      <p>2.5+ years of professional experience across consulting and an early-stage startup, supporting <strong class="inl-0006">software validation</strong>, <strong class="inl-0006">data systems</strong>, and <strong class="inl-0006">automation</strong> alongside product and engineering teams. Comfortable in fast-paced environments that require <strong class="inl-0006">structured problem-solving</strong>, <strong class="inl-0006">documentation</strong>, and <strong class="inl-0006">cross-functional coordination</strong>.</p>
+      <p>Currently freelancing as a <strong class="inl-0006">Business Analyst</strong> and <strong class="inl-0006">GenAI Automation Consultant</strong>. Founder of Mesh23.</p>
+      <div class="about-tags" id="homeAboutTags"></div>
+    </div>
+  </div>
+
+  <div class="divider"></div><div class="divider-dots"><span></span><span></span><span></span></div><div class="divider"></div>
+
+  <!-- EXPERIENCE -->
+  <div class="wrap inl-0007">
+    <div class="sec-lbl">Experience</div>
+    <div class="exp-grid" id="homeExperienceGrid"></div>
+  </div>
+
+  <div class="divider"></div><div class="divider-dots"><span></span><span></span><span></span></div><div class="divider"></div>
+
+  <!-- SYSTEMS IMPACT (expandable accordion) -->
+  <div class="wrap inl-0007">
+    <div class="sec-lbl">Systems Impact</div>
+    <div class="impact-list" id="homeImpactList"></div>
+  </div>
+
+  <div class="divider"></div><div class="divider-dots"><span></span><span></span><span></span></div><div class="divider"></div>
+
+  <!-- CARDS -->
+  <div class="wrap inl-0008">
+    <div class="cards-grid inl-0009">
+      <div class="feat-card inl-0010">
+        <div class="fc-corner"></div>
+        <div class="mini-card-inner inl-0011">
+          <div class="mini-preview inl-0012"><canvas id="miniCanvas" aria-label="Interactive mini preview animation"></canvas></div>
+          <div class="card-lbl inl-0013">
+            <span class="rsq"></span>
+            <div class="card-title">Play with tech,<br>learn through fun.</div>
+          </div>
+          <button class="card-cta" data-onclick="showPage('visionlabs')"><span class="rsq"></span> Explore Vision Labs</button>
+        </div>
+      </div>
+      <div class="feat-card inl-0014" data-onclick="showPage('projects')">
+        <div class="fc-corner"></div>
+        <div class="proj-card-inner inl-0011">
+          <div class="card-big-title">Projects</div>
+          <div class="proj-list inl-0015" id="homeProjectPreview"></div>
+          <button class="card-cta cta-glint" onclick="showPage('projects')">
+      <span class="rsq"></span>
+      <span>View All Projects</span>
+    </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta-section">
+    <div class="cta-eyebrow">Business Analyst &nbsp;·&nbsp; Automation Engineer &nbsp;·&nbsp; Associate PM</div>
+    <div class="cta-title">Your next hire<br><em>is right here</em></div>
+    <p class="inl-0016">2.5 years of real work across data systems, automation, and product operations. Available immediately. Open to full-time, contract, and remote roles globally.</p>
+    <div class="cta-links">
+      <a href="mailto:vidur2002@gmail.com" class="cta-btn primary"><span class="cta-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg></span><span>Email Me</span></a>
+      <a href="https://cal.com/vidur-r-a55ab0" target="_blank" rel="noopener noreferrer" class="cta-btn secondary"><span class="cta-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span><span>Schedule a Call</span></a>
+      <a href="https://in.linkedin.com/in/vidurr" target="_blank" rel="noopener noreferrer" class="cta-btn secondary"><span class="cta-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></span><span>LinkedIn</span></a>
+      <button class="cta-btn secondary" data-onclick="downloadResume()"><span class="cta-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7,10 12,15 17,10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></span><span>Resume PDF</span></button>
+    </div>
+    <div class="cta-avail">Currently <strong>available</strong> · Hyderabad, IN · Open to relocation</div>
+  </div>
+
+  <div class="divider"></div><div class="divider-dots"><span></span><span></span><span></span></div><div class="divider"></div>
+  <footer>
+    <div class="foot-inner">
+      <div class="foot-pokemon" style="background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22%23FCD12A%22%3E%3Cpath d=%22M2 2v20h20V2H2zm4 4h2v2H6V6zm10 0h2v2h-2V6zM8 10h8v4h-2v2h-4v-2H8v-4zm0 6h2v2H8v-2zm6 0h2v2h-2v-2z%22/%3E%3C/svg%3E');"></div>
+      <a href="mailto:vidur2002@gmail.com" class="foot-email">&#9993;&nbsp; vidur2002@gmail.com</a>
+      <a href="https://in.linkedin.com/in/vidurr" target="_blank" rel="noopener noreferrer" class="foot-email">&#128279;&nbsp; linkedin.com/in/vidurr</a>
+      <span class="foot-credit">© 2026</span>
+    </div>
+    <div class="foot-dark"><span>·············· Designed &amp; Built by Vidur Ramachandran</span></div>
+  </footer>
+</div>
+
+<!-- ════════════════════ ABOUT ════════════════════ -->
+<div id="page-about" class="page">
+
+  <!-- ABOUT HERO — dark, full-bleed -->
+  <div class="inl-0017 page-hero-with-game">
+    <canvas id="aboutHeaderCanvas" class="section-header-game" aria-label="Decorative section header background"></canvas>
+    <!-- decorative grid lines -->
+    <div class="inl-0018"></div>
+    <div class="wrap inl-0019">
+      <div class="inl-0020">
+        <span class="inl-0021"></span> 01 / About
+      </div>
+      <h1 class="inl-0022">VIDUR<br><span class="inl-0023">RAMACHANDRAN</span></h1>
+      <p class="inl-0024">Systems thinker. Automation builder. I take messy operational problems and turn them into documented, reliable systems that actually hold up.</p>
+    </div>
+  </div>
+
+  <div class="wrap inl-0025">
+
+    <!-- BIO + CONTACT row -->
+    <div class="au-section">
+      <div class="sec-lbl">Profile</div>
+      <div class="about-uniform-grid inl-0026">
+
+        <!-- Who I am — styled like a dossier card -->
+        <div class="inl-0027">
+          <div class="inl-0028"></div>
+          <div class="inl-0029">Who I am</div>
+          <p class="inl-0030">I'm <strong class="inl-0006">Vidur Ramachandran</strong>, a <strong class="inl-0006">Business Analyst</strong> and <strong class="inl-0006">GenAI Automation Consultant</strong> with 2.5+ years of professional experience across consulting and an early-stage startup. I support <strong class="inl-0006">software validation</strong>, <strong class="inl-0006">data systems</strong>, and <strong class="inl-0006">automation</strong> alongside product and engineering teams.</p>
+          <p class="inl-0030">At <strong class="inl-0006">Deloitte USI</strong>, I worked on <strong class="inl-0006">enterprise CDP systems</strong> for <strong class="inl-0006">Fortune 500 clients</strong> — conducting <strong class="inl-0006">root cause analysis</strong> on data pipeline failures and building <strong class="inl-0006">automation frameworks</strong>. Before that, at <strong class="inl-0006">Acumen Connect</strong>, I owned <strong class="inl-0006">product and ops</strong> tasks in a fast-paced startup.</p>
+          <p class="inl-0031">I'm comfortable in fast-paced environments that demand <strong class="inl-0006">structured problem-solving</strong>, <strong class="inl-0006">documentation</strong>, and <strong class="inl-0006">cross-functional coordination</strong>. Currently freelancing and building <strong class="inl-0006">Mesh23</strong>, delivering <strong class="inl-0006">AI-driven workflow solutions</strong> for SMBs.</p>
+        </div>
+
+        <!-- Contact + Location stacked -->
+        <div class="inl-0032">
+          <div class="inl-0033">
+            <div class="inl-0028"></div>
+            <div class="inl-0034">Contact</div>
+            <div class="au-contact-list">
+              <a href="mailto:vidur2002@gmail.com" class="au-contact-item"><span class="au-ci-icon">✉</span>vidur2002@gmail.com</a>
+              <span class="au-contact-item"><span class="au-ci-icon">✆</span>+91 88978 05834</span>
+              <a href="https://in.linkedin.com/in/vidurr" target="_blank" rel="noopener noreferrer" class="au-contact-item"><span class="au-ci-icon">in</span>linkedin.com/in/vidurr</a>
+              <span class="au-contact-item"><span class="au-ci-icon au-ci-green">●</span><span class="inl-0035">Available Immediately</span></span>
+            </div>
+          </div>
+          <div class="inl-0033">
+            <div class="inl-0028"></div>
+            <div class="inl-0036">Location &amp; Visa</div>
+            <p class="inl-0037">Hyderabad, India<br>Open to remote &amp; relocation<br><span class="inl-0038"><strong>B1/B2 US Business Visa</strong> — valid · 10-year</span><br><span class="inl-0039">Comfortable with EST / PST-aligned shifts &amp; overnight hours</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SKILLS — horizontal bands instead of cards -->
+    <div class="au-section">
+      <div class="sec-lbl">Skills</div>
+      <div class="inl-0040">
+        <div class="inl-0028"></div>
+        <div class="inl-0041">
+          <div class="inl-0042">
+            <div class="inl-0043">Data &amp; Analytics</div>
+            <ul class="au-list"><li>SQL — BigQuery, MySQL</li><li>Python · Java Scripting</li><li>Apache Airflow</li><li>JSON Schema Validation</li><li>Anomaly Detection</li><li>VBA / Macros</li></ul>
+          </div>
+          <div class="inl-0042">
+            <div class="inl-0043">Platforms &amp; Automation</div>
+            <ul class="au-list"><li>Adobe Experience Platform (AEP)</li><li>Adobe Journey Optimizer (AJO)</li><li>BigQuery / Firebase</li><li>n8n / Lindy AI</li><li>GenAI Workflow Automation</li></ul>
+          </div>
+          <div class="inl-0044">
+            <div class="inl-0043">Testing &amp; Validation</div>
+            <ul class="au-list"><li>Test Case Design</li><li>Functional &amp; Automation Testing</li><li>Software Validation</li><li>Defect Analysis &amp; Debugging</li><li>Root Cause Analysis</li></ul>
+          </div>
+        </div>
+        <div class="inl-0045">
+          <div class="inl-0042">
+            <div class="inl-0043">Business Analysis &amp; Ops</div>
+            <ul class="au-list"><li>Program Tracking &amp; Milestone Monitoring</li><li>Risk &amp; Issue Tracking</li><li>Dashboard Creation &amp; Status Reporting</li><li>SOPs &amp; Runbooks</li><li>Process Documentation</li></ul>
+          </div>
+          <div class="inl-0044">
+            <div class="inl-0043">Collaboration &amp; Communication</div>
+            <ul class="au-list"><li>Cross-functional Coordination</li><li>Stakeholder Communication (Technical &amp; Non-technical)</li><li>EST / PST-aligned Remote Work</li><li>Comfortable with Overnight &amp; Global Shifts</li></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- EXPERIENCE — resume bullets verbatim -->
+    <div class="au-section">
+      <div class="sec-lbl">Experience</div>
+      <div class="inl-0032">
+
+        <!-- Freelance -->
+        <div class="au-exp-dossier">
+          <div class="inl-0028"></div>
+          <div class="au-exp-left">
+            <div>
+              <div class="inl-0046">Freelance</div>
+              <div class="inl-0047">Business Analyst &amp;<br>GenAI Automation<br>Consultant</div>
+            </div>
+            <div class="inl-0048">Jul 2025 — Present<br><span class="inl-0049">Hyderabad</span></div>
+          </div>
+          <div class="inl-0044">
+            <ul class="au-list au-list-spaced">
+              <li>Translated <strong class="inl-0006">business requirements</strong> into structured <strong class="inl-0006">user stories</strong> and collaborated with developers to deliver <strong class="inl-0006">automation-driven workflows</strong>.</li>
+              <li>Led <strong class="inl-0006">CX analysis</strong> and <strong class="inl-0006">feature refinement</strong> initiatives, improving <strong class="inl-0006">product usability</strong> and stakeholder alignment.</li>
+              <li>Designed and deployed <strong class="inl-0006">GenAI + n8n automation solutions</strong> for SMB clients, streamlining manual processes and <strong class="inl-0006">reducing operational effort</strong>.</li>
+              <li>Founded and operated <strong class="inl-0006">Mesh23</strong>: a freelance automation initiative delivering <strong class="inl-0006">AI-driven workflow optimization</strong>.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Deloitte -->
+        <div class="au-exp-dossier inl-0050">
+          <div class="inl-0028"></div>
+          <div class="au-exp-left">
+            <div>
+              <div class="inl-0046">Deloitte<br>USI</div>
+              <div class="inl-0047">Consulting Associate<br>Analyst (Engineering<br>Support / Developer)</div>
+            </div>
+            <div class="inl-0048">Feb 2024 — Jun 2025<br><span class="inl-0049">Hyderabad</span></div>
+          </div>
+          <div class="inl-0044">
+            <div class="inl-0051">Fortune 500 clients: <strong class="inl-0052">Wells Fargo</strong> (Feb–Nov 2024) &amp; <strong class="inl-0052">LG</strong> (Dec 2024–Jun 2025)</div>
+            <ul class="au-list au-list-spaced">
+              <li>Performed <strong class="inl-0006">root cause analysis</strong> and <strong class="inl-0006">failure investigation</strong> on recurring <strong class="inl-0006">data pipeline failures</strong> within <strong class="inl-0006">Adobe Experience Platform</strong>, utilizing <strong class="inl-0006">SQL-based audits</strong> and validation checks to trace issues across ingestion, transformation, and activation workflows — <strong class="inl-0006">reducing incident resolution time by 28%</strong>.</li>
+              <li>Conducted <strong class="inl-0006">data validation</strong> and <strong class="inl-0006">error pattern analysis</strong> on large datasets (<strong class="inl-0006">5–18M+ records</strong>) to identify <strong class="inl-0006">schema mismatches</strong> and system inconsistencies impacting customer workflows — <strong class="inl-0006">improving data reliability by 16%</strong>.</li>
+              <li>Contributed to the design and testing of <strong class="inl-0006">Python-based validation automation</strong> to filter and verify live data before ingestion into downstream systems.</li>
+              <li>Supported <strong class="inl-0006">QA, validation, and troubleshooting workflows</strong> using <strong class="inl-0006">AI-assisted tools</strong> to accelerate checks during development; documented recurring issues into <strong class="inl-0006">SOPs and runbooks</strong>.</li>
+              <li>Collaborated with <strong class="inl-0006">engineering, product, and operations teams</strong> to validate fixes, monitor <strong class="inl-0006">post-launch system behaviour</strong>, and track issue resolution — recommending improvements based on <strong class="inl-0006">data insights</strong>.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Acumen Connect -->
+        <div class="au-exp-dossier">
+          <div class="inl-0028"></div>
+          <div class="au-exp-left">
+            <div>
+              <div class="inl-0046">Acumen<br>Connect</div>
+              <div class="inl-0047">Product Intern →<br>Product Development Associate<br><span class="inl-0053">(Early-Stage Startup)</span></div>
+            </div>
+            <div class="inl-0048">Jan 2023 — Feb 2024<br><span class="inl-0049">Hyderabad</span></div>
+          </div>
+          <div class="inl-0044">
+            <ul class="au-list au-list-spaced">
+              <li>Operated in a <strong class="inl-0006">fast-paced startup environment</strong> with high accountability, taking ownership of <strong class="inl-0006">operational and product-related tasks</strong> with limited guidance.</li>
+              <li>Identified recurring <strong class="inl-0006">operational inefficiencies</strong> and converted fixes into <strong class="inl-0006">6+ documented SOPs</strong>, improving <strong class="inl-0006">interdepartmental coordination efficiency by 15%</strong>.</li>
+              <li>Collaborated with freelancers and marketing team to translate <strong class="inl-0006">business requirements</strong> into <strong class="inl-0006">structured tasks</strong> and <strong class="inl-0006">feature validation scenarios</strong> for freelance developers.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- EDUCATION -->
+    <div class="au-section inl-0054">
+      <div class="sec-lbl">Education</div>
+      <div class="inl-0055">
+        <div class="inl-0028"></div>
+        <div class="inl-0056">
+          <div class="inl-0046">BCA</div>
+          <div class="inl-0057">2020 – 2023</div>
+        </div>
+        <div class="inl-0058">
+          <div class="inl-0059">Bachelor of Computer Applications</div>
+          <div class="inl-0060">Symbiosis Institute of Computer Studies &amp; Research, Pune</div>
+          <span class="inl-0061">CGPA 7.9/10</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="divider"></div><div class="divider-dots"><span></span><span></span><span></span></div><div class="divider"></div>
+  <footer>
+    <div class="foot-inner"><div class="foot-pokemon" style="background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22%23FFCA44%22%3E%3Cpath d=%22M4 2v20h16V2H4zm4 4h2v2H8V6zm4 0h2v2h-2V6zm-6 6h12v4h-2v2H8v-2H6v-4z%22/%3E%3C/svg%3E');"></div><a href="mailto:vidur2002@gmail.com" class="foot-email">&#9993;&nbsp; vidur2002@gmail.com</a><a href="https://in.linkedin.com/in/vidurr" target="_blank" rel="noopener noreferrer" class="foot-email">&#128279;&nbsp; linkedin.com/in/vidurr</a><span class="foot-credit">© 2026</span></div>
+    <div class="foot-dark"><span>·············· Designed &amp; Built by Vidur Ramachandran</span></div>
+  </footer>
+</div>
+
+<!-- ════════════════════ PROJECTS ════════════════════ -->
+<div id="page-projects" class="page">
+  <!-- PROJECTS HERO — dark, full-bleed -->
+  <div class="inl-0017 page-hero-with-game">
+    <canvas id="projectsHeaderCanvas" class="section-header-game" aria-label="Decorative section header background"></canvas>
+    <div class="inl-0018"></div>
+    <div class="wrap inl-0019">
+      <div class="inl-0020">
+        <span class="inl-0021"></span> 02 / Work
+      </div>
+      <h1 class="inl-0022">Systems<br><span class="inl-0023">Built</span></h1>
+      <p class="inl-0024">Automated systems, analytical frameworks, and workflow tools built across enterprise consulting and independent work. Each one starts with a real problem.</p>
+    </div>
+  </div>
+  <div class="wrap inl-0062">
+    <div class="projects-grid" id="projectsGrid"></div>
+  </div>
+  <!-- CASE STUDY -->
+  <div class="wrap inl-0054">
+    <div class="sec-lbl">Deep Dive · Case Study</div>
+    <div class="case-study-card">
+      <div class="cs-header"><div class="cs-num">→</div><div><div class="cs-eyebrow">Enterprise Data Systems · Deloitte USI</div><h3 class="cs-title">Reducing Data Pipeline Failures in Adobe Experience Platform</h3></div></div>
+      <div class="cs-body">
+        <div class="cs-steps">
+          <div class="cs-step"><div class="cs-step-lbl"><span class="cs-step-num">01</span> Problem</div><p class="cs-step-text">A Fortune 500 client's Adobe AEP pipeline was producing silent failures. Customer segments weren't updating correctly and downstream marketing automations were firing on stale data. The team was manually checking logs with no structured process.</p></div>
+          <div class="cs-step"><div class="cs-step-lbl"><span class="cs-step-num">02</span> Investigation</div><p class="cs-step-text">Performed SQL audits across 18M+ records to identify where the pipeline was failing: schema mismatches, null propagation errors, and upstream ingestion delays. Mapped failure patterns across 8 weeks of pipeline logs to surface recurring root causes.</p></div>
+          <div class="cs-step"><div class="cs-step-lbl"><span class="cs-step-num">03</span> System Understanding</div><p class="cs-step-text">Built a mental model of the full data flow — from raw event ingestion through AEP identity resolution to segment activation. This revealed three structural failure points that were not visible in isolation.</p></div>
+          <div class="cs-step"><div class="cs-step-lbl"><span class="cs-step-num">04</span> Solution</div><p class="cs-step-text">Contributed to Python-based pre-ingestion validation scripts that caught malformed data before pipeline entry. Compiled each failure class into structured SOPs and worked with engineering to implement schema validation gates.</p></div>
+          <div class="cs-step"><div class="cs-step-lbl"><span class="cs-step-num">05</span> Outcome</div><p class="cs-step-text">28% reduction in average incident resolution time. Repeat escalations dropped by around 22%. The runbooks were adopted team-wide, turning individual knowledge into institutional memory.</p></div>
+        </div>
+        <div class="cs-sidebar">
+          <div class="cs-meta-block"><div class="cs-meta-lbl">Environment</div><div class="cs-meta-val">Adobe Experience Platform (AEP)</div></div>
+          <div class="cs-meta-block"><div class="cs-meta-lbl">Tools Used</div><div class="cs-meta-val">SQL · BigQuery · Python · Apache Airflow</div></div>
+          <div class="cs-meta-block"><div class="cs-meta-lbl">Role</div><div class="cs-meta-val">Associate Analyst — Investigation, Automation and Documentation</div></div>
+          <div class="cs-meta-block"><div class="cs-meta-lbl">Scale</div><div class="cs-meta-val">18M+ records · Fortune 500 client</div></div>
+          <div class="cs-outcomes"><div class="cs-out-item"><span class="cs-out-dot">■</span> 28% faster resolution</div><div class="cs-out-item"><span class="cs-out-dot">■</span> 22% fewer repeat incidents</div><div class="cs-out-item"><span class="cs-out-dot">■</span> 16% data reliability improvement</div><div class="cs-out-item"><span class="cs-out-dot">■</span> 6+ SOPs created</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="divider"></div><div class="divider-dots"><span></span><span></span><span></span></div><div class="divider"></div>
+  <footer>
+    <div class="foot-inner">
+      <div class="foot-pokemon" style="background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22%236390F0%22%3E%3Cpath d=%22M2 2v20h20V2H2zm10 4h4v4h-4V6zm-6 6h12v4h-2v2H8v-2H6v-4zm2 8h2v2H8v-2z%22/%3E%3C/svg%3E');"></div>
+      <a href="mailto:vidur2002@gmail.com" class="foot-email">&#9993;&nbsp; vidur2002@gmail.com</a>
+      <a href="https://in.linkedin.com/in/vidurr" target="_blank" rel="noopener noreferrer" class="foot-email">&#128279;&nbsp; linkedin.com/in/vidurr</a>
+      <span class="foot-credit">© 2026</span>
+    </div>
+    <div class="foot-dark"><span>·············· Designed &amp; Built by Vidur Ramachandran</span></div>
+  </footer>
+</div>
+
+<!-- ════════════════════ VISION LABS ════════════════════ -->
+<div id="page-visionlabs" class="page">
+  <div class="vl-hero">
+    <canvas id="vlCanvas" aria-label="Decorative Vision Labs background animation"></canvas>
+    <div class="inl-0018"></div>
+    <div class="vl-hero-fade"></div>
+    <div class="vl-hc">
+      <div class="vl-lbl">03 / Builder Lab</div>
+      <h1 class="vl-title">Vision<br><em>Labs</em></h1>
+      <p class="vl-desc">Where I experiment with startup ideas and automation systems. Not polished products — honest exploration. The best way to understand a problem space is to build something in it.</p>
+    </div>
+  </div>
+  <div class="wrap inl-0062">
+    <div class="sec-lbl">Lab Projects</div>
+    <div class="lab-grid" id="visionLabsGrid"></div>
+    <div class="sec-lbl">Builder Mindset</div>
+    <div class="philosophy">
+      <div class="phil-corner"></div>
+      <div class="phil-title">Build to Learn. Ship to Understand.</div>
+      <p class="phil-text">Vision Labs is a commitment to staying operationally sharp beyond formal job titles. Every project here is a real systems problem I've chosen to work on — an automation workflow, a SaaS prototype, or a business model stress-test. The experiments are messy. The thinking is real.</p>
+    </div>
+  </div>
+  <div class="divider"></div><div class="divider-dots"><span></span><span></span><span></span></div><div class="divider"></div>
+  <footer>
+    <div class="foot-inner">
+      <div class="foot-pokemon" style="background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22%237AC74C%22%3E%3Cpath d=%22M2 2v20h20V2H2zm8 4h4v2h-4V6zm-4 6h12v6h-4v2H8v-2H6v-6zm2 10h2v2H8v-2z%22/%3E%3C/svg%3E');"></div>
+      <a href="mailto:vidur2002@gmail.com" class="foot-email">&#9993;&nbsp; vidur2002@gmail.com</a>
+      <a href="https://in.linkedin.com/in/vidurr" target="_blank" rel="noopener noreferrer" class="foot-email">&#128279;&nbsp; linkedin.com/in/vidurr</a>
+      <span class="foot-credit">© 2026</span>
+    </div>
+    <div class="foot-dark"><span>·············· Designed &amp; Built by Vidur Ramachandran</span></div>
+  </footer>
+</div>
+
+<!-- ════════════════════ CORPSIM AI CONCEPT DOC ════════════════════ -->
+<div id="page-corpsim" class="page">
+
+  <!-- HERO -->
+  <div class="inl-0063">
+    <div class="inl-0018"></div>
+    <div class="inl-0064">
+      <div class="inl-0020">
+        <span class="inl-0021"></span>
+        <span data-onclick="showPage('visionlabs')" data-onmouseover="this.style.color='rgba(255,255,255,.6)'" data-onmouseout="this.style.color='rgba(255,255,255,.25)'" class="inl-0065">&#8592; Vision Labs</span>
+        <span class="inl-0066">/</span>
+        <span>Concept Doc</span>
+      </div>
+      <div class="inl-0067">
+        <div class="inl-0068">
+          <span class="inl-0069"></span> Prototype Built
+        </div>
+        <div class="inl-0070">
+          Built for EMELEX Solutions Pvt. Ltd.
+        </div>
+      </div>
+      <h1 class="inl-0071">Corp<em class="inl-0072">Sim</em><br>AI</h1>
+      <p class="inl-0073">A professional-grade, AI-powered corporate simulation platform that bridges the gap between campus life and the corporate world &#8212; built as a working prototype to give shape to a founder&#8217;s vision for what AI-native corporate readiness training could be.</p>
+      <div class="inl-0074">
+        <a href="https://corp-sim-zeta.vercel.app/" target="_blank" rel="noopener noreferrer" class="inl-0075"><span class="rsq inl-0076"></span> Try the Prototype</a>
+        <a href="https://www.pidot.in/" target="_blank" rel="noopener noreferrer" class="inl-0077">&#8599; EMELEX Solutions Pvt. Ltd.</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap inl-0078">
+
+    <!-- MY ROLE -->
+    <div class="au-section inl-0079">
+      <div class="sec-lbl">My Role</div>
+      <div class="inl-0080">
+        <div class="inl-0028"></div>
+        <p class="inl-0081"><strong class="inl-0006">EMELEX Solutions</strong> is building the next generation of corporate readiness training. Inspired by the founder&#8217;s vision, I wanted to build a demo prototype for him &#8212; my own understanding of what he was trying to create, translated into something tangible and explorable.</p>
+        <p class="inl-0031">This prototype is something I built independently, thinking like a product person: mapping the user journey end-to-end, defining the information architecture, prototyping the core experience, and documenting how it all fits together. It&#8217;s not a final product &#8212; it&#8217;s a high-fidelity signal of what this kind of product could feel and function like.</p>
+        <div class="inl-0082">
+          <span class="inl-0023">&#9632;</span>&nbsp; Deliverable: Prototype + Product Wireframe from a Product Person&#8217;s POV &#8212; a shareable signal of what the product architecture and experience could look like.
+        </div>
+      </div>
+    </div>
+
+    <!-- THE CONCEPT -->
+    <div class="au-section inl-0079">
+      <div class="sec-lbl">The Core Concept</div>
+      <div class="inl-0083">
+        <div class="inl-0084">
+          <div class="inl-0028"></div>
+          <div class="inl-0085">The Problem</div>
+          <ul class="au-list au-list-spaced">
+            <li>Students graduate with zero corporate context &#8212; no idea how to manage email, handle stakeholders, or prioritise under pressure.</li>
+            <li>Existing platforms are passive &#8212; videos and quizzes, not real work.</li>
+            <li>Internships are competitive and limited. Most students never get one before their first job.</li>
+            <li>Corporate readiness is untestable on a resume &#8212; it has to be demonstrated.</li>
+          </ul>
+        </div>
+        <div class="inl-0084">
+          <div class="inl-0028"></div>
+          <div class="inl-0085">The Solution</div>
+          <ul class="au-list au-list-spaced">
+            <li><strong class="inl-0086">CorpSim AI</strong> drops users into a Virtual Desktop Environment &#8212; their first day on the job.</li>
+            <li>AI-powered stakeholders respond to your emails, messages, and decisions dynamically.</li>
+            <li>Real tasks: write a BRD, analyse data, manage a Kanban board, present to a panel.</li>
+            <li>A proprietary 8-pillar <strong class="inl-0086">Corporate Readiness Score (CRS)</strong> benchmarks performance against real corporate standards.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- THE VDE -->
+    <div class="au-section inl-0079">
+      <div class="sec-lbl">The Virtual Desktop Environment</div>
+      <div class="inl-0040">
+        <div class="inl-0028"></div>
+        <div class="inl-0087">
+          <p class="inl-0088">The VDE is a multi-app interface containing everything a junior professional would need on day one. Users don&#8217;t &#8220;answer questions&#8221; &#8212; they actually work inside these tools simultaneously.</p>
+        </div>
+        <div class="inl-0089">
+          <div class="inl-0090">
+            <div class="inl-0091">InboxAI</div>
+            <p class="inl-0092">Intelligent email client where users manage AI-generated stakeholder communications. Claude responds dynamically to tone, clarity, and analytical depth.</p>
+          </div>
+          <div class="inl-0090">
+            <div class="inl-0091">SlackSim + TaskBoard</div>
+            <p class="inl-0092">Real-time chat simulation for team collaboration, plus a Kanban system for managing deliverables &#8212; mirroring actual project workflows.</p>
+          </div>
+          <div class="inl-0093">
+            <div class="inl-0091">DocVault + MeetingRoom</div>
+            <p class="inl-0092">Professional document editor for BRDs, specs, and reports &#8212; plus a video call simulator for stakeholder presentations and stand-ups.</p>
+          </div>
+        </div>
+        <div class="inl-0094">
+          <div class="inl-0090">
+            <div class="inl-0091">DataStudio + TeamCalendar</div>
+            <p class="inl-0092">Analytics and scheduling tools to round out the experience &#8212; modelling real analyst and PM workflows.</p>
+          </div>
+          <div class="inl-0093">
+            <div class="inl-0091">CRS Engine</div>
+            <p class="inl-0092">Proprietary 8-pillar scoring: Communication, Analytical Thinking, Urgency, Stakeholder Management, and more &#8212; updated in real-time as you work.</p>
+          </div>
+        </div>
+        <div class="inl-0095">
+          <p class="inl-0096">AI Engine: Claude/Anthropic generates dynamic content (emails, documents) and provides objective managerial grading on all user outputs. The AI acts as your manager, colleague, and evaluator simultaneously.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- USER JOURNEY -->
+    <div class="au-section inl-0079">
+      <div class="sec-lbl">The User Journey</div>
+      <div class="inl-0097">
+        <div class="inl-0028"></div>
+        <div class="inl-0098">Designed to feel less like a test, more like your first week on the job.</div>
+        <div class="inl-0099">
+          <div class="inl-0100">
+            <div class="inl-0101"><div class="inl-0102">01</div><div class="inl-0103">Discovery</div></div>
+            <div><div class="inl-0104">Landing &#8594; Simulation Catalog</div><p class="inl-0092">User enters through a professional portal and browses a library of Experience Templates &#8212; e.g. &#8220;Business Analyst at JPMorgan&#8221; or &#8220;Risk Analysis at McKinsey&#8221;. Each shows difficulty, skills practiced, and partner certifications available.</p></div>
+          </div>
+          <div class="inl-0100">
+            <div class="inl-0101"><div class="inl-0102">02</div><div class="inl-0103">Immersion</div></div>
+            <div><div class="inl-0104">Enter the VDE &#8212; First Day Hook</div><p class="inl-0092">User is dropped into their Virtual Desktop. An onboarding email arrives in InboxAI. A welcome message appears on SlackSim from their AI manager. Then the problem lands: &#8220;Our regulatory reporting system is failing &#8212; we need a BRD by Wednesday.&#8221;</p></div>
+          </div>
+          <div class="inl-0100">
+            <div class="inl-0101"><div class="inl-0102">03</div><div class="inl-0103">Deep Work</div></div>
+            <div><div class="inl-0104">Multi-App Workflow Execution</div><p class="inl-0092">Draft requirements in DocVault. Analyse data in DataStudio. Track progress on the TaskBoard. Schedule stakeholder syncs in TeamCalendar. AI stakeholders respond dynamically to tone and clarity &#8212; CRS updates in real-time.</p></div>
+          </div>
+          <div class="inl-0100">
+            <div class="inl-0101"><div class="inl-0102">04</div><div class="inl-0103">Curveball</div></div>
+            <div><div class="inl-0104">Dynamic Complexity Injection</div><p class="inl-0092">Halfway through, the AI triggers a disruption &#8212; a stakeholder change, a data error, a shifting deadline. How you prioritise under pressure directly impacts your CRS score.</p></div>
+          </div>
+          <div class="inl-0100">
+            <div class="inl-0101"><div class="inl-0102">05</div><div class="inl-0103">Presentation</div></div>
+            <div><div class="inl-0104">The MeetingRoom &#8212; Stakeholder Presentation</div><p class="inl-0092">The journey culminates in a simulated video call where the user presents findings to a panel of AI stakeholders &#8212; practising verbal communication and executive presence.</p></div>
+          </div>
+          <div class="inl-0105">
+            <div class="inl-0101"><div class="inl-0102">06</div><div class="inl-0103">Results</div></div>
+            <div><div class="inl-0104">8-Pillar CRS Scorecard + Certification</div><p class="inl-0092">A comprehensive debrief breaks down Professionalism, Urgency, Analytical Thinking, Communication, and more. Pass the threshold and earn a verified digital certificate shareable on LinkedIn or with partner recruiters.</p></div>
+          </div>
+        </div>
+        <div class="inl-0106">
+          <p class="inl-0107">Journey: <span class="inl-0108">Landing &#8594; Dashboard &#8594; Catalog &#8594; Virtual Work (VDE) &#8594; Real-time Feedback &#8594; Certified CRS Score</span></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- TECH STACK -->
+    <div class="au-section inl-0079">
+      <div class="sec-lbl">Tech Stack</div>
+      <div class="inl-0040">
+        <div class="inl-0028"></div>
+        <div class="inl-0089">
+          <div class="inl-0042">
+            <div class="inl-0109">Frontend</div>
+            <ul class="au-list"><li>Next.js 14 (App Router)</li><li>TypeScript</li><li>Tailwind CSS &#8212; B2B SaaS light theme</li><li>Framer Motion for transitions</li></ul>
+          </div>
+          <div class="inl-0042">
+            <div class="inl-0109">Backend</div>
+            <ul class="au-list"><li>FastAPI (Python)</li><li>PostgreSQL</li><li>Redis for caching and queues</li><li>WebSockets for live score updates</li></ul>
+          </div>
+          <div class="inl-0044">
+            <div class="inl-0109">AI + Infra</div>
+            <ul class="au-list"><li>Claude / Anthropic API</li><li>Dockerised monorepo</li><li>Ready for high-scale deployment</li></ul>
+          </div>
+        </div>
+        <div class="inl-0110">
+          <p class="inl-0096">Design aesthetic: Premium B2B SaaS &#8212; clean light theme, sophisticated slate-gray accents, high-readability typography. Deliberately moved away from typical educational platform aesthetics toward something closer to Linear or Notion.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- TRY THE PROTOTYPE -->
+    <div class="au-section inl-0111">
+      <div class="sec-lbl">Try the Prototype</div>
+      <div class="inl-0112">
+        <div class="inl-0028"></div>
+        <div class="inl-0113">Recommended walkthrough to experience the student POV</div>
+        <div class="inl-0114">
+          <div class="inl-0115">
+            <div class="inl-0116">Step-by-step</div>
+            <ol class="inl-0117">
+              <li class="inl-0118"><span class="inl-0119">1</span>Click <strong class="inl-0120">Get Started</strong> and enter any dummy information to create an account.</li>
+              <li class="inl-0118"><span class="inl-0119">2</span>Land on the <strong class="inl-0120">Dashboard</strong> &#8212; your student home base.</li>
+              <li class="inl-0118"><span class="inl-0119">3</span>Select <strong class="inl-0120">Corporate Simulation</strong> from the catalog.</li>
+              <li class="inl-0118"><span class="inl-0119">4</span>Choose <strong class="inl-0120">Business Analyst at JPMorgan</strong> to experience the full VM-type student POV.</li>
+            </ol>
+          </div>
+          <div class="inl-0121">
+            <div>
+              <div class="inl-0122">What to look for</div>
+              <ul class="inl-0123">
+                <li class="inl-0124"><span class="inl-0125">&#9632;</span>How the multi-app VDE simulates a real work environment</li>
+                <li class="inl-0124"><span class="inl-0125">&#9632;</span>The information architecture and user flow across tools</li>
+                <li class="inl-0124"><span class="inl-0125">&#9632;</span>The CRS scoring panel updating in real-time</li>
+                <li class="inl-0124"><span class="inl-0125">&#9632;</span>The premium B2B SaaS aesthetic vs. typical EdTech UI</li>
+              </ul>
+            </div>
+            <div class="inl-0126">
+              <p class="inl-0127">This is a prototype &#8212; some flows may be incomplete. The goal is to convey the product vision and architecture, not production-ready polish.</p>
+            </div>
+          </div>
+        </div>
+        <a href="https://corp-sim-zeta.vercel.app/" target="_blank" rel="noopener noreferrer" class="inl-0128"><span class="rsq inl-0076"></span> Open CorpSim AI Prototype &#8599;</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="divider"></div><div class="divider-dots"><span></span><span></span><span></span></div><div class="divider"></div>
+  <footer>
+    <div class="foot-inner"><div class="foot-pokemon" style="background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22%236390F0%22%3E%3Cpath d=%22M2 2v20h20V2H2zm10 4h4v4h-4V6zm-6 6h12v4h-2v2H8v-2H6v-4zm2 8h2v2H8v-2z%22/%3E%3C/svg%3E');"></div><a href="mailto:vidur2002@gmail.com" class="foot-email">&#9993;&nbsp; vidur2002@gmail.com</a><a href="https://in.linkedin.com/in/vidurr" target="_blank" rel="noopener noreferrer" class="foot-email">&#128279;&nbsp; linkedin.com/in/vidurr</a><span class="foot-credit">&#169; 2026</span></div>
+    <div class="foot-dark"><span>&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183; Designed &amp; Built by Vidur Ramachandran</span></div>
+  </footer>
+</div>
+
+<!-- ════════════════════ HR SAAS CONCEPT DOC ════════════════════ -->
+<div id="page-hrsaas" class="page">
+
+  <!-- HERO -->
+  <div class="inl-0063">
+    <div class="inl-0018"></div>
+    <div class="inl-0064">
+      <div class="inl-0020">
+        <span class="inl-0021"></span>
+        <span data-onclick="showPage('visionlabs')" data-onmouseover="this.style.color='rgba(255,255,255,.6)'" data-onmouseout="this.style.color='rgba(255,255,255,.25)'" class="inl-0065">← Vision Labs</span>
+        <span class="inl-0066">/</span>
+        <span>Concept Doc</span>
+      </div>
+      <div class="inl-0129">
+        <span class="inl-0130"></span> Concept Phase — Not Built
+      </div>
+      <h1 class="inl-0071">HR<br><span class="inl-0023">SaaS</span></h1>
+      <p class="inl-0131">Lightweight people operations for early-stage startups — onboarding workflows, doc management, and headcount planning without enterprise overhead.</p>
+    </div>
+  </div>
+
+  <div class="wrap inl-0078">
+
+    <!-- WHY I'M BUILDING THIS -->
+    <div class="au-section inl-0079">
+      <div class="sec-lbl">Why I'm Exploring This</div>
+      <div class="inl-0080">
+        <div class="inl-0028"></div>
+        <p class="inl-0081">At <strong class="inl-0006">Acumen Connect</strong>, I watched a 15-person startup collapse its own onboarding under Notion chaos. Policies were scattered, contracts were tracked in emails, and nobody was sure who'd signed what. I spent weeks converting that into documented SOPs — and the improvement was immediate.</p>
+        <p class="inl-0031">That experience — combined with my BA work at Deloitte around process reliability — made me realise the problem is structural, not individual. Startups don't fail at HR because they're careless. They fail because the tools available are either too heavy or too unstructured. This is a systems problem, and it's one I know how to scope.</p>
+        <div class="inl-0082">
+          <span class="inl-0023">■</span>&nbsp; This is a concept — not a live product. Documenting ideas publicly keeps me accountable to actually building them.
+        </div>
+      </div>
+    </div>
+
+    <!-- PROBLEM -->
+    <div class="au-section inl-0079">
+      <div class="sec-lbl">The Problem</div>
+      <div class="inl-0083">
+        <div class="inl-0084">
+          <div class="inl-0028"></div>
+          <div class="inl-0085">What startups actually do</div>
+          <ul class="au-list au-list-spaced">
+            <li>Onboarding lives in a shared Google Doc no one updates.</li>
+            <li>Offer letters are sent from a personal Gmail as Word attachments.</li>
+            <li>Leave tracking is a column in a team spreadsheet.</li>
+            <li>Headcount plans exist only in the founder's head.</li>
+            <li>Policy documents get lost after the third Notion reorganisation.</li>
+          </ul>
+        </div>
+        <div class="inl-0084">
+          <div class="inl-0028"></div>
+          <div class="inl-0085">Why existing tools don't fit</div>
+          <ul class="au-list au-list-spaced">
+            <li><strong class="inl-0086">Enterprise HRMS</strong> (Workday, SAP) — built for 500+ orgs, overkill and expensive.</li>
+            <li><strong class="inl-0086">Mid-market tools</strong> (BambooHR, Darwinbox) — still carry implementation overhead.</li>
+            <li><strong class="inl-0086">Notion / Airtable</strong> — flexible but no automation, no accountability layer.</li>
+            <li>Nothing is <em>opinionated</em> for a 10–50 person team that just needs things to not fall through the cracks.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- TARGET USER -->
+    <div class="au-section inl-0079">
+      <div class="sec-lbl">Target User</div>
+      <div class="inl-0132">
+        <div class="inl-0028"></div>
+        <div class="inl-0133">
+          <div>
+            <div class="inl-0134">The Ops Lead</div>
+            <div class="inl-0135">Primary persona</div>
+          </div>
+          <div>
+            <div class="inl-0134">The Founder</div>
+            <div class="inl-0135">Secondary persona</div>
+          </div>
+        </div>
+        <div class="inl-0136">
+          <div class="inl-0137">
+            <div class="inl-0138">Company profile</div>
+            <div class="inl-0139">
+              <span class="about-tag">10–50 employees</span><span class="about-tag">Seed to Series A</span><span class="about-tag">No dedicated HR team</span><span class="about-tag">India / SEA</span><span class="about-tag">Tech or Tech-adjacent</span>
+            </div>
+          </div>
+          <div>
+            <div class="inl-0138">Their core pain</div>
+            <p class="inl-0088">They're spending 3–4 hours a week on HR admin that should take 20 minutes. Not because the tasks are hard — because there's no system. Every new hire means re-inventing the onboarding checklist. Every policy update means chasing people on Slack. They need structure, not software complexity.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CORE MODULES -->
+    <div class="au-section inl-0079">
+      <div class="sec-lbl">Core Modules — Planned Scope</div>
+      <div class="inl-0083">
+
+        <div class="inl-0140">
+          <div class="inl-0028"></div>
+          <div class="inl-0141">
+            <span class="inl-0142">01</span>
+            <div>
+              <div class="inl-0143">Onboarding Workflows</div>
+              <div class="inl-0144">Day 0 → Day 30</div>
+            </div>
+          </div>
+          <ul class="au-list">
+            <li>Templated onboarding checklists per role</li>
+            <li>Automated task assignment to manager, IT, finance</li>
+            <li>New hire self-serve portal for form collection</li>
+            <li>Progress tracking with deadline nudges</li>
+          </ul>
+        </div>
+
+        <div class="inl-0140">
+          <div class="inl-0028"></div>
+          <div class="inl-0141">
+            <span class="inl-0142">02</span>
+            <div>
+              <div class="inl-0143">Document Management</div>
+              <div class="inl-0144">Contracts, Policies, Offer Letters</div>
+            </div>
+          </div>
+          <ul class="au-list">
+            <li>Template library for offer letters, NDAs, policies</li>
+            <li>e-Signature collection with audit trail</li>
+            <li>Version-controlled policy hub</li>
+            <li>Expiry tracking for contracts and visas</li>
+          </ul>
+        </div>
+
+        <div class="inl-0140">
+          <div class="inl-0028"></div>
+          <div class="inl-0141">
+            <span class="inl-0142">03</span>
+            <div>
+              <div class="inl-0143">Headcount Planning</div>
+              <div class="inl-0144">Hiring Tracker + Org View</div>
+            </div>
+          </div>
+          <ul class="au-list">
+            <li>Open roles pipeline with status tracking</li>
+            <li>Lightweight org chart linked to headcount plan</li>
+            <li>Budget per hire (basic cost modelling)</li>
+            <li>Founder-facing hiring dashboard</li>
+          </ul>
+        </div>
+
+        <div class="inl-0140">
+          <div class="inl-0028"></div>
+          <div class="inl-0141">
+            <span class="inl-0142">04</span>
+            <div>
+              <div class="inl-0143">Leave & Attendance</div>
+              <div class="inl-0144">Lightweight — not a timesheet</div>
+            </div>
+          </div>
+          <ul class="au-list">
+            <li>Leave request + approval in two clicks</li>
+            <li>Team calendar view for coverage visibility</li>
+            <li>Configurable leave policies per region</li>
+            <li>No biometrics, no punching — trust-first design</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- WHAT IT WON'T BE -->
+    <div class="au-section inl-0079">
+      <div class="sec-lbl">What It Won't Be</div>
+      <div class="inl-0145">
+        <div class="inl-0028"></div>
+        <p class="inl-0113">Design constraints — deliberately out of scope</p>
+        <div class="inl-0146">
+          <div class="inl-0147">
+            <div class="inl-0148">✗ No Payroll</div>
+            <p class="inl-0149">Payroll processing is a compliance minefield. Integrate with Razorpay or Zoho Payroll instead.</p>
+          </div>
+          <div class="inl-0147">
+            <div class="inl-0148">✗ No Performance Mgmt</div>
+            <p class="inl-0149">Goal-setting and review cycles are culturally loaded. Keep it out of v1.</p>
+          </div>
+          <div class="inl-0147">
+            <div class="inl-0148">✗ No Biometrics</div>
+            <p class="inl-0149">Attendance punching belongs in factories. Early-stage startups run on trust.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TECH THINKING -->
+    <div class="au-section inl-0079">
+      <div class="sec-lbl">Tech Stack Thinking</div>
+      <div class="inl-0040">
+        <div class="inl-0028"></div>
+        <div class="inl-0089">
+          <div class="inl-0042">
+            <div class="inl-0109">Frontend</div>
+            <ul class="au-list"><li>React + Tailwind</li><li>Radix UI components</li><li>Lightweight, no heavy UI frameworks</li></ul>
+          </div>
+          <div class="inl-0042">
+            <div class="inl-0109">Backend / Data</div>
+            <ul class="au-list"><li>Supabase (Postgres + Auth + Storage)</li><li>Edge Functions for automation triggers</li><li>Row-level security for multi-tenancy</li></ul>
+          </div>
+          <div class="inl-0044">
+            <div class="inl-0109">Automation Layer</div>
+            <ul class="au-list"><li>n8n for workflow orchestration</li><li>LLM for doc generation / summarisation</li><li>Email + Slack notification hooks</li></ul>
+          </div>
+        </div>
+        <div class="inl-0110">
+          <p class="inl-0096">Stack rationale: Supabase gives a production-grade backend with zero infra ops. n8n keeps automation logic visible and modifiable without code changes. The goal is a 2-person team being able to ship and maintain this.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- STATUS + NEXT STEPS -->
+    <div class="au-section inl-0079">
+      <div class="sec-lbl">Status & Next Steps</div>
+      <div class="inl-0150">
+
+        <div class="inl-0140">
+          <div class="inl-0028"></div>
+          <div class="inl-0151">Current Status</div>
+          <div class="inl-0152">
+            <div class="inl-0153">
+              <span class="inl-0154"></span>
+              <span class="inl-0155">Problem framed</span>
+            </div>
+            <div class="inl-0153">
+              <span class="inl-0154"></span>
+              <span class="inl-0155">Scope documented</span>
+            </div>
+            <div class="inl-0153">
+              <span class="inl-0156"></span>
+              <span class="inl-0157">User interviews</span>
+            </div>
+            <div class="inl-0153">
+              <span class="inl-0156"></span>
+              <span class="inl-0157">Wireframes / IA</span>
+            </div>
+            <div class="inl-0153">
+              <span class="inl-0156"></span>
+              <span class="inl-0157">MVP prototype</span>
+            </div>
+            <div class="inl-0153">
+              <span class="inl-0156"></span>
+              <span class="inl-0157">Beta with 3 startups</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="inl-0032">
+          <div class="inl-0033">
+            <div class="inl-0028"></div>
+            <div class="inl-0158">Immediate Next Steps</div>
+            <ul class="au-list au-list-spaced">
+              <li>5 user interviews with ops leads at seed-stage startups</li>
+              <li>Validate: which module causes the most pain day-to-day?</li>
+              <li>Sketch information architecture and core user flows in Figma</li>
+              <li>Identify 1 anchor feature to build as a no-code prototype</li>
+            </ul>
+          </div>
+          <div class="inl-0033">
+            <div class="inl-0028"></div>
+            <div class="inl-0158">Open Questions</div>
+            <ul class="au-list">
+              <li>Freemium vs flat-rate pricing for early adopters?</li>
+              <li>Is onboarding or doc management the right entry wedge?</li>
+              <li>How tight is the Slack / Google Workspace integration need?</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+  <div class="divider"></div><div class="divider-dots"><span></span><span></span><span></span></div><div class="divider"></div>
+  <footer>
+    <div class="foot-inner">
+      <div class="foot-pokemon" style="background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22%23FA7F08%22%3E%3Cpath d=%22M2 2v20h20V2H2zm4 4h4v4H6V6zm8 0h4v4h-4V6zM6 14h12v4h-2v2H8v-2H6v-4z%22/%3E%3C/svg%3E');"></div>
+      <a href="mailto:vidur2002@gmail.com" class="foot-email">&#9993;&nbsp; vidur2002@gmail.com</a>
+      <a href="https://in.linkedin.com/in/vidurr" target="_blank" rel="noopener noreferrer" class="foot-email">&#128279;&nbsp; linkedin.com/in/vidurr</a>
+      <span class="foot-credit">© 2026</span>
+    </div>
+    <div class="foot-dark"><span>·············· Designed &amp; Built by Vidur Ramachandran</span></div>
+  </footer>
+</div>
+
+<!-- ════════════════════ ROASTMONEY CONCEPT DOC ════════════════════ -->
+<div id="page-roastmoney" class="page">
+  <div class="inl-0063">
+    <div class="inl-0018"></div>
+    <div class="inl-0064">
+      <div class="inl-0020">
+        <span class="inl-0021"></span>
+        <span data-onclick="showPage('visionlabs')" data-onmouseover="this.style.color='rgba(255,255,255,.6)'" data-onmouseout="this.style.color='rgba(255,255,255,.25)'" class="inl-0065">← Vision Labs</span>
+        <span class="inl-0066">/</span>
+        <span>Concept Doc</span>
+      </div>
+      <div class="inl-0159">
+        <span class="inl-0160"></span> Prototype Ready
+      </div>
+      <h1 class="inl-0071">Roast<br><span class="inl-0023">Money</span></h1>
+      <p class="inl-0131">A behavior-first financial assistant that uses "Judgmental AI" to bridge the gap between earning well and building a legacy. Not a tracker — a financial Tamagotchi for adults.</p>
+      <div class="inl-0161">
+        <div><div class="inl-0162">0</div><div class="inl-0163">Data Sold</div></div>
+        <div><div class="inl-0164">1</div><div class="inl-0163">AI Companion</div></div>
+        <div><div class="inl-0162">∞</div><div class="inl-0163">Roasts Possible</div></div>
+        <div><div class="inl-0162">AES</div><div class="inl-0163">256-bit Encryption</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="wrap inl-0078">
+    <div class="au-section inl-0079">
+      <div class="sec-lbl">Why I'm Building This</div>
+      <div class="inl-0080">
+        <div class="inl-0028"></div>
+        <p class="inl-0081">Most personal finance apps are <strong class="inl-0006">passive trackers</strong>. They show you pretty graphs of where your money went, but they don't help you change your behaviour in the moment. The result is the <strong class="inl-0006">"Financial Ostrich Effect"</strong> — people avoid their own bank balances because opening the app feels like guilt, not growth.</p>
+        <p class="inl-0031">I'm building RoastMoney because the emotional layer is completely missing from fintech. Behavioural economics tells us that friction and social cost are the most effective ways to interrupt impulse spending — but no one has built that in a way that's actually fun to use.</p>
+        <div class="inl-0082"><span class="inl-0023">■</span>&nbsp; Prototype is built and demoed. Watch the walkthrough below.</div>
+      </div>
+    </div>
+    <div class="au-section inl-0079">
+      <div class="sec-lbl">The Problem</div>
+      <div class="inl-0083">
+        <div class="inl-0084">
+          <div class="inl-0028"></div>
+          <div class="inl-0085">What existing apps get wrong</div>
+          <ul class="au-list au-list-spaced">
+            <li><strong class="inl-0086">Notification Fatigue</strong> — generic "You spent ₹200 at Swiggy" alerts are immediately ignored.</li>
+            <li><strong class="inl-0086">Complexity Overload</strong> — super-app clutter makes basic tracking feel like work.</li>
+            <li><strong class="inl-0086">No Emotional Connection</strong> — money is deeply personal, but banking apps are sterile and cold.</li>
+            <li><strong class="inl-0086">Passive by Design</strong> — weekly reports you forget to read change nothing about Monday's behaviour.</li>
+          </ul>
+        </div>
+        <div class="inl-0084">
+          <div class="inl-0028"></div>
+          <div class="inl-0085">The gap RoastMoney fills</div>
+          <ul class="au-list au-list-spaced">
+            <li>Introduces <strong class="inl-0086">Emotional Friction</strong> — users don't just see numbers go down, they feel something.</li>
+            <li>Converts spending data into <strong class="inl-0086">future cost</strong> — ₹300 today becomes ₹6,000 in compounded opportunity cost.</li>
+            <li>Consolidates credit card due dates into a <strong class="inl-0086">single predictive timeline</strong>.</li>
+            <li>Answers contextual questions — "Can I afford this iPhone and still hit my SIP?"</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="au-section inl-0079">
+      <div class="sec-lbl">Target User</div>
+      <div class="inl-0132">
+        <div class="inl-0028"></div>
+        <div class="inl-0133">
+          <div><div class="inl-0134">The Earner</div><div class="inl-0135">Primary persona</div></div>
+          <div><div class="inl-0134">The Saver</div><div class="inl-0135">Secondary persona</div></div>
+        </div>
+        <div class="inl-0136">
+          <div class="inl-0137">
+            <div class="inl-0138">User profile</div>
+            <div class="inl-0139"><span class="about-tag">22–30 years old</span><span class="about-tag">First job or freelancing</span><span class="about-tag">UPI-first spender</span><span class="about-tag">Knows they should save more</span><span class="about-tag">India / Urban</span></div>
+          </div>
+          <div>
+            <div class="inl-0138">Their real problem</div>
+            <p class="inl-0088">They aren't broke — they're "fine." That's exactly the problem. Being "fine" is the enemy of being wealthy. They earn decently, spend without tracking, and avoid their balance because looking at it feels bad. They don't need a budgeting lecture; they need something that makes finance <em>feel like it matters</em> today, not in retirement.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="au-section inl-0079">
+      <div class="sec-lbl">Core Features</div>
+      <div class="inl-0083">
+        <div class="inl-0140">
+          <div class="inl-0028"></div>
+          <div class="inl-0141"><span class="inl-0165">🔥</span><div class="inl-0166">The Roast Engine</div></div>
+          <p class="inl-0167">Converts dry transaction data into witty, hard-hitting commentary that actually sticks in your mind. The AI doesn't just tell you what happened — it gives you the emotional context your bank never would.</p>
+          <ul class="au-list"><li>Spend-triggered roasts generated per transaction</li><li>Tone calibrated to your spending pattern history</li><li>Never generic — always contextual to your habits</li></ul>
+        </div>
+        <div class="inl-0140">
+          <div class="inl-0028"></div>
+          <div class="inl-0141"><span class="inl-0165">🕰️</span><div class="inl-0166">Money Time Machine</div></div>
+          <p class="inl-0167">Translates today's spending into its compounded future cost. A ₹300 daily coffee becomes ₹6,000+ per month in opportunity cost — visible, concrete, impossible to ignore.</p>
+          <ul class="au-list"><li>Per-transaction future value calculation</li><li>Annual habit cost vs. a real-life goal (vacation, SIP milestone)</li><li>Converts "doing fine" users into wealth builders</li></ul>
+        </div>
+        <div class="inl-0140">
+          <div class="inl-0028"></div>
+          <div class="inl-0141"><span class="inl-0165">💳</span><div class="inl-0166">Pay Hub</div></div>
+          <p class="inl-0167">Clubs multiple credit cards into a single chronological due-date timeline. No more hidden dues, no more missed payments ruining your credit score.</p>
+          <ul class="au-list"><li>All credit card dues in one predictive timeline</li><li>Pre-due reminders with available balance context</li><li>Debt fragmentation solved at a glance</li></ul>
+        </div>
+        <div class="inl-0140">
+          <div class="inl-0028"></div>
+          <div class="inl-0141"><span class="inl-0165">💬</span><div class="inl-0166">AI Chat Modal</div></div>
+          <p class="inl-0167">Chat with your money instead of searching for answers. Ask "Can I afford that iPhone if I want to hit my SIP goal?" and get a data-backed answer, not just feelings.</p>
+          <ul class="au-list"><li>Contextual Q&amp;A grounded in your actual balance</li><li>SIP / savings goal impact modelling</li><li>Subscription audit — catches "invisible leaks" automatically</li></ul>
+        </div>
+      </div>
+    </div>
+    <div class="au-section inl-0079">
+      <div class="sec-lbl">The Marshmallow Avatar — Emotional Accountability</div>
+      <div class="inl-0168">
+        <div class="inl-0028"></div>
+        <div class="inl-0169">
+          <div><div class="inl-0170">Passive</div><div class="inl-0135">Other apps</div></div>
+          <div><div class="inl-0171">Alive</div><div class="inl-0135">RoastMoney</div></div>
+        </div>
+        <div class="inl-0136">
+          <p class="inl-0172">The Avatar is RoastMoney's standout differentiator — a Ditto-Baymax hybrid character (Marshmallow) that reacts physically to your spending in real time. Overspend and it gets visibly angry. Hit a savings goal and it celebrates with you.</p>
+          <p class="inl-0173">Behavioural economics confirms this works: users don't just see a number go down — they <em>feel</em> like they're letting their AI companion down. This is the "Emotional Friction" moat that makes RoastMoney a coach, not just a spreadsheet.</p>
+        </div>
+      </div>
+    </div>
+    <div class="au-section inl-0079">
+      <div class="sec-lbl">Competitive Positioning</div>
+      <div class="inl-0040">
+        <div class="inl-0028"></div>
+        <div class="inl-0089">
+          <div class="inl-0090">
+            <div class="inl-0174">Feature</div>
+            <ul class="inl-0175"><li class="inl-0176">Tone</li><li class="inl-0176">Feedback</li><li class="inl-0176">Engagement</li><li class="inl-0176">Utility</li><li class="inl-0176">Bill Mgmt</li></ul>
+          </div>
+          <div class="inl-0090">
+            <div class="inl-0174">Competitors (Mint, YNAB)</div>
+            <ul class="inl-0175"><li class="inl-0177">Helpful, Neutral, Corporate</li><li class="inl-0177">Static pie charts</li><li class="inl-0177">Check once a week</li><li class="inl-0177">Manual budgeting</li><li class="inl-0177">View all accounts</li></ul>
+          </div>
+          <div class="inl-0093">
+            <div class="inl-0178">RoastMoney Edge</div>
+            <ul class="inl-0175"><li class="inl-0179">Judgmental, Witty, Brutally Honest</li><li class="inl-0179">Dynamic Avatar Emotions</li><li class="inl-0179">After every spend — to see the reaction</li><li class="inl-0179">AI Budget Analysis + Time Machine</li><li class="inl-0179">Predictive Bill Timeline</li></ul>
+          </div>
+        </div>
+        <div class="inl-0110"><p class="inl-0096">Vision: To become the world's first financial app that users are "scared" to disappoint — resulting in the highest savings-rate-per-user in the industry.</p></div>
+      </div>
+    </div>
+    <div class="au-section inl-0079">
+      <div class="sec-lbl">Product Demo</div>
+      <div class="inl-0180">
+        <div class="inl-0028"></div>
+        <div class="inl-0181">
+          <div class="inl-0182">Prototype Walkthrough</div>
+          <span class="inl-0183">RoastMoney — Early Build</span>
+        </div>
+        <div class="inl-0184">
+          <div class="inl-0185">
+            <iframe src="https://drive.google.com/file/d/1wJu_qT5Ynqh9Nb8eNAw1Lyad-bz5tqhS/preview" allow="autoplay" allowfullscreen class="inl-0186"></iframe>
+          </div>
+        </div>
+        <div class="inl-0187"><p class="inl-0188">Early prototype — core flows demonstrated: Roast Engine · Pay Hub · Money Time Machine · AI Chat Modal</p></div>
+      </div>
+    </div>
+    <div class="au-section inl-0079">
+      <div class="sec-lbl">Privacy &amp; Business Model</div>
+      <div class="inl-0083">
+        <div class="inl-0140">
+          <div class="inl-0028"></div>
+          <div class="inl-0085">The Vault — Data Safety</div>
+          <ul class="au-list au-list-spaced"><li><strong class="inl-0086">AES-256</strong> encryption at rest, <strong class="inl-0086">TLS 1.3</strong> in transit</li><li>AI Anonymisation — the LLM sees Merchant_ID, never your name or account</li><li>Zero data reselling — ever. Full stop.</li><li>Your financial data is your most private asset — we treat it that way</li></ul>
+        </div>
+        <div class="inl-0140">
+          <div class="inl-0028"></div>
+          <div class="inl-0085">Why Paid — Alignment of Interests</div>
+          <ul class="au-list au-list-spaced"><li>If you aren't paying for the product, <em>you</em> are the product</li><li>One caught subscription or one avoided late fee pays for the annual plan</li><li>Our incentive is to keep you rich — not to push high-interest debt products</li><li>Trust-based business model, not ad-driven lead gen</li></ul>
+        </div>
+      </div>
+    </div>
+    <div class="au-section inl-0111">
+      <div class="sec-lbl">Status &amp; Next Steps</div>
+      <div class="inl-0150">
+        <div class="inl-0140">
+          <div class="inl-0189"></div>
+          <div class="inl-0151">Current Status</div>
+          <div class="inl-0152">
+            <div class="inl-0153"><span class="inl-0154"></span><span class="inl-0155">Problem &amp; market framed</span></div>
+            <div class="inl-0153"><span class="inl-0154"></span><span class="inl-0155">Core features scoped</span></div>
+            <div class="inl-0153"><span class="inl-0154"></span><span class="inl-0155">Prototype built &amp; demoed</span></div>
+            <div class="inl-0153"><span class="inl-0156"></span><span class="inl-0157">User testing round 1</span></div>
+            <div class="inl-0153"><span class="inl-0156"></span><span class="inl-0157">Roast Engine fine-tuning</span></div>
+            <div class="inl-0153"><span class="inl-0156"></span><span class="inl-0157">Beta launch — 50 users</span></div>
+          </div>
+        </div>
+        <div class="inl-0032">
+          <div class="inl-0033">
+            <div class="inl-0028"></div>
+            <div class="inl-0158">Immediate Next Steps</div>
+            <ul class="au-list au-list-spaced"><li>User testing the prototype with 10 target-persona users</li><li>Validate: does the Roast Engine create behaviour change or just laughs?</li><li>Refine Avatar emotion triggers based on spending category, not just amount</li><li>Stress-test the Pay Hub UX with users who have 3+ active credit cards</li></ul>
+          </div>
+          <div class="inl-0033">
+            <div class="inl-0028"></div>
+            <div class="inl-0158">Open Questions</div>
+            <ul class="au-list"><li>What's the right roast intensity — brutal honesty vs. playful nudge?</li><li>Freemium (limited roasts) vs. flat monthly subscription?</li><li>How does the Avatar feel after 6 months — novelty or habit?</li></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="divider"></div><div class="divider-dots"><span></span><span></span><span></span></div><div class="divider"></div>
+  <footer>
+    <div class="foot-inner"><div class="foot-pokemon" style="background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22%23EE8130%22%3E%3Cpath d=%22M2 2v20h20V2H2zm8 4h4v2h-4V6zm-4 6h12v6h-4v2H8v-2H6v-6zm2 10h2v2H8v-2z%22/%3E%3C/svg%3E');"></div><a href="mailto:vidur2002@gmail.com" class="foot-email">&#9993;&nbsp; vidur2002@gmail.com</a><a href="https://in.linkedin.com/in/vidurr" target="_blank" rel="noopener noreferrer" class="foot-email">&#128279;&nbsp; linkedin.com/in/vidurr</a><span class="foot-credit">© 2026</span></div>
+    <div class="foot-dark"><span>·············· Designed &amp; Built by Vidur Ramachandran</span></div>
+  </footer>
+</div>
+
+<!-- ════════════════════ VALIDATE YOUR IDEA CONCEPT DOC ════════════════════ -->
+<div id="page-validateidea" class="page">
+
+  <!-- HERO -->
+  <div class="inl-0063">
+    <div class="inl-0018"></div>
+    <div class="inl-0064">
+      <div class="inl-0020">
+        <span class="inl-0021"></span>
+        <span data-onclick="showPage('visionlabs')" data-onmouseover="this.style.color='rgba(255,255,255,.6)'" data-onmouseout="this.style.color='rgba(255,255,255,.25)'" class="inl-0065">&#8592; Vision Labs</span>
+        <span class="inl-0066">/</span>
+        <span>Concept Doc</span>
+      </div>
+      <div class="inl-0067">
+        <div class="inl-0068">
+          <span class="inl-0069"></span> Prototype Built
+        </div>
+        <div class="inl-0070">
+          Powered by Gemini API &mdash; Full deployment pending
+        </div>
+      </div>
+      <h1 class="inl-0071">Validate<br><em class="inl-0072">Your Idea</em></h1>
+      <p class="inl-0073">An AI-powered idea validation platform that goes deeper than a basic search &#8212; analysing what people actually complain about across Reddit, LinkedIn, forums, and the open web to help you find real gaps before you build.</p>
+      <div class="inl-0074">
+        <a href="https://validated-app.vercel.app/" target="_blank" rel="noopener noreferrer" class="inl-0075"><span class="rsq inl-0076"></span> Try the Prototype &#8599;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap inl-0078">
+
+    <!-- PROTOTYPE NOTE -->
+    <div class="au-section inl-0079">
+      <div class="sec-lbl">About This Prototype</div>
+      <div class="inl-0080">
+        <div class="inl-0028"></div>
+        <p class="inl-0081">This is an early-stage prototype built to demonstrate the core idea &#8212; not a finished product. The current version runs on a <strong class="inl-0006">Gemini API key</strong> with limited quota, which means some analyses may be throttled or incomplete in the live demo.</p>
+        <p class="inl-0031">When deployed properly with a production-grade API key and full data connectors (Reddit API, LinkedIn data, web scraping pipelines), the platform will deliver richer, real-time multi-source intelligence. This prototype is a proof of concept &#8212; the architecture and UX are real, the data depth will scale.</p>
+        <div class="inl-0082">
+          <span class="inl-0023">&#9632;</span>&nbsp; Current stack: Gemini API &middot; Next.js &middot; Vercel &mdash; Production roadmap: full Reddit + LinkedIn + web crawl pipelines with dedicated API infrastructure.
+        </div>
+      </div>
+    </div>
+
+    <!-- THE PROBLEM -->
+    <div class="au-section inl-0079">
+      <div class="sec-lbl">The Problem</div>
+      <div class="inl-0083">
+        <div class="inl-0084">
+          <div class="inl-0028"></div>
+          <div class="inl-0085">How founders validate today</div>
+          <ul class="au-list au-list-spaced">
+            <li>Google search + scroll &#8212; surface-level, SEO-gamed results with no signal on real frustrations.</li>
+            <li>Ask ChatGPT &#8212; gets a generic &#8220;here are 5 competitors&#8221; list with no depth on what people actually hate about them.</li>
+            <li>Manually browse Reddit &#8212; hours of reading to find a handful of relevant threads.</li>
+            <li>Ask friends &#8212; confirmation bias from people who want to be supportive.</li>
+            <li>Skip validation entirely and just build &#8212; the most common and most expensive mistake.</li>
+          </ul>
+        </div>
+        <div class="inl-0084">
+          <div class="inl-0028"></div>
+          <div class="inl-0085">What&rsquo;s missing</div>
+          <ul class="au-list au-list-spaced">
+            <li>No tool synthesises what <em>real users</em> are complaining about across forums, communities, and reviews at scale.</li>
+            <li>Existing AI tools don&rsquo;t search the live web &#8212; they hallucinate market data from stale training.</li>
+            <li>No platform maps competitor weaknesses against your specific idea framing.</li>
+            <li>Founders need structured output they can act on &#8212; not raw search results to interpret themselves.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- THE SOLUTION -->
+    <div class="au-section inl-0079">
+      <div class="sec-lbl">How It Works</div>
+      <div class="inl-0097">
+        <div class="inl-0028"></div>
+        <div class="inl-0190">Three inputs. One deep-analysis report. No manual research needed.</div>
+        <div class="inl-0099">
+          <div class="inl-0100">
+            <div class="inl-0101"><div class="inl-0102">01</div><div class="inl-0103">Input</div></div>
+            <div><div class="inl-0104">Describe Your Idea + Context</div><p class="inl-0092">Enter a plain-language description of your idea. Then select your <strong class="inl-0086">industry</strong> (e.g. FinTech, HR Tech, EdTech), <strong class="inl-0086">sector</strong> (B2B SaaS, Consumer App, Marketplace), and <strong class="inl-0086">target audience</strong> (e.g. solo founders, enterprise ops teams, students). These selectors focus the analysis so you don&rsquo;t get generic results.</p></div>
+          </div>
+          <div class="inl-0100">
+            <div class="inl-0101"><div class="inl-0102">02</div><div class="inl-0103">Analysis</div></div>
+            <div><div class="inl-0104">Multi-Source Deep Search</div><p class="inl-0092">The platform runs queries across Reddit threads, LinkedIn discussions, product review sites, and the open web to find: what people are saying about this problem space, which companies already exist, and &#8212; critically &#8212; what users complain those companies are getting wrong.</p></div>
+          </div>
+          <div class="inl-0100">
+            <div class="inl-0101"><div class="inl-0102">03</div><div class="inl-0103">Output</div></div>
+            <div><div class="inl-0104">Structured Validation Report</div><p class="inl-0092">A structured report covering: existing competitors and their gaps, recurring user frustrations in the space, signals of unsolved demand, and a positioning recommendation for how your idea can differentiate. Actionable &#8212; not just a list of links.</p></div>
+          </div>
+          <div class="inl-0105">
+            <div class="inl-0101"><div class="inl-0102">04</div><div class="inl-0103">Edge</div></div>
+            <div><div class="inl-0104">Deeper Than Existing AI Tools</div><p class="inl-0092">Unlike asking ChatGPT, this platform is structured around searching live sources &#8212; not generating answers from training data. The goal is to give founders information that feels like they did 10 hours of research themselves.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CORE FEATURES -->
+    <div class="au-section inl-0079">
+      <div class="sec-lbl">Core Features</div>
+      <div class="inl-0083">
+        <div class="inl-0140">
+          <div class="inl-0028"></div>
+          <div class="inl-0141"><span class="inl-0142">01</span><div class="inl-0143">Idea Input + Context Selectors</div></div>
+          <ul class="au-list"><li>Plain-language idea description field</li><li>Industry selector (FinTech, HR Tech, EdTech, SaaS, etc.)</li><li>Sector picker (B2B, B2C, Marketplace, Consumer)</li><li>Target audience definition (role, segment, geography)</li></ul>
+        </div>
+        <div class="inl-0140">
+          <div class="inl-0028"></div>
+          <div class="inl-0141"><span class="inl-0142">02</span><div class="inl-0143">Competitor Landscape Map</div></div>
+          <ul class="au-list"><li>Identifies existing companies in the space</li><li>Surfaces what each competitor is criticised for</li><li>Flags underserved segments or missing features</li><li>Sourced from real forum discussion, not AI inference</li></ul>
+        </div>
+        <div class="inl-0140">
+          <div class="inl-0028"></div>
+          <div class="inl-0141"><span class="inl-0142">03</span><div class="inl-0143">Demand Signal Analysis</div></div>
+          <ul class="au-list"><li>Finds threads where people ask for a solution like yours</li><li>Scores demand signals by recency and volume</li><li>Surfaces &#8220;has anyone built X yet?&#8221; style posts as proof of gap</li><li>Distinguishes nice-to-have from genuine pain</li></ul>
+        </div>
+        <div class="inl-0140">
+          <div class="inl-0028"></div>
+          <div class="inl-0141"><span class="inl-0142">04</span><div class="inl-0143">Positioning Recommendation</div></div>
+          <ul class="au-list"><li>Suggests how to frame your idea vs. existing alternatives</li><li>Highlights the 1&ndash;2 differentiators with strongest signal</li><li>Flags red flags if the space is too crowded or demand is low</li><li>Gives a plain-language &#8220;build / revisit / pivot&#8221; verdict</li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- TECH STACK -->
+    <div class="au-section inl-0079">
+      <div class="sec-lbl">Tech Stack</div>
+      <div class="inl-0040">
+        <div class="inl-0028"></div>
+        <div class="inl-0089">
+          <div class="inl-0042">
+            <div class="inl-0109">Frontend</div>
+            <ul class="au-list"><li>Next.js (App Router)</li><li>Tailwind CSS</li><li>Clean SaaS-style UI</li></ul>
+          </div>
+          <div class="inl-0042">
+            <div class="inl-0109">AI Layer (Prototype)</div>
+            <ul class="au-list"><li>Gemini API for synthesis</li><li>Web search grounding enabled</li><li>Structured prompt pipeline</li></ul>
+          </div>
+          <div class="inl-0044">
+            <div class="inl-0109">Production Roadmap</div>
+            <ul class="au-list"><li>Reddit API + LinkedIn data</li><li>Custom web crawl pipeline</li><li>Dedicated LLM inference</li></ul>
+          </div>
+        </div>
+        <div class="inl-0110">
+          <p class="inl-0096">Current limitation: The Gemini API key used in the prototype has rate limits and quota caps, so deep multi-source analysis may be throttled. This is a demo of the product vision &#8212; full deployment requires a production API setup and dedicated data pipeline infrastructure.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- TRY THE PROTOTYPE -->
+    <div class="au-section inl-0111">
+      <div class="sec-lbl">Try the Prototype</div>
+      <div class="inl-0112">
+        <div class="inl-0028"></div>
+        <div class="inl-0113">Recommended flow to experience the platform</div>
+        <div class="inl-0114">
+          <div class="inl-0115">
+            <div class="inl-0116">Step-by-step</div>
+            <ol class="inl-0117">
+              <li class="inl-0118"><span class="inl-0119">1</span>Open the prototype and describe your startup idea in plain language.</li>
+              <li class="inl-0118"><span class="inl-0119">2</span>Select your industry, sector, and target audience from the dropdowns.</li>
+              <li class="inl-0118"><span class="inl-0119">3</span>Hit <strong class="inl-0120">Validate</strong> and wait for the analysis to run.</li>
+              <li class="inl-0118"><span class="inl-0119">4</span>Review the competitor map, demand signals, and positioning recommendation.</li>
+            </ol>
+          </div>
+          <div class="inl-0121">
+            <div>
+              <div class="inl-0122">What to keep in mind</div>
+              <ul class="inl-0123">
+                <li class="inl-0124"><span class="inl-0125">&#9632;</span>API quota may limit depth &#8212; this is expected in the prototype</li>
+                <li class="inl-0124"><span class="inl-0125">&#9632;</span>Try a specific niche idea for the most focused results</li>
+                <li class="inl-0124"><span class="inl-0125">&#9632;</span>The report structure shows what the full product will output at scale</li>
+                <li class="inl-0124"><span class="inl-0125">&#9632;</span>Production version will pull live Reddit, LinkedIn &amp; web data directly</li>
+              </ul>
+            </div>
+            <div class="inl-0126">
+              <p class="inl-0127">This is a prototype &#8212; built to prove the concept and explore the product architecture. Not production-ready, but the core idea is real.</p>
+            </div>
+          </div>
+        </div>
+        <a href="https://validated-app.vercel.app/" target="_blank" rel="noopener noreferrer" class="inl-0128"><span class="rsq inl-0076"></span> Open Validate Your Idea &#8599;</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="divider"></div><div class="divider-dots"><span></span><span></span><span></span></div><div class="divider"></div>
+  <footer>
+    <div class="foot-inner"><div class="foot-pokemon" style="background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22%2396D9D6%22%3E%3Cpath d=%22M2 2v20h20V2H2zm6 4h4v4H8V6zm-2 8h12v4h-2v2H8v-2H6v-4z%22/%3E%3C/svg%3E');"></div><a href="mailto:vidur2002@gmail.com" class="foot-email">&#9993;&nbsp; vidur2002@gmail.com</a><a href="https://in.linkedin.com/in/vidurr" target="_blank" rel="noopener noreferrer" class="foot-email">&#128279;&nbsp; linkedin.com/in/vidurr</a><span class="foot-credit">&#169; 2026</span></div>
+    <div class="foot-dark"><span>&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183; Designed &amp; Built by Vidur Ramachandran</span></div>
+  </footer>
+</div>
+
+<div id="page-finmonitor" class="page">
+
+  <!-- HERO -->
+  <div class="inl-0063">
+    <div class="inl-0018"></div>
+    <div class="inl-0064">
+      <div class="inl-0020">
+        <span class="inl-0021"></span>
+        <span data-onclick="showPage('projects')" data-onmouseover="this.style.color='rgba(255,255,255,.6)'" data-onmouseout="this.style.color='rgba(255,255,255,.25)'" class="inl-0065">← Projects</span>
+        <span class="inl-0066">/</span>
+        <span>Project Doc</span>
+      </div>
+      <div class="inl-0159">
+        <span class="inl-0191"></span> Complete
+      </div>
+      <h1 class="inl-0192">Automated<br>Financial<br><span class="inl-0023">Transaction</span><br>Monitoring</h1>
+      <p class="inl-0131">A rule-based pipeline that automatically cleans transaction data, detects anomalies, and generates daily risk summaries — replacing manual spreadsheet review entirely.</p>
+      <!-- METRICS STRIP -->
+      <div class="inl-0193">
+        <div>
+          <div class="inl-0162">3</div>
+          <div class="inl-0163">Pipeline Modules</div>
+        </div>
+        <div>
+          <div class="inl-0162">3</div>
+          <div class="inl-0163">Detection Rules</div>
+        </div>
+        <div>
+          <div class="inl-0164">0</div>
+          <div class="inl-0163">Manual Steps</div>
+        </div>
+        <div>
+          <div class="inl-0162">4</div>
+          <div class="inl-0163">Output Files</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap inl-0078">
+
+    <!-- SCOPE -->
+    <div class="au-section inl-0079">
+      <div class="sec-lbl">Scope of the Project</div>
+      <div class="inl-0083">
+        <div class="inl-0084">
+          <div class="inl-0028"></div>
+          <div class="inl-0085">What this project does</div>
+          <ul class="au-list au-list-spaced">
+            <li>Cleans and validates raw transaction data automatically</li>
+            <li>Calculates customer-level spending baselines</li>
+            <li>Flags abnormal transactions using rule-based logic</li>
+            <li>Generates structured daily summaries for risk teams</li>
+            <li>Tracks data quality issues for audit purposes</li>
+          </ul>
+        </div>
+        <div class="inl-0084">
+          <div class="inl-0028"></div>
+          <div class="inl-0085">Deliberately out of scope</div>
+          <ul class="au-list au-list-spaced">
+            <li>No real customer data — fully simulated transactions</li>
+            <li>No real-time streaming or live API connections</li>
+            <li>No customer-facing communication or alerting</li>
+            <li>Not a machine learning model — explicit rule logic only</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- USE CASE -->
+    <div class="au-section inl-0079">
+      <div class="sec-lbl">The Problem This Solves</div>
+      <div class="inl-0168">
+        <div class="inl-0028"></div>
+        <div class="inl-0169">
+          <div>
+            <div class="inl-0170">The Old Way</div>
+            <div class="inl-0135">Manual review</div>
+          </div>
+          <div>
+            <div class="inl-0171">This System</div>
+            <div class="inl-0135">Automated pipeline</div>
+          </div>
+        </div>
+        <div class="inl-0136">
+          <p class="inl-0172">Real-time transaction data arrives every day. Manually checking it is slow, inconsistent, and error-prone — analysts miss patterns that only become visible in aggregate.</p>
+          <p class="inl-0173">This pipeline runs automatically when new data arrives: cleaning it, identifying what's unusual, and producing a structured report — with no manual intervention required after initial setup.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- PIPELINE -->
+    <div class="au-section inl-0079">
+      <div class="sec-lbl">Pipeline Architecture</div>
+      <!-- Pipeline flow diagram -->
+      <div class="inl-0194">
+        <div class="inl-0028"></div>
+        <div class="inl-0195">
+          <!-- Step 1 -->
+          <div class="inl-0196">
+            <div class="inl-0197">01</div>
+            <div class="inl-0198">Raw Data In</div>
+            <div class="inl-0199">transactions.csv</div>
+          </div>
+          <div class="inl-0200"></div>
+          <!-- Step 2 -->
+          <div class="inl-0196">
+            <div class="inl-0197">02</div>
+            <div class="inl-0198">Clean</div>
+            <div class="inl-0199">clean_data.py</div>
+          </div>
+          <div class="inl-0200"></div>
+          <!-- Step 3 -->
+          <div class="inl-0196">
+            <div class="inl-0197">03</div>
+            <div class="inl-0198">Detect</div>
+            <div class="inl-0199">analyze_data.py</div>
+          </div>
+          <div class="inl-0200"></div>
+          <!-- Step 4 -->
+          <div class="inl-0196">
+            <div class="inl-0197">04</div>
+            <div class="inl-0198">Report</div>
+            <div class="inl-0199">report.py</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODULES -->
+    <div class="au-section inl-0079">
+      <div class="sec-lbl">Module Breakdown</div>
+      <div class="inl-0201">
+
+        <!-- Module 1 -->
+        <div class="inl-0040">
+          <div class="inl-0028"></div>
+          <div class="inl-0202">
+            <div class="inl-0203">
+              <div class="inl-0204">01</div>
+              <div class="inl-0205">Data Cleaning</div>
+              <div class="inl-0206">clean_data.py</div>
+              <span class="inl-0207">Python · Pandas</span>
+            </div>
+            <div class="inl-0208">
+              <p class="inl-0209">Prepares raw data to ensure it's consistent and safe for analysis. Handles the messy reality of real transaction files.</p>
+              <ul class="au-list">
+                <li>Removes exact duplicate records</li>
+                <li>Converts and validates date/amount column formats</li>
+                <li>Fills missing amounts using median — robust to outliers</li>
+                <li>Drops transactions with missing IDs or merchant data</li>
+                <li>Removes zero and negative-value transactions</li>
+                <li>Flags rows where amounts were originally missing (audit trail)</li>
+              </ul>
+            </div>
+          </div>
+          <!-- CODE BLOCK -->
+          <div class="inl-0210">
+            <div class="inl-0211">clean_data.py</div>
+            <pre class="inl-0212"><span class="inl-0213"># 1. Load raw data</span>
+df = pd.read_csv(<span class="inl-0214">'../data/transactions.csv'</span>)
+<span class="inl-0213"># 2. Standardize column names</span>
+df.columns = df.columns.str.lower().str.strip()
+<span class="inl-0213"># 3. Remove exact duplicate rows</span>
+df = df.drop_duplicates()
+<span class="inl-0213"># 4. Convert date column to datetime</span>
+df[<span class="inl-0214">'date'</span>] = pd.to_datetime(df[<span class="inl-0214">'date'</span>], errors=<span class="inl-0214">'coerce'</span>)
+<span class="inl-0213"># 5. Handle missing or invalid amounts</span>
+df[<span class="inl-0214">'amount'</span>] = pd.to_numeric(df[<span class="inl-0214">'amount'</span>], errors=<span class="inl-0214">'coerce'</span>)
+df[<span class="inl-0214">'amount_was_missing'</span>] = df[<span class="inl-0214">'amount'</span>].isna()
+median_amount = df[<span class="inl-0214">'amount'</span>].median()
+df[<span class="inl-0214">'amount'</span>] = df[<span class="inl-0214">'amount'</span>].fillna(median_amount)
+<span class="inl-0213"># 6. Remove transactions with missing critical identifiers</span>
+df = df.dropna(subset=[<span class="inl-0214">'transaction_id'</span>, <span class="inl-0214">'customer_id'</span>, <span class="inl-0214">'merchant'</span>])
+<span class="inl-0213"># 7. Remove negative or zero-value transactions</span>
+df = df[df[<span class="inl-0214">'amount'</span>] &gt; <span class="inl-0215">0</span>]
+<span class="inl-0213"># 8. Sort for consistency (audit-friendly)</span>
+df = df.sort_values(by=[<span class="inl-0214">'customer_id'</span>, <span class="inl-0214">'date'</span>])
+<span class="inl-0213"># 9. Save cleaned data</span>
+df.to_csv(<span class="inl-0214">'../output/cleaned_data.csv'</span>, index=<span class="inl-0215">False</span>)</pre>
+          </div>
+        </div>
+
+        <!-- Module 2 -->
+        <div class="inl-0040">
+          <div class="inl-0028"></div>
+          <div class="inl-0202">
+            <div class="inl-0203">
+              <div class="inl-0204">02</div>
+              <div class="inl-0205">Anomaly Detection</div>
+              <div class="inl-0206">analyze_data.py</div>
+              <span class="inl-0207">Python · Rule Logic</span>
+            </div>
+            <div class="inl-0208">
+              <p class="inl-0209">Identifies transactions that don't match a customer's normal spending behavior. Three independent rules — any one hit triggers a flag.</p>
+              <div class="inl-0152">
+                <div class="inl-0216">
+                  <div class="inl-0217">Rule 1 — Spend Spike</div>
+                  <p class="inl-0218">Transaction exceeds 2× the customer's average historical spend. Personalized baseline per customer_id.</p>
+                </div>
+                <div class="inl-0216">
+                  <div class="inl-0217">Rule 2 — High Absolute Value</div>
+                  <p class="inl-0218">Transaction amount exceeds ₹20,000 threshold regardless of customer history.</p>
+                </div>
+                <div class="inl-0216">
+                  <div class="inl-0217">Rule 3 — High-Risk Merchant</div>
+                  <p class="inl-0218">Merchant appears on a configurable high-risk list. Combined with Rule 2 for a final anomaly flag.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- CODE BLOCK -->
+          <div class="inl-0210">
+            <div class="inl-0211">analyze_data.py</div>
+            <pre class="inl-0212"><span class="inl-0213"># 1. Load cleaned data</span>
+df = pd.read_csv(<span class="inl-0214">'../output/cleaned_data.csv'</span>)
+<span class="inl-0213"># 2. Customer-level baseline</span>
+avg_spend = df.groupby(<span class="inl-0214">'customer_id'</span>)[<span class="inl-0214">'amount'</span>].mean()
+df[<span class="inl-0214">'avg_customer_spend'</span>] = df[<span class="inl-0214">'customer_id'</span>].map(avg_spend)
+<span class="inl-0213"># 3. Rule 1: Spend spike anomaly</span>
+df[<span class="inl-0214">'spend_anomaly'</span>] = df[<span class="inl-0214">'amount'</span>] &gt; (<span class="inl-0215">2</span> * df[<span class="inl-0214">'avg_customer_spend'</span>])
+<span class="inl-0213"># 4. Rule 2: High absolute transaction value</span>
+df[<span class="inl-0214">'high_value_anomaly'</span>] = df[<span class="inl-0214">'amount'</span>] &gt; <span class="inl-0215">20000</span>
+<span class="inl-0213"># 5. Rule 3: High-risk merchant</span>
+high_risk_merchants = [<span class="inl-0214">'Apple'</span>, <span class="inl-0214">'Dell'</span>]
+df[<span class="inl-0214">'merchant_risk'</span>] = df[<span class="inl-0214">'merchant'</span>].isin(high_risk_merchants)
+<span class="inl-0213"># 6. Final anomaly flag (company logic)</span>
+df[<span class="inl-0214">'final_anomaly'</span>] = (
+    df[<span class="inl-0214">'spend_anomaly'</span>] |
+    (df[<span class="inl-0214">'high_value_anomaly'</span>] &amp; df[<span class="inl-0214">'merchant_risk'</span>])
+)
+<span class="inl-0213"># 7. Save outputs</span>
+df[df[<span class="inl-0214">'final_anomaly'</span>]].to_csv(<span class="inl-0214">'../output/anomalies.csv'</span>, index=<span class="inl-0215">False</span>)</pre>
+          </div>
+        </div>
+        <div class="inl-0040">
+          <div class="inl-0028"></div>
+          <div class="inl-0202">
+            <div class="inl-0203">
+              <div class="inl-0204">03</div>
+              <div class="inl-0205">Reporting</div>
+              <div class="inl-0206">report.py</div>
+              <span class="inl-0207">Python · CSV Output</span>
+            </div>
+            <div class="inl-0208">
+              <p class="inl-0209">Converts raw anomaly data into a clear, actionable daily summary for business and risk teams.</p>
+              <ul class="au-list">
+                <li>Total flagged transactions and unique customers impacted</li>
+                <li>Total and average value of risky transactions</li>
+                <li>Top merchants by anomaly frequency</li>
+                <li>Top customers by total anomalous spend</li>
+                <li>Saves structured daily_anomaly_summary.csv for downstream use</li>
+                <li>Handles empty anomaly sets gracefully — no crashes</li>
+              </ul>
+            </div>
+          </div>
+          <!-- CODE BLOCK -->
+          <div class="inl-0210">
+            <div class="inl-0211">report.py</div>
+            <pre class="inl-0212"><span class="inl-0213"># 1. Load anomaly data</span>
+df = pd.read_csv(<span class="inl-0214">'../output/anomalies.csv'</span>)
+<span class="inl-0213"># 2. Handle case where no anomalies exist</span>
+<span class="inl-0219">if</span> df.empty:
+    <span class="inl-0215">print</span>(<span class="inl-0214">"No anomalies detected for this period."</span>)
+<span class="inl-0219">else</span>:
+    <span class="inl-0213"># 3. Summary metrics</span>
+    total_anomalies = <span class="inl-0215">len</span>(df)
+    unique_customers = df[<span class="inl-0214">'customer_id'</span>].nunique()
+    total_amount = df[<span class="inl-0214">'amount'</span>].sum()
+    avg_anomaly_amount = df[<span class="inl-0214">'amount'</span>].mean()
+    <span class="inl-0215">print</span>(<span class="inl-0214">f"Total flagged transactions : {total_anomalies}"</span>)
+    <span class="inl-0215">print</span>(<span class="inl-0214">f"Unique customers impacted : {unique_customers}"</span>)
+    <span class="inl-0215">print</span>(<span class="inl-0214">f"Total amount at risk (₹)  : {total_amount:,.2f}"</span>)
+    <span class="inl-0215">print</span>(<span class="inl-0214">f"Average anomaly amount    : {avg_anomaly_amount:,.2f}"</span>)
+    <span class="inl-0213"># 4. Top risky merchants</span>
+    <span class="inl-0215">print</span>(<span class="inl-0214">"\nTop merchants by anomaly count:"</span>)
+    <span class="inl-0215">print</span>(df[<span class="inl-0214">'merchant'</span>].value_counts().head())
+    <span class="inl-0213"># 5. Top customers by total anomaly spend</span>
+    <span class="inl-0215">print</span>(<span class="inl-0214">"\nTop customers by anomaly spend:"</span>)
+    <span class="inl-0215">print</span>(
+        df.groupby(<span class="inl-0214">'customer_id'</span>)[<span class="inl-0214">'amount'</span>]
+          .sum()
+          .sort_values(ascending=<span class="inl-0215">False</span>)
+          .head()
+    )
+    <span class="inl-0213"># 6. Save daily summary</span>
+    summary_df = pd.DataFrame([{
+        <span class="inl-0214">'total_anomalies'</span>: total_anomalies,
+        <span class="inl-0214">'unique_customers'</span>: unique_customers,
+        <span class="inl-0214">'total_amount_at_risk'</span>: total_amount,
+        <span class="inl-0214">'average_anomaly_amount'</span>: avg_anomaly_amount
+    }])
+    summary_df.to_csv(<span class="inl-0214">'../output/daily_anomaly_summary.csv'</span>, index=<span class="inl-0215">False</span>)</pre>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- OUTPUTS -->
+    <div class="au-section inl-0079">
+      <div class="sec-lbl">Generated Outputs</div>
+      <div class="inl-0083">
+        <div class="inl-0033">
+          <div class="inl-0028"></div>
+          <div class="inl-0085">Output Files</div>
+          <ul class="au-list au-list-spaced">
+            <li><strong class="inl-0086">cleaned_data.csv</strong> — validated, standardised transaction records</li>
+            <li><strong class="inl-0086">anomalies.csv</strong> — all flagged transactions with rule columns</li>
+            <li><strong class="inl-0086">daily_anomaly_summary.csv</strong> — aggregated metrics for reporting</li>
+            <li><strong class="inl-0086">Console report</strong> — human-readable summary printed at run time</li>
+          </ul>
+        </div>
+        <div class="inl-0033">
+          <div class="inl-0028"></div>
+          <div class="inl-0085">Scalability Path</div>
+          <ul class="au-list au-list-spaced">
+            <li>Logic can be scheduled daily via cron or Apache Airflow</li>
+            <li>Each module is independent — swap or extend without breaking others</li>
+            <li>Output CSVs plug directly into dashboards or email automation</li>
+            <li>Detection rules are configurable — thresholds and merchant lists are easy to update</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- TECH STACK -->
+    <div class="au-section inl-0079">
+      <div class="sec-lbl">Tech Stack</div>
+      <div class="inl-0040">
+        <div class="inl-0028"></div>
+        <div class="inl-0089">
+          <div class="inl-0042">
+            <div class="inl-0109">Core Language</div>
+            <ul class="au-list"><li>Python 3</li><li>pandas for data manipulation</li><li>numpy for numeric operations</li></ul>
+          </div>
+          <div class="inl-0042">
+            <div class="inl-0109">Data & Storage</div>
+            <ul class="au-list"><li>CSV-based file I/O</li><li>Structured /data and /output directories</li><li>Audit-ready column flagging</li></ul>
+          </div>
+          <div class="inl-0044">
+            <div class="inl-0109">Automation Layer</div>
+            <ul class="au-list"><li>Cron-schedulable scripts</li><li>Airflow-compatible pipeline structure</li><li>Zero manual steps after setup</li></ul>
+          </div>
+        </div>
+        <div class="inl-0110">
+          <p class="inl-0096">Design rationale: Vanilla Python and pandas keeps the system readable, auditable, and easy to hand off. No framework dependencies means nothing breaks when an external library updates. The modular structure lets each script be tested, replaced, or extended independently.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- STATUS -->
+    <div class="au-section inl-0111">
+      <div class="sec-lbl">Project Status</div>
+      <div class="inl-0145">
+        <div class="inl-0189"></div>
+        <div class="inl-0220">
+          <div>
+            <div class="inl-0221">What's complete</div>
+            <ul class="au-list inl-0222">
+              <li class="inl-0223">Full three-module pipeline built and tested</li>
+              <li class="inl-0223">All three anomaly detection rules implemented</li>
+              <li class="inl-0223">Daily summary report generating correctly</li>
+              <li class="inl-0223">Edge cases handled — empty datasets, missing values</li>
+            </ul>
+          </div>
+          <div>
+            <div class="inl-0221">Possible extensions</div>
+            <ul class="au-list inl-0222">
+              <li class="inl-0223">ML-based anomaly scoring (isolation forest / z-score)</li>
+              <li class="inl-0223">Airflow DAG for scheduled runs</li>
+              <li class="inl-0223">Email or Slack alert integration for flagged batches</li>
+              <li class="inl-0223">Dashboard layer (Streamlit or Tableau)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="divider"></div><div class="divider-dots"><span></span><span></span><span></span></div><div class="divider"></div>
+  <footer>
+    <div class="foot-inner">
+      <div class="foot-pokemon" style="background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22%23A8A77A%22%3E%3Cpath d=%22M2 2v20h20V2H2zm4 4h2v2H6V6zm10 0h2v2h-2V6zM6 12h12v4h-4v2H10v-2H6v-4zm2 8h2v2H8v-2z%22/%3E%3C/svg%3E');"></div>
+      <a href="mailto:vidur2002@gmail.com" class="foot-email" aria-label="Send email to Vidur">&#9993;&nbsp; vidur2002@gmail.com</a>
+      <a href="https://in.linkedin.com/in/vidurr" target="_blank" rel="noopener noreferrer" class="foot-email" aria-label="Visit Vidur's LinkedIn">&#128279;&nbsp; linkedin.com/in/vidurr</a>
+      <span class="foot-credit">© 2026</span>
+    </div>
+    <div class="foot-dark"><span>·············· Designed &amp; Built by Vidur Ramachandran</span></div>
+  </footer>
+</div>
+
+<script type="module" src="./scripts/main.js"></script>
+</body>
+</html>

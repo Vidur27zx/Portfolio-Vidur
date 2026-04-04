@@ -1,0 +1,33 @@
+/* ── 11. VISION LABS PAGE ── */
+.vl-hero{min-height:340px;background:#0a0a10;position:relative;overflow:hidden;display:flex;align-items:flex-end;border-bottom:1px dashed #1a1a22;}
+#vlCanvas{position:absolute;inset:0;width:100%;height:100%;z-index:0;opacity:.16;filter:blur(1.2px);}
+.vl-hero-fade{position:absolute;bottom:0;left:0;right:0;height:100px;background:linear-gradient(to bottom,transparent,#0a0a10);z-index:1;pointer-events:none;}
+.vl-hc{position:relative;z-index:2;max-width:900px;margin:0 auto;width:100%;padding:110px 40px 64px;}
+.vl-lbl{font-family:var(--fm);font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.28);margin-bottom:10px;}
+.vl-title{font-family:var(--fp);font-size:clamp(42px,7.5vw,86px);letter-spacing:.06em;text-transform:uppercase;color:#fff;line-height:.9;}
+.vl-title em{color:var(--red);font-style:normal;}
+.vl-desc{font-family:var(--fb);font-size:14px;color:rgba(255,255,255,.48);line-height:1.7;margin-top:14px;max-width:460px;font-weight:300;}
+.lab-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:64px;}
+.lab-card{border:1px dashed var(--border);background:var(--white);position:relative;padding:32px;transition:all 0.3s cubic-bezier(0.4, 0, 0.2, 1);display:flex;flex-direction:column;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);}
+.lab-card:hover{border-color:var(--black);background:var(--white);transform:translateY(-8px);box-shadow:0 24px 64px rgba(0,0,0,0.12);}
+.lab-corner{position:absolute;top:0;left:0;width:6px;height:6px;background:var(--red);}
+.lab-card.hero-card{grid-column:1/-1;display:grid;grid-template-columns:1.1fr 1fr;gap:32px;}
+.lab-visual{border:1px dashed var(--border);background:transparent;min-height:220px;overflow:hidden;position:relative;}
+.lab-visual img{border:none;}
+#mesh23Canvas{display:block;width:100%;height:100%;}
+.lab-status{display:inline-flex;align-items:center;gap:6px;font-family:var(--fm);font-size:8px;letter-spacing:.13em;text-transform:uppercase;margin-bottom:12px;}
+.lb-dot{width:5px;height:5px;border-radius:50%;}
+.lb-dot.live{background:#22cc88;box-shadow:0 0 5px #22cc88;}
+.lb-dot.building{background:#ffaa22;animation:blink 1.5s infinite;}
+.lb-dot.concept{background:#999;}
+.lab-title{font-family:var(--fp);font-size:32px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:5px;}
+.lab-sub{font-family:var(--fm);font-size:8px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;}
+.lab-desc{font-family:var(--fb);font-size:13px;color:#555;line-height:1.65;font-weight:300;margin-bottom:16px;flex:1;}
+.lab-tags{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:18px;}
+.lab-tag{font-family:var(--fm);font-size:8px;letter-spacing:.09em;text-transform:uppercase;border:1px solid #e0e0e0;padding:3px 9px;color:#888;}
+.lab-cta{display:inline-flex;align-items:center;gap:7px;padding:11px 16px;border:1px dashed #bbb;font-family:var(--fm);font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--black);background:none;transition:all .18s;cursor:pointer;}
+.lab-cta:hover{background:var(--black);color:#fff;}
+.philosophy{border:1px dashed #bbb;padding:36px;background:var(--white);position:relative;}
+.phil-corner{position:absolute;top:0;left:0;width:7px;height:7px;background:var(--red);}
+.phil-title{font-family:var(--fp);font-size:26px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:12px;}
+.phil-text{font-family:var(--fb);font-size:13px;color:#555;line-height:1.75;font-weight:300;max-width:580px;}

@@ -1,0 +1,25 @@
+.projects-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;}
+#projCanvas{display:block;width:100%;height:100%;min-height:180px;}
+.pc{border:1px dashed var(--border);background:var(--glass);position:relative;padding:32px;transition:all 0.3s cubic-bezier(0.4, 0, 0.2, 1);display:flex;flex-direction:column;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);}
+.pc:hover{border-color:var(--black);background:var(--white);transform:translateY(-8px);box-shadow:0 24px 64px rgba(0,0,0,0.12);}
+.pc-corner{position:absolute;top:0;left:0;width:6px;height:6px;background:var(--red);}
+.pc-num{font-family:var(--fp);font-size:48px;color:#f0f0ee;line-height:1;margin-bottom:8px;}
+.pc-title{font-family:var(--fm);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:9px;line-height:1.4;}
+.pc-desc{font-family:var(--fb);font-size:13px;color:#555;line-height:1.65;font-weight:300;margin-bottom:12px;flex:1;}
+.pc-outcome{font-family:var(--fm);font-size:9px;color:#444;line-height:1.5;letter-spacing:.02em;margin-bottom:14px;border-left:2px solid var(--red);padding-left:11px;}
+.pc-tags{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:16px;}
+.pc-tag{font-family:var(--fm);font-size:8px;letter-spacing:.09em;text-transform:uppercase;border:1px solid #e0e0e0;padding:3px 9px;color:#888;}
+.pc-status{display:inline-flex;align-items:center;gap:5px;font-family:var(--fm);font-size:8px;letter-spacing:.13em;text-transform:uppercase;}
+.pc-feature-row{display:flex;align-items:center;gap:12px;margin-top:16px;flex-wrap:wrap;}
+.pc-feature-cta{margin-top:0;max-width:100%;white-space:nowrap;padding:9px 12px;font-size:8px;letter-spacing:.1em;}
+.st-dot{width:5px;height:5px;border-radius:50%;}
+.st-dot.done{background:#22cc88;}
+.st-dot.wip{background:#ffaa22;animation:blink 1.5s infinite;}
+.pc.featured{grid-column:1/-1;display:grid;grid-template-columns:1fr 1.4fr;gap:28px;}
+.p-visual{border:1px dashed #e8e8e8;background:#f8f8f6;overflow:hidden;display:flex;align-items:stretch;}
+.p-visual canvas{display:block;width:100%;height:100%;min-height:180px;}
+/* Mini case study in project cards */
+.pc-mini-cs{margin-bottom:14px;}
+.pc-cs-row{display:grid;grid-template-columns:64px 1fr;gap:10px;margin-bottom:9px;align-items:start;}
+.pc-cs-lbl{font-family:var(--fm);font-size:8px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--red);padding-top:1px;}
+.pc-cs-txt{font-family:var(--fb);font-size:12px;color:#555;line-height:1.6;font-weight:300;}
