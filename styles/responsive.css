@@ -38,7 +38,7 @@
   .section-header-game{opacity:.1!important;filter:blur(1.2px)!important;}
   #hero{background:#0a0a0c;}
   #vlCanvas{opacity:.11!important;}
-  #gameCanvas{opacity:0.38;}
+  #gameCanvas{opacity:0.36;}
   /* Hide desktop-only game UI on mobile */
   #gameInteractOverlay,.game-interact-pill{display:none!important;}
   /* heroGameHint shown on mobile — between hire badge and spaceship, left side */
