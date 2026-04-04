@@ -1,7 +1,4 @@
 /* ── 3. NAVIGATION ── */
-canvas {
-  touch-action: none;
-}
 
 nav{padding:16px 40px;display:flex;align-items:center;background:rgba(0,0,0,0.85);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,0.08);position:fixed;top:0;left:0;right:0;z-index:900;}
 .nav-logo{font-family:var(--fm);font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#fff;text-decoration:none;cursor:pointer;white-space:nowrap;}
