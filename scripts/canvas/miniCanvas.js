@@ -29,8 +29,12 @@ function gunBarrelY() { return cowboyY() - 22; }
 function resize() {
   if (!cv) return;
   const p = cv.parentElement;
-  state.W = cv.width = p.clientWidth;
-  state.H = cv.height = p.clientHeight;
+  const dpr = window.devicePixelRatio || 1;
+  state.W = p.clientWidth;
+  state.H = p.clientHeight;
+  cv.width = state.W * dpr;
+  cv.height = state.H * dpr;
+  cx.scale(dpr, dpr);
 }
 
 function spawnTarget() {

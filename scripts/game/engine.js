@@ -35,8 +35,12 @@ export function replayGame() {
 
 function resize() {
   if (!cv || !state) return;
-  state.W = cv.width = window.innerWidth;
-  state.H = cv.height = window.innerHeight;
+  const dpr = window.devicePixelRatio || 1;
+  state.W = window.innerWidth;
+  state.H = window.innerHeight;
+  cv.width = state.W * dpr;
+  cv.height = state.H * dpr;
+  cx.scale(dpr, dpr);
   state.shipX = state.W / 2;
   state.shipY = state.H - 100;
   state.stars = [];

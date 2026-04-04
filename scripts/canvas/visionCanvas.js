@@ -19,8 +19,12 @@ export function initProjCanvas() {
 
   function resize() {
     const p = cv.parentElement;
-    W = cv.width = p.clientWidth;
-    H = cv.height = p.clientHeight;
+    const dpr = window.devicePixelRatio || 1;
+    W = p.clientWidth;
+    H = p.clientHeight;
+    cv.width = W * dpr;
+    cv.height = H * dpr;
+    cx.scale(dpr, dpr);
   }
 
   resize();
@@ -153,8 +157,12 @@ export function initVLCanvas() {
   let nodes = [];
 
   function resize() {
-    W = cv.width = cv.parentElement.clientWidth;
-    H = cv.height = cv.parentElement.clientHeight;
+    const dpr = window.devicePixelRatio || 1;
+    W = cv.parentElement.clientWidth;
+    H = cv.parentElement.clientHeight;
+    cv.width = W * dpr;
+    cv.height = H * dpr;
+    cx.scale(dpr, dpr);
     nodes = [];
     for (let i = 0; i < 32; i += 1) {
       nodes.push({
@@ -240,8 +248,12 @@ export function initMesh23() {
 
   function resize() {
     const p = cv.parentElement;
-    W = cv.width = p.clientWidth;
-    H = cv.height = p.clientHeight;
+    const dpr = window.devicePixelRatio || 1;
+    W = p.clientWidth;
+    H = p.clientHeight;
+    cv.width = W * dpr;
+    cv.height = H * dpr;
+    cx.scale(dpr, dpr);
   }
 
   resize();
@@ -389,8 +401,12 @@ export function initBreakoutBg() {
 
   function resize() {
     const parent = cv.parentElement;
-    W = cv.width = parent ? parent.clientWidth : window.innerWidth;
-    H = cv.height = parent ? parent.clientHeight : window.innerHeight;
+    const dpr = window.devicePixelRatio || 1;
+    W = parent ? parent.clientWidth : window.innerWidth;
+    H = parent ? parent.clientHeight : window.innerHeight;
+    cv.width = W * dpr;
+    cv.height = H * dpr;
+    cx.scale(dpr, dpr);
   }
 
   resize();
@@ -616,8 +632,12 @@ export function initSnakeGame() {
 
   function resize() {
     const parent = cv.parentElement;
-    W = cv.width = parent ? parent.clientWidth : window.innerWidth;
-    H = cv.height = parent ? parent.clientHeight : window.innerHeight;
+    const dpr = window.devicePixelRatio || 1;
+    W = parent ? parent.clientWidth : window.innerWidth;
+    H = parent ? parent.clientHeight : window.innerHeight;
+    cv.width = W * dpr;
+    cv.height = H * dpr;
+    cx.scale(dpr, dpr);
   }
 
   function currentLevel() {
@@ -1141,8 +1161,12 @@ export function initMarioBg() {
 
   function resize() {
     const parent = cv.parentElement;
-    W = cv.width = parent ? parent.clientWidth : window.innerWidth;
-    H = cv.height = parent ? parent.clientHeight : window.innerHeight;
+    const dpr = window.devicePixelRatio || 1;
+    W = parent ? parent.clientWidth : window.innerWidth;
+    H = parent ? parent.clientHeight : window.innerHeight;
+    cv.width = W * dpr;
+    cv.height = H * dpr;
+    cx.scale(dpr, dpr);
 
     const minCell = isMobile() ? 9 : 11;
     const maxCell = isMobile() ? 13 : 16;
