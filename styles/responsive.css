@@ -156,17 +156,11 @@
   }
   .cards-grid{grid-template-columns:1fr!important;}
 
-  /* SCROLL CTA — show on mobile only */
-  .scroll-cta{display:flex;}
 
   /* FOOTER POKEMON — hide on mobile to prevent absolute overflow on stacked layout */
   .foot-pokemon{display:none;}
 }
 
-/* ── TABLET (721px–900px) — Show scroll CTA hint but not full mobile */
-@media(max-width:900px) and (min-width:721px){
-  .scroll-cta{display:none;}
-}
 
 /* ── PREFERS REDUCED MOTION — Accessibility (WCAG 2.1 AA) ── */
 @media (prefers-reduced-motion: reduce) {
