@@ -65,7 +65,7 @@ export function handleBulletCollisions(state, updateHud) {
 
       state.asteroids.splice(i, 1);
       bullet.life = 0;
-      state.shake = 4;
+      state.shake = 2;
       updateHud();
       break;
     }
