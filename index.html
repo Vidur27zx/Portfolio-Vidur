@@ -89,15 +89,10 @@
     <div id="gameOver"><div class="go-box"><div class="go-title">SYSTEM FAILURE</div><div class="go-sub" id="goSub"></div><div class="go-bar inl-0001"><div class="go-fill" id="goFill"></div></div></div></div>
     <div id="replayChip">
       <div id="replayChipTitle">SYSTEM FAILURE</div>
-      <button id="replayChipBtn" data-onclick="replayGame()">↺ Play Again</button>
+      <button class="replay-btn" onclick="window.scrollBy({top: window.innerHeight * 0.8, behavior: 'smooth'})">↓ Scroll Down</button>
+      <button class="replay-btn" data-onclick="replayGame()">↺ Play Again</button>
     </div>
-    <!-- Scroll Nudge Popup -->
-    <div id="scrollNudge" class="scroll-nudge-popup">
-      <div class="nudge-content">
-        <span class="nudge-icon">↓</span>
-        <span class="nudge-text">Scroll to explore</span>
-      </div>
-    </div>
+
     <div id="gameInteractOverlay" class="inl-0002"><div class="game-interact-pill" id="gamePill"></div></div>
     <div id="heroGameHint" class="inl-0003">
       <span class="inl-0004"></span>

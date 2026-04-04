@@ -17,8 +17,8 @@
 #replayChip{position:absolute;bottom:130px;left:50%;transform:translateX(-50%);z-index:20;display:none;flex-direction:column;align-items:center;gap:10px;pointer-events:auto;animation:chipFadeIn .35s ease;}
 #replayChip.visible{display:flex;}
 #replayChipTitle{font-family:var(--fp);font-size:22px;letter-spacing:.12em;color:var(--red);text-shadow:0 0 20px rgba(224,48,48,.5);}
-#replayChipBtn{font-family:var(--fm);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#fff;background:rgba(14,14,14,.85);border:1px dashed rgba(255,255,255,.45);padding:9px 26px;cursor:pointer;transition:all .2s;backdrop-filter:blur(6px);}
-#replayChipBtn:hover{background:var(--red);border-color:var(--red);}
+.replay-btn{font-family:var(--fm);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#fff;background:rgba(14,14,14,.85);border:1px dashed rgba(255,255,255,.45);padding:9px 26px;cursor:pointer;transition:all .2s;backdrop-filter:blur(6px);width:100%;}
+.replay-btn:hover{background:var(--red);border-color:var(--red);}
 .go-box{text-align:center;}
 .go-title{font-family:var(--fp);font-size:54px;color:var(--red);letter-spacing:.1em;}
 .go-sub{font-family:var(--fm);font-size:10px;letter-spacing:.18em;color:rgba(255,255,255,.38);margin-top:6px;}

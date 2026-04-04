@@ -4,7 +4,7 @@ export function createHeroState() {
     H: 0,
     score: 0,
     hiScore: parseInt(localStorage.getItem('arcade_hiscore')) || 0,
-    lives: 3,
+    lives: 2,
     wave: 1,
     asteroids: [],
     bullets: [],
@@ -28,7 +28,7 @@ export function createHeroState() {
 
 export function resetHeroRound(state) {
   state.score = 0;
-  state.lives = 3;
+  state.lives = 2;
   state.wave = 1;
   state.asteroids = [];
   state.bullets = [];

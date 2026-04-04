@@ -78,29 +78,7 @@ function renderHomeProjectPreview() {
     .join('');
 }
 
-function initScrollNudge() {
-  const nudge = document.getElementById('scrollNudge');
-  if (!nudge) {
-    return;
-  }
 
-  const nudgeTimer = setTimeout(() => {
-    const isHome = document.getElementById('page-home').classList.contains('active');
-    if (window.scrollY < 50 && isHome) {
-      nudge.classList.add('show');
-      setTimeout(() => nudge.classList.remove('show'), 6000);
-    }
-  }, 20000);
-
-  const clearNudge = () => {
-    if (window.scrollY > 50) {
-      clearTimeout(nudgeTimer);
-      nudge.classList.remove('show');
-      window.removeEventListener('scroll', clearNudge);
-    }
-  };
-  window.addEventListener('scroll', clearNudge);
-}
 
 export function initHomePage() {
   if (initialized) {
@@ -115,6 +93,5 @@ export function initHomePage() {
   renderHomeProjectPreview();
   initExpCards();
   initMiniCanvas();
-  initScrollNudge();
   initialized = true;
 }
