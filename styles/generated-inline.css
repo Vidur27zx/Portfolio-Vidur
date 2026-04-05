@@ -49,8 +49,8 @@
 .inl-0048{font-family:var(--fm);font-size:9px;color:#bbb;letter-spacing:.04em;margin-top:12px;padding-top:10px;border-top:1px dashed #e8e8e8;}
 .inl-0049{color:#aaa;}
 .inl-0050{border:1px dashed #e03030;}
-.inl-0051{font-family:var(--fm);font-size:8px;letter-spacing:.08em;color:#999;margin-bottom:12px;padding:6px 10px;background:#f9f9f7;border-left:2px solid var(--red);}
-.inl-0052{color:#555;}
+.inl-0051{font-family:var(--fm);font-size:11px;letter-spacing:.06em;color:#666;margin-bottom:12px;padding:7px 12px;background:#f9f9f7;border-left:2px solid var(--red);}
+.inl-0052{color:#111;font-weight:700;}
 .inl-0053{color:#aaa;font-size:7px;}
 .inl-0054{padding-bottom:72px;}
 .inl-0055{border:1px dashed #bbb;background:#fff;padding:0;position:relative;display:grid;grid-template-columns:180px 1fr;}
