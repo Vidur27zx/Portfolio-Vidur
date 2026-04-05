@@ -58,9 +58,9 @@ export function showPage(id) {
 
   window.scrollTo(0, 0);
   try {
-    const newHash = id === 'home' ? '#home' : `#${id}`;
-    if (window.location.hash !== newHash) {
-      history.pushState({ pageId: id }, '', newHash);
+    const newPath = id === 'home' ? '/' : `/${id}`;
+    if (window.location.pathname !== newPath) {
+      history.pushState({ pageId: id }, '', newPath);
     }
   } catch (_error) {
     // no-op
@@ -114,23 +114,25 @@ export function showPage(id) {
 }
 
 export function initRouter() {
-  function routeHash() {
-    const hash = (window.location.hash || '').replace('#', '').trim();
-    showPage(hash && VALID_PAGES.includes(hash) ? hash : 'home');
+  function routeFromPath() {
+    // Support both path-based (/about) and legacy hash-based (#about) routing
+    const pathSegment = window.location.pathname.replace(/^\//, '').trim();
+    const hashSegment = (window.location.hash || '').replace('#', '').trim();
+    const segment = pathSegment || hashSegment;
+    showPage(segment && VALID_PAGES.includes(segment) ? segment : 'home');
   }
 
-  window.addEventListener('hashchange', routeHash);
   window.addEventListener('popstate', (e) => {
     if (e.state && e.state.pageId) {
       showPage(e.state.pageId);
     } else {
-      routeHash();
+      routeFromPath();
     }
   });
 
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', routeHash, { once: true });
+    document.addEventListener('DOMContentLoaded', routeFromPath, { once: true });
   } else {
-    routeHash();
+    routeFromPath();
   }
 }
