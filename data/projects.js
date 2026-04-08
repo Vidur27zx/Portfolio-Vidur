@@ -93,7 +93,7 @@ export const visionLabsCards = [
     status: 'Active',
     title: 'Mesh23',
     sub: 'Freelance AI Automation Consultancy',
-    desc: 'Founded and operating Mesh23 — delivering AI-driven workflow optimization for SMB clients. Combining n8n, GenAI, and process design to eliminate manual overhead and streamline operations.',
+    desc: 'Freelancing via Mesh23 — delivering AI-driven workflow optimization for SMB clients. Combining n8n, GenAI, and process design to eliminate manual overhead and streamline operations.',
     tags: ['n8n', 'GenAI', 'Workflow Automation', 'SMB'],
     action: { type: 'link', href: 'https://mesh23-web.vercel.app/', text: 'Learn More' },
     hero: true,

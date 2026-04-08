@@ -13,7 +13,7 @@
 @media(max-width:720px){
 
   /* NAV — hamburger dropdown */
-  nav{padding:11px 18px;position:relative;flex-wrap:nowrap;justify-content:space-between;align-items:center;}
+  nav{padding:11px 18px;position:fixed;top:0;left:0;right:0;z-index:1000;flex-wrap:nowrap;justify-content:space-between;align-items:center;}
   .nav-line{display:none;}
   .nav-hamburger{display:flex;}
   .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:rgba(8,8,8,.98);border-bottom:1px solid rgba(255,255,255,.1);flex-direction:column;padding:6px 0 12px;z-index:999;transform:translateY(-8px);opacity:0;transition:transform .22s ease,opacity .22s ease;}
