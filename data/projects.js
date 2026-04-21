@@ -128,4 +128,14 @@ export const visionLabsCards = [
     tags: ['SaaS', 'HR Tech', 'Workflows'],
     action: { type: 'route', target: 'hrsaas', text: 'View Concept Doc' },
   },
+  {
+    id: 'clinicbot',
+    statusDot: 'concept',
+    status: 'Concept Phase',
+    title: 'ClinicBot',
+    sub: 'Medication + Care Follow-Up Automation',
+    desc: 'Patient reminder and follow-up automation for clinics using Telegram, Google Sheets, and n8n, with multilingual support, voice-note triage, doctor escalation, and pharmacy refill workflows.',
+    tags: ['Healthcare Ops', 'n8n', 'Automation', 'Conversational AI'],
+    action: { type: 'route', target: 'clinicbot', text: 'View Concept Doc' },
+  },
 ];

@@ -6,6 +6,7 @@ export const VALID_PAGES = [
   'projects',
   'visionlabs',
   'hrsaas',
+  'clinicbot',
   'corpsim',
   'finmonitor',
   'roastmoney',

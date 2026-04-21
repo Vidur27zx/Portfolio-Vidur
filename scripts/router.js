@@ -4,6 +4,7 @@ import { initProjectsPage } from './pages/projects.js';
 import { initVisionlabsPage } from './pages/visionlabs.js';
 import { initAboutPage } from './pages/about.js';
 import { initHrsaasPage } from './pages/hrsaas.js';
+import { initClinicbotPage } from './pages/clinicbot.js';
 import { initCorpsimPage } from './pages/corpsim.js';
 import { initFinmonitorPage } from './pages/finmonitor.js';
 import { initRoastmoneyPage } from './pages/roastmoney.js';
@@ -98,6 +99,9 @@ export function showPage(id) {
   }
   if (id === 'hrsaas') {
     initHrsaasPage();
+  }
+  if (id === 'clinicbot') {
+    initClinicbotPage();
   }
   if (id === 'corpsim') {
     initCorpsimPage();

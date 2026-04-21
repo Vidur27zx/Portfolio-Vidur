@@ -981,6 +981,284 @@
 </div>
 
 <!-- ════════════════════ ROASTMONEY CONCEPT DOC ════════════════════ -->
+<!-- CLINICBOT CONCEPT DOC -->
+<div id="page-clinicbot" class="page">
+
+  <div class="inl-0063">
+    <div class="inl-0018"></div>
+    <div class="inl-0064">
+      <div class="inl-0020">
+        <span class="inl-0021"></span>
+        <span data-onclick="showPage('visionlabs')" data-onmouseover="this.style.color='rgba(255,255,255,.6)'" data-onmouseout="this.style.color='rgba(255,255,255,.25)'" class="inl-0065">&#8592; Vision Labs</span>
+        <span class="inl-0066">/</span>
+        <span>Concept Doc</span>
+      </div>
+      <div class="inl-0129">
+        <span class="inl-0130"></span> Concept Phase - Build Guide Ready
+      </div>
+      <h1 class="inl-0071">Clinic<br><span class="inl-0023">Bot</span></h1>
+      <p class="inl-0131">Step-by-step clinic automation concept for medicine reminders, voice-note triage, doctor escalation, and pharmacy refill delivery using n8n, Telegram, Google Sheets, and Groq.</p>
+    </div>
+  </div>
+
+  <div class="wrap inl-0078">
+
+    <div class="au-section inl-0079">
+      <div class="sec-lbl">Core Concept</div>
+      <div class="inl-0080">
+        <div class="inl-0028"></div>
+        <p class="inl-0081">ClinicBot is designed as a practical, low-cost care follow-up system for small clinics. It reminds patients to take medicines, listens to replies in text or voice, flags risky symptoms, and helps clinics coordinate pharmacy refill delivery without adding admin burden to doctors.</p>
+        <p class="inl-0031">The interaction model is intentionally simple for elderly patients: they receive prompts in their preferred language, reply with short text or voice notes, and get timely support when something feels wrong.</p>
+        <div class="inl-0082">
+          <span class="inl-0023">&#9632;</span>&nbsp; This is a concept document with an implementation blueprint. Product build is planned, not deployed yet.
+        </div>
+      </div>
+    </div>
+
+    <div class="au-section inl-0079">
+      <div class="sec-lbl">System Roles</div>
+      <div class="inl-0083">
+        <div class="inl-0084">
+          <div class="inl-0028"></div>
+          <div class="inl-0085">What each tool does</div>
+          <ul class="au-list au-list-spaced">
+            <li><strong class="inl-0086">n8n</strong>: the office manager that runs reminders and workflows on schedule.</li>
+            <li><strong class="inl-0086">Telegram</strong>: the patient messaging channel for replies and voice notes.</li>
+            <li><strong class="inl-0086">Google Sheets</strong>: the operating database for patients, medicines, check-ins, and orders.</li>
+            <li><strong class="inl-0086">Groq</strong>: speech-to-text layer for understanding voice notes.</li>
+            <li><strong class="inl-0086">Partner pharmacy</strong>: receives refill requests and dispatches through Rapido.</li>
+          </ul>
+        </div>
+        <div class="inl-0084">
+          <div class="inl-0028"></div>
+          <div class="inl-0085">Who this serves first</div>
+          <ul class="au-list au-list-spaced">
+            <li>Independent clinics and neighborhood hospitals.</li>
+            <li>Chronic-care patients (BP, diabetes, thyroid) who need regular refill cycles.</li>
+            <li>Elderly patients needing multilingual and voice-first support.</li>
+            <li>Clinic coordinators who need structured follow-up without extra software overhead.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="au-section inl-0079">
+      <div class="sec-lbl">Build Plan (Zero to Live)</div>
+      <div class="inl-0132">
+        <div class="inl-0028"></div>
+        <div class="inl-0133">
+          <div>
+            <div class="inl-0134">Setup Phase</div>
+            <div class="inl-0135">One-time environment</div>
+          </div>
+          <div>
+            <div class="inl-0134">Build Phase</div>
+            <div class="inl-0135">Workflow-by-workflow</div>
+          </div>
+        </div>
+        <div class="inl-0136">
+          <div class="inl-0137">
+            <div class="inl-0138">Setup checklist</div>
+            <div class="inl-0139">
+              <span class="about-tag">Install Node.js</span><span class="about-tag">Run n8n locally</span><span class="about-tag">Expose webhook via ngrok</span><span class="about-tag">Create Telegram bot</span><span class="about-tag">Create Groq API key</span><span class="about-tag">Prepare Google Sheets schema</span>
+            </div>
+          </div>
+          <div>
+            <div class="inl-0138">Key sheets in database</div>
+            <p class="inl-0088">Patients, Medicines, CheckIns, Orders, Pharmacies, and CheckUps. Structure is designed so non-technical clinic staff can update records directly in spreadsheet format while workflows run automatically in the background.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="au-section inl-0079">
+      <div class="sec-lbl">Workflow Scope</div>
+      <div class="inl-0083">
+        <div class="inl-0140">
+          <div class="inl-0028"></div>
+          <div class="inl-0141">
+            <span class="inl-0142">01</span>
+            <div>
+              <div class="inl-0143">Medication Reminders</div>
+              <div class="inl-0144">7 AM, 1 PM, 9 PM schedule</div>
+            </div>
+          </div>
+          <ul class="au-list">
+            <li>Read active patients and active medicines from Google Sheets.</li>
+            <li>Map reminder text by language (English, Hindi, Telugu).</li>
+            <li>Generate per-patient medicine lists for the current time slot.</li>
+            <li>Send reminders through Telegram bot automatically.</li>
+          </ul>
+        </div>
+
+        <div class="inl-0140">
+          <div class="inl-0028"></div>
+          <div class="inl-0141">
+            <span class="inl-0142">02</span>
+            <div>
+              <div class="inl-0143">Replies + Voice Understanding</div>
+              <div class="inl-0144">Text and voice into one decision stream</div>
+            </div>
+          </div>
+          <ul class="au-list">
+            <li>Listen to all patient Telegram replies using Telegram Trigger.</li>
+            <li>For voice notes: download audio, transcribe with Groq Whisper endpoint.</li>
+            <li>Classify replies into escalation, refill intent, or normal acknowledgment.</li>
+            <li>Support mixed-language symptom words for practical real-world use.</li>
+          </ul>
+        </div>
+
+        <div class="inl-0140">
+          <div class="inl-0028"></div>
+          <div class="inl-0141">
+            <span class="inl-0142">03</span>
+            <div>
+              <div class="inl-0143">Doctor Escalation</div>
+              <div class="inl-0144">Immediate alert path for risk responses</div>
+            </div>
+          </div>
+          <ul class="au-list">
+            <li>Create a structured doctor alert with patient details and symptom text.</li>
+            <li>Mark whether input came from voice transcription.</li>
+            <li>Send reassurance back to patient in preferred language.</li>
+            <li>Keep timestamped escalation logs for clinic operations tracking.</li>
+          </ul>
+        </div>
+
+        <div class="inl-0140">
+          <div class="inl-0028"></div>
+          <div class="inl-0141">
+            <span class="inl-0142">04</span>
+            <div>
+              <div class="inl-0143">Elderly Care Schedule</div>
+              <div class="inl-0144">Monthly, quarterly, annual check-up reminders</div>
+            </div>
+          </div>
+          <ul class="au-list">
+            <li>Daily scan of CheckUps sheet for upcoming due dates.</li>
+            <li>Send reminders at T-3 days and day-of checkup.</li>
+            <li>Notify caretakers for elderly patients when needed.</li>
+            <li>Track reminder_sent state to avoid duplicate notification loops.</li>
+          </ul>
+        </div>
+
+        <div class="inl-0140">
+          <div class="inl-0028"></div>
+          <div class="inl-0141">
+            <span class="inl-0142">05</span>
+            <div>
+              <div class="inl-0143">Pharmacy Refill Delivery</div>
+              <div class="inl-0144">Detection, consent, dispatch, payment</div>
+            </div>
+          </div>
+          <ul class="au-list">
+            <li>Detect refill need 2 days before stockout for chronic medicines.</li>
+            <li>Ask patient consent for home delivery (YES/NO flow).</li>
+            <li>Generate structured order message to pharmacy partner.</li>
+            <li>Share UPI deep link and delivery status back to patient.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="au-section inl-0079">
+      <div class="sec-lbl">Tech Stack Thinking</div>
+      <div class="inl-0040">
+        <div class="inl-0028"></div>
+        <div class="inl-0089">
+          <div class="inl-0042">
+            <div class="inl-0109">Runtime</div>
+            <ul class="au-list"><li>Node.js</li><li>n8n local runner</li><li>ngrok tunnel for Telegram webhook</li></ul>
+          </div>
+          <div class="inl-0042">
+            <div class="inl-0109">Data Layer</div>
+            <ul class="au-list"><li>Google Sheets as operational DB</li><li>Tab-based schema for patients, meds, checkups, orders</li><li>Low-friction manual edits by clinic staff</li></ul>
+          </div>
+          <div class="inl-0044">
+            <div class="inl-0109">AI + Messaging</div>
+            <ul class="au-list"><li>Telegram Bot API for patient conversations</li><li>Groq speech transcription for voice notes</li><li>Keyword and rule-based triage logic in n8n code nodes</li></ul>
+          </div>
+        </div>
+        <div class="inl-0110">
+          <p class="inl-0096">Stack rationale: every core piece has a free starting path, setup is reproducible by a non-enterprise clinic, and operations remain transparent because data and workflow state stay human-auditable.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="au-section inl-0079">
+      <div class="sec-lbl">Demo & Validation Plan</div>
+      <div class="inl-0150">
+
+        <div class="inl-0140">
+          <div class="inl-0028"></div>
+          <div class="inl-0151">Current Status</div>
+          <div class="inl-0152">
+            <div class="inl-0153">
+              <span class="inl-0154"></span>
+              <span class="inl-0155">Problem mapped end-to-end</span>
+            </div>
+            <div class="inl-0153">
+              <span class="inl-0154"></span>
+              <span class="inl-0155">Data schema defined</span>
+            </div>
+            <div class="inl-0153">
+              <span class="inl-0154"></span>
+              <span class="inl-0155">Workflow blueprint documented</span>
+            </div>
+            <div class="inl-0153">
+              <span class="inl-0156"></span>
+              <span class="inl-0157">n8n workflow build</span>
+            </div>
+            <div class="inl-0153">
+              <span class="inl-0156"></span>
+              <span class="inl-0157">Clinic pilot testing</span>
+            </div>
+            <div class="inl-0153">
+              <span class="inl-0156"></span>
+              <span class="inl-0157">WhatsApp migration layer</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="inl-0032">
+          <div class="inl-0033">
+            <div class="inl-0028"></div>
+            <div class="inl-0158">Demo Sequence (Loom)</div>
+            <ul class="au-list au-list-spaced">
+              <li>Trigger reminder and show multilingual medicine message on phone.</li>
+              <li>Send a voice note and show Groq transcription + escalation route.</li>
+              <li>Trigger refill flow and show pharmacy order + payment link loop.</li>
+              <li>Walk through n8n canvas node-by-node to explain logic clearly.</li>
+            </ul>
+          </div>
+          <div class="inl-0033">
+            <div class="inl-0028"></div>
+            <div class="inl-0158">Operational Risks To Handle</div>
+            <ul class="au-list">
+              <li>Webhook downtime when ngrok is not running.</li>
+              <li>Incorrect chat_id mapping causing message routing errors.</li>
+              <li>False positives in symptom keyword detection.</li>
+              <li>Manual handoff gaps with pharmacy dispatch updates.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="divider"></div><div class="divider-dots"><span></span><span></span><span></span></div><div class="divider"></div>
+  <footer>
+    <div class="foot-inner">
+      <div class="foot-pokemon" style="background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22%2304B35A%22%3E%3Cpath d=%22M2 2v20h20V2H2zm4 4h12v4H6V6zm0 6h12v4H6v-4zm2 6h8v2H8v-2z%22/%3E%3C/svg%3E');"></div>
+      <a href="mailto:vidur2002@gmail.com" class="foot-email">&#9993;&nbsp; vidur2002@gmail.com</a>
+      <a href="https://in.linkedin.com/in/vidurr" target="_blank" rel="noopener noreferrer" class="foot-email">&#128279;&nbsp; linkedin.com/in/vidurr</a>
+      <span class="foot-credit">&#169; 2026</span>
+    </div>
+    <div class="foot-dark"><span>&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183; Designed &amp; Built by Vidur Ramachandran</span></div>
+  </footer>
+</div>
+
 <div id="page-roastmoney" class="page">
   <div class="inl-0063">
     <div class="inl-0018"></div>
