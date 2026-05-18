@@ -21,8 +21,8 @@ function renderCard(card) {
   if (card.hero) {
     let visualHtml = `<div class="lab-visual"><canvas id="mesh23Canvas"></canvas></div>`;
     if (card.id === 'mesh23') {
-      visualHtml = `<a href="${card.action.href || 'https://mesh23-web.vercel.app/'}" target="_blank" rel="noopener noreferrer" class="lab-visual" style="display: block; text-decoration: none; transition: transform 0.2s; cursor: pointer; padding: 0;">
-        <img src="assets/images/mesh23.png" alt="Mesh23 Preview" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+      visualHtml = `<a href="${card.action.href || 'https://mesh-23-codex.vercel.app/'}" target="_blank" rel="noopener noreferrer" class="lab-visual" style="display: block; text-decoration: none; transition: transform 0.2s; cursor: pointer; padding: 0;">
+        <img src="assets/images/mesh23.2.png" alt="Mesh23 Preview" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
       </a>`;
     }
     return `<div class="lab-card hero-card"><div class="lab-corner"></div><div>${base}</div><div>${visualHtml}</div></div>`;
