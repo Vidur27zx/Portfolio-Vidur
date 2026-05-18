@@ -89,8 +89,8 @@ export const projectsPageCards = [
 export const visionLabsCards = [
   {
     id: 'mesh23',
-    statusDot: 'live',
-    status: 'Active',
+    statusDot: 'building',
+    status: 'Prototype Built',
     title: 'Mesh23',
     sub: 'Customer Intelligence & Journey Platform',
     desc: 'Mesh23 is a customer intelligence and journey platform for D2C brands that unifies commerce, messaging, ads, and customer data into profiles, segments, and analytics. It helps teams build AI-assisted WhatsApp, Email, SMS, Web Push, and Meta audience plans, then monitor performance across clicks, conversions, coupons, and revenue.',
@@ -100,7 +100,7 @@ export const visionLabsCards = [
   },
   {
     id: 'corpsim',
-    statusDot: 'live',
+    statusDot: 'building',
     status: 'Prototype Built',
     title: 'CorpSim AI',
     sub: 'Corporate Readiness Simulation Platform',
@@ -110,7 +110,7 @@ export const visionLabsCards = [
   },
   {
     id: 'validateidea',
-    statusDot: 'live',
+    statusDot: 'building',
     status: 'Prototype Built',
     title: 'Validate Your<br>Idea',
     sub: 'AI-Powered Idea Validation Platform',
