@@ -109,6 +109,8 @@
 
   /* VISION LABS */
   .lab-grid{grid-template-columns:1fr;}
+  .lab-tabs{display:flex;flex-wrap:wrap;width:100%;}
+  .lab-tab{flex:1 1 30%;min-width:98px;padding:10px 8px;}
 
   /* PAGE HEADERS */
   .pg-title{font-size:clamp(30px,9vw,60px);}

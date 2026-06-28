@@ -1,18 +1,18 @@
 export const homeProjectPreview = [
   {
-    title: 'Financial Transaction Monitor',
-    desc: 'Automated anomaly detection framework for transaction data.',
-    tags: ['Python', 'SQL', 'BigQuery'],
+    title: 'Saathi',
+    desc: 'A finance companion for safer money decisions and clearer personal finance.',
+    tags: ['FinTech', 'Product Strategy'],
   },
   {
-    title: 'Customer Loan Behavior Analysis',
-    desc: 'Cleaned & analyzed credit card spend data to identify loan acceptance drivers.',
-    tags: ['Tableau', 'SQL'],
+    title: 'Batua',
+    desc: 'A safer, clearer personal finance layer for modern Indian users.',
+    tags: ['FinTech', 'UX Strategy'],
   },
   {
-    title: 'Gen AI Job Application Tracker',
-    desc: 'AI-powered automation tracker for job applications using n8n & GenAI.',
-    tags: ['n8n', 'GenAI', 'Automation'],
+    title: 'CorpSim AI',
+    desc: 'Corporate readiness simulation platform built from a product POV.',
+    tags: ['AI / LLM', 'Product Prototype'],
   },
 ];
 
@@ -137,5 +137,102 @@ export const visionLabsCards = [
     desc: 'Patient reminder and follow-up automation for clinics using Telegram, Google Sheets, and n8n, with multilingual support, voice-note triage, doctor escalation, and pharmacy refill workflows.',
     tags: ['Healthcare Ops', 'n8n', 'Automation', 'Conversational AI'],
     action: { type: 'route', target: 'clinicbot', text: 'View Concept Doc' },
+  },
+];
+
+const corpSimLabCard = visionLabsCards.find((card) => card.id === 'corpsim');
+const automationSourceCard = projectsPageCards[0];
+
+export const labsTabs = [
+  {
+    id: 'projects',
+    label: 'Projects',
+    cards: [
+      {
+        id: 'saathi',
+        statusDot: 'live',
+        status: 'Product Vision',
+        title: 'Saathi',
+        sub: 'A personal finance companion for safer decisions and clearer money habits.',
+        desc: 'A finance product concept for helping users understand money choices, organize financial context, and move through everyday decisions with more confidence and clarity.',
+        tags: ['FinTech', 'Personal Finance', 'Product Strategy', 'User Flows'],
+        action: { type: 'link', href: 'https://saathi-prd.vercel.app/', text: 'PRD Doc & Wireframe' },
+      },
+      {
+        id: 'batua',
+        statusDot: 'concept',
+        status: 'Product Concept',
+        title: 'Batua',
+        sub: 'A safer, clearer personal finance layer for modern Indian users.',
+        desc: 'A fintech product concept for tracking cards, balances, expenses, financial health, and money decisions across multiple accounts and instruments.',
+        tags: ['FinTech', 'Personal Finance', 'UX Strategy', 'Product Design'],
+        action: { type: 'link', href: 'https://batua-prd.vercel.app/', text: 'PRD Doc & Wireframe' },
+      },
+      {
+        ...corpSimLabCard,
+        hero: false,
+      },
+      {
+        id: 'automation-flows',
+        statusDot: automationSourceCard.status.dot === 'done' ? 'live' : 'building',
+        status: automationSourceCard.status.text,
+        title: 'Automation Pipeline / Flows Project',
+        sub: automationSourceCard.title.replace(/<br>/g, ' '),
+        desc: 'A compact monitoring flow for transaction data that flags anomalies and routes exceptions before reporting.',
+        tags: automationSourceCard.tags,
+        action: automationSourceCard.action,
+      },
+    ],
+  },
+  {
+    id: 'freelance',
+    label: 'Freelance',
+    cards: [
+      {
+        id: 'sixt4-creations',
+        statusDot: 'building',
+        status: 'In Progress',
+        title: 'Sixt4 Creations',
+        sub: 'Website development - in progress',
+        desc: 'Building and refining the website experience, structure, and digital presence for the brand.',
+        tags: ['Website Development', 'Web Presence', 'Client Work'],
+        action: { type: 'link', href: 'https://sixt4creations-wireframe.vercel.app/', text: 'View Wireframe' },
+      },
+      {
+        id: 'broadmind-technologies',
+        statusDot: 'building',
+        status: 'Underway',
+        title: 'Broadmind Technologies Pvt Ltd India',
+        sub: 'GoHighLevel agency ecosystem build - underway',
+        desc: 'Working on a GoHighLevel-powered agency operating system covering CRM setup, AI workflows, automations, funnels, client onboarding, and backend execution flows.',
+        tags: ['GoHighLevel', 'CRM', 'Automation', 'Agency Systems'],
+      },
+      {
+        id: 'bombay-central',
+        statusDot: 'live',
+        status: 'Client Work',
+        title: 'Bombay Central',
+        sub: 'Social media marketing and content execution',
+        desc: 'Contributed to social media strategy, scripts, shooting, editing, and Instagram page execution for brand visibility and content growth.',
+        tags: ['Social Media', 'Content Strategy', 'Scripts', 'Editing'],
+        action: { type: 'link', href: 'https://www.instagram.com/bombaycentrral.india/?hl=en', text: 'View Instagram' },
+      },
+    ],
+  },
+  {
+    id: 'personal',
+    label: 'Personal',
+    cards: [
+      {
+        id: 'vidur-life',
+        statusDot: 'live',
+        status: 'Personal Project',
+        title: 'vidur.life',
+        sub: 'My biggest project yet: rebuilding health and staying accountable in public.',
+        desc: 'A personal digital space for making my health better, documenting the journey, and sharing progress openly so I stay consistent and accountable.',
+        tags: ['Health', 'Accountability', 'Discipline', 'Personal Journey'],
+        action: { type: 'link', href: 'https://www.instagram.com/vidur.life/?hl=en', text: 'View Instagram' },
+      },
+    ],
   },
 ];

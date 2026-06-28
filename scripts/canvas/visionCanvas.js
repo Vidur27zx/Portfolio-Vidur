@@ -600,13 +600,16 @@ export function initBreakoutBg() {
   loop();
 }
 
-let snakeInit = false;
-export function initSnakeGame() {
-  const cv = document.getElementById('projectsHeaderCanvas');
-  if (!cv || snakeInit) {
+const snakeInits = new Set();
+export function initSnakeGame(options = {}) {
+  const canvasId = options.canvasId || 'projectsHeaderCanvas';
+  const activePage = options.activePage || 'projects';
+  const hudLabel = options.hudLabel || 'PROJECTS';
+  const cv = document.getElementById(canvasId);
+  if (!cv || snakeInits.has(canvasId)) {
     return;
   }
-  snakeInit = true;
+  snakeInits.add(canvasId);
 
   const cx = cv.getContext('2d');
   const keys = { up: false, down: false, left: false, right: false };
@@ -627,7 +630,7 @@ export function initSnakeGame() {
   let shake = 0;
 
   function isProjectsActive() {
-    return isPageActive('projects');
+    return isPageActive(activePage);
   }
 
   function resize() {
@@ -944,7 +947,7 @@ export function initSnakeGame() {
     cx.save();
     cx.font = '8px "Space Mono",monospace';
     cx.fillStyle = 'rgba(255,255,255,.2)';
-    cx.fillText('SYSTEM NAV // PROJECTS', 10, H - 10);
+    cx.fillText(`SYSTEM NAV // ${hudLabel}`, 10, H - 10);
     cx.fillText(`UPTIME ${elapsed.toFixed(1)}S`, 12, 16);
     cx.fillText(`BEST ${best.toFixed(1)}S`, 12, 28);
     cx.restore();

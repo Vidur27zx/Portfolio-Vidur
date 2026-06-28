@@ -27,6 +27,10 @@ export function isPageActive(id) {
 }
 
 export function showPage(id) {
+  if (id === 'projects') {
+    id = 'visionlabs';
+  }
+
   if (id === lastPageID) {
     return;
   }
@@ -89,9 +93,8 @@ export function showPage(id) {
   }
   if (id === 'visionlabs') {
     initVisionlabsPage();
-    initVLCanvas();
     initMesh23();
-    initMarioBg();
+    initSnakeGame({ canvasId: 'vlCanvas', activePage: 'visionlabs', hudLabel: 'LABS' });
   }
   if (id === 'about') {
     initAboutPage();

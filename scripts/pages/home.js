@@ -40,7 +40,7 @@ function renderExperience() {
   container.innerHTML = homeExperience
     .map((item) => {
       const details = item.highlights.map((line) => `<li>${line}</li>`).join('');
-      const accent = item.accent ? ' home-exp-accent' : '';
+      const accent = item.accent === 'green' ? ' home-exp-green' : item.accent ? ' home-exp-accent' : '';
       return `<div class="exp-card${accent}"><div class="exp-corner"></div><div class="exp-company">${item.company}</div><div class="exp-role">${item.role}</div><div class="exp-period">${item.period}</div><div class="exp-details"><ul>${details}</ul></div></div>`;
     })
     .join('');

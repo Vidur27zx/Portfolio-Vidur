@@ -1,19 +1,20 @@
 export const homeExperience = [
   {
-    company: 'Freelance',
-    role: 'Business Analyst & GenAI Automation Consultant',
-    period: 'Jul 2025 — Present',
+    company: 'EMELEX Business Solutions Pvt Ltd',
+    role: "Founder's Office Associate - Product",
+    period: 'Sep 2025 - Jun 2026',
+    type: "Product / Founder's Office / Strategy",
     highlights: [
-      'Business requirements gathering, user story documentation & developer handoff',
-      'GenAI and n8n workflow automation design and deployment for SMB clients',
-      'CX analysis, product feature refinement & stakeholder management',
+      'Partnered directly with the founder to convert early-stage vision into structured product, operations, and marketing plans',
+      'Supported PI DOT product development by giving customer and client POV inputs to freelance developers',
+      'Created SOPs and documentation to turn ad hoc work into repeatable systems',
     ],
-    accent: false,
+    accent: 'green',
   },
   {
     company: 'Deloitte USI',
-    role: 'Associate Analyst — Engineering Support / Developer',
-    period: 'Feb 2024 — Jun 2025',
+    role: 'Associate Analyst - Engineering Support / Developer',
+    period: 'Feb 2024 - Jun 2025',
     highlights: [
       'Adobe AEP pipeline monitoring, failure investigation & root cause analysis',
       'Large-scale data validation and quality assurance across customer data ingestion workflows',
@@ -23,8 +24,8 @@ export const homeExperience = [
   },
   {
     company: 'Acumen Connect',
-    role: 'Product Intern → Product Development Associate',
-    period: 'Jan 2023 — Feb 2024',
+    role: 'Product Intern -> Product Development Associate',
+    period: 'Jan 2023 - Feb 2024',
     highlights: [
       'Product requirements documentation and feature validation across the product lifecycle',
       'Process improvement, SOP creation and cross-functional coordination',

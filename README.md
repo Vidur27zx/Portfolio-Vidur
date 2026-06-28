@@ -7,7 +7,7 @@ This portfolio has been refactored into modular vanilla HTML/CSS/JS.
 - Home systems/tags: `C:\Users\vidur\OneDrive\Desktop\Portfolio\data\systems.js`
 - Experience cards: `C:\Users\vidur\OneDrive\Desktop\Portfolio\data\experience.js`
 - Impact rows: `C:\Users\vidur\OneDrive\Desktop\Portfolio\data\metrics.js`
-- Projects and Vision Labs cards: `C:\Users\vidur\OneDrive\Desktop\Portfolio\data\projects.js`
+- Labs tabs and cards: `C:\Users\vidur\OneDrive\Desktop\Portfolio\data\projects.js`
 
 ## Runtime architecture
 

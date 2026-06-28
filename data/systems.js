@@ -1,41 +1,41 @@
-﻿export const homeSystems = [
+export const homeSystems = [
   {
     icon: '◈',
-    name: 'Customer Data Platforms',
-    detail: 'Adobe AEP · AJO',
+    name: 'Product Thinking',
+    detail: 'MVPs · User Flows',
   },
   {
     icon: '⬡',
-    name: 'Data Pipelines & Validation',
-    detail: 'BigQuery · Airflow · SQL',
+    name: 'Founder-Led Product',
+    detail: 'Docs · Plans · Follow-through',
   },
   {
     icon: '◎',
     name: 'Automation Workflows',
-    detail: 'Python · n8n · GenAI',
+    detail: 'n8n · AI Tools · CRM',
   },
   {
     icon: '▣',
-    name: 'Business Analysis',
-    detail: 'Requirements · User Stories · BRDs',
+    name: 'Workflow Design',
+    detail: 'Journeys · SOPs · Handoffs',
   },
   {
     icon: '◐',
-    name: 'Product Operations',
-    detail: 'SOPs · Process Design · Runbooks',
+    name: 'Client Systems',
+    detail: 'GoHighLevel · Funnels · Ops',
   },
   {
     icon: '◉',
-    name: 'Analytics & Reporting',
-    detail: 'SQL · BigQuery · Tableau',
+    name: 'Proof of Work',
+    detail: 'vidur.life · Labs · Rebuilds',
   },
 ];
 
 export const homeAboutTags = [
-  'SQL / BigQuery',
-  'Python',
-  'Adobe AEP / AJO',
-  'n8n Automation',
-  'GenAI Workflows',
-  'Apache Airflow',
+  'Product Thinking',
+  'Founder\'s Office',
+  'Workflow Design',
+  'AI / No-Code',
+  'CRM Systems',
+  'Proof of Work',
 ];

@@ -63,14 +63,23 @@
 .about-tag:hover{border-color:var(--red);color:var(--red);}
 /* Exp cards (home preview) */
 .exp-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;align-items:start;}
-.exp-card{border:1px dashed var(--border);background:var(--white);padding:24px;position:relative;cursor:default;transition:all .3s ease;overflow:hidden;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);}
+.exp-card{border:1px dashed var(--border);background:var(--white);padding:20px;position:relative;cursor:default;transition:all .3s ease;overflow:hidden;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);}
 .exp-grid:hover .exp-card:not(:hover){opacity:0.75;filter:grayscale(0.5);}
 .exp-card:hover{border-color:var(--black);background:var(--white);transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,0.06);}
-.exp-card.home-exp-accent{border:2px dotted var(--red);background:var(--white);}
-.exp-corner{position:absolute;top:0;left:0;width:7px;height:7px;background:var(--red);}
-.exp-company{font-family:var(--fp);font-size:22px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:3px;}
+.exp-card.home-exp-accent{border:2px dotted rgba(224,48,48,.24);background:var(--white);}
+.exp-card.home-exp-accent .exp-corner{background:rgba(224,48,48,.32);}
+.exp-card.home-exp-accent:hover{border-color:var(--red);}
+.exp-card.home-exp-accent:hover .exp-corner{background:var(--red);}
+.exp-card.home-exp-green{border:2px dotted rgba(34,204,136,.24);background:var(--white);}
+.exp-card.home-exp-green .exp-corner{background:rgba(34,204,136,.34);}
+.exp-card.home-exp-green:hover{border-color:#22cc88;}
+.exp-card.home-exp-green:hover .exp-corner{background:#22cc88;}
+.exp-card.home-exp-green .exp-details li::before{background:#22cc88;}
+.exp-corner{position:absolute;top:0;left:0;width:7px;height:7px;background:rgba(224,48,48,.32);}
+.exp-card:hover .exp-corner{background:var(--red);}
+.exp-company{font-family:var(--fp);font-size:22px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:3px;overflow-wrap:anywhere;}
 .exp-role{font-family:var(--fm);font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:4px;}
-.exp-period{font-family:var(--fm);font-size:8px;color:#bbb;letter-spacing:.05em;margin-bottom:12px;}
+.exp-period{font-family:var(--fm);font-size:8px;color:#bbb;letter-spacing:.05em;margin-bottom:0;}
 .exp-details{max-height:0;overflow:hidden;transition:max-height .35s ease,opacity .3s ease;opacity:0;}
 .exp-card:hover .exp-details{max-height:300px;opacity:1;}
 .exp-details ul{list-style:none;padding:0;}

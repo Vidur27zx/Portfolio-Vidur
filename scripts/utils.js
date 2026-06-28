@@ -1,21 +1,11 @@
-import { RESUME_B64 } from './config.js';
-
 export function downloadResume() {
   try {
-    const bytes = atob(RESUME_B64);
-    const arr = new Uint8Array(bytes.length);
-    for (let i = 0; i < bytes.length; i += 1) {
-      arr[i] = bytes.charCodeAt(i);
-    }
-    const blob = new Blob([arr], { type: 'application/pdf' });
-    const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
-    a.href = url;
+    a.href = './assets/Vidur__CV.pdf';
     a.download = 'Vidur_Ramachandran_Resume.pdf';
     document.body.appendChild(a);
     a.click();
     setTimeout(() => {
-      URL.revokeObjectURL(url);
       a.remove();
     }, 1000);
   } catch (error) {
