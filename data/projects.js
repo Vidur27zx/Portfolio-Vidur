@@ -151,12 +151,12 @@ export const labsTabs = [
       {
         id: 'saathi',
         statusDot: 'live',
-        status: 'Product Vision',
+        status: 'PM Case Study',
         title: 'Saathi',
-        sub: 'A personal finance companion for safer decisions and clearer money habits.',
-        desc: 'A finance product concept for helping users understand money choices, organize financial context, and move through everyday decisions with more confidence and clarity.',
-        tags: ['FinTech', 'Personal Finance', 'Product Strategy', 'User Flows'],
-        action: { type: 'link', href: 'https://saathi-prd.vercel.app/', text: 'PRD Doc & Wireframe' },
+        sub: "A PM case study for SAATHI, an existing personal finance company and product.",
+        desc: "This was not my product concept. It was created only for an interview conversation to show SAATHI's founder how I would approach their existing app as a PM: understanding the user journey, identifying possible feature improvements, and thinking through guidance, onboarding, and decision-support flows.",
+        tags: ['Existing Company', 'PM Case Study', 'Feature Thinking', 'User Flows'],
+        action: { type: 'link', href: 'https://saathi-prd.vercel.app/', text: 'View Case Study & Wireframe' },
       },
       {
         id: 'batua',
