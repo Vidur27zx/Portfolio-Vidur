@@ -1,8 +1,8 @@
 export function downloadResume() {
   try {
     const a = document.createElement('a');
-    a.href = './assets/Vidur__CV.pdf';
-    a.download = 'Vidur_Ramachandran_Resume.pdf';
+    a.href = './assets/Vidur_SF_CV.pdf';
+    a.download = 'Vidur_SF_CV.pdf';
     document.body.appendChild(a);
     a.click();
     setTimeout(() => {
